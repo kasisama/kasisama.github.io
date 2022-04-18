@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>《飞行姬：异种生态》V2.04(PC简中 And繁中)</title>
+      <link href="//fly204.html"/>
+      <url>//fly204.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><ul><li>若此内容侵犯了您的权益，请评论里留言联系我们，我们将第一时间处理<span id="more"></span></li></ul><h2 id="版本说明"><a href="#版本说明" class="headerlink" title="版本说明"></a>版本说明</h2><p>这是一款由[<a href="https://ci-en.dlsite.com/creator/3206">暗黒郷物語</a>]社团制作的日式ACT游戏<br>游戏现在更新到了V2.0.4版本<br>游戏链接内包含了如下资源：</p><ul><li>V 2.04最新版本（PC）  </li><li>V 2.01最新版本（安卓）</li></ul><h2 id="游戏简介"><a href="#游戏简介" class="headerlink" title="游戏简介"></a>游戏简介</h2><p>飞行姬是魔物娘题材的弹射手游，玩法和愤怒的小鸟类似，玩家操作角色进行弹射击败魔物。<br>收集各种随从魔物娘为自己作战，然后一场复仇计划开始了。<br>养成不同品种的魔物娘为自己充当先锋，这样才能更好的通关游戏。 </p><h2 id="游戏预览"><a href="#游戏预览" class="headerlink" title="游戏预览"></a>游戏预览</h2><blockquote><img src="https://cdn.jsdelivr.net/gh/kasisama/Blog_images@main/Otherimgage/fei1.jpg" width="800" height="600">  <center>PC版截图</center>  </blockquote><blockquote><img src="https://cdn.jsdelivr.net/gh/kasisama/Blog_images@main/Otherimgage/fei2.jpg" width="800" height="600">  <center>PE版截图</center></blockquote><!--<img src="https://acgyw.com/usr/uploads/2021/04/2020020814322915.jpg" class="" width="200" height="100" title="测试">-->]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 游戏 </tag>
+            
+            <tag> PC </tag>
+            
+            <tag> 安卓 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Codepage/JsDelivr缓存问题</title>
+      <link href="//code-1.html"/>
+      <url>//code-1.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>备忘！JsDelivr缓存不刷新怎么办！</p><span id="more"></span><p>今天修改图片，Push到仓库后图片一直不刷新，然后就去查了一下，为了以防万一还是自己记下来比较好！<br>想要刷新缓存的时候可以通过访问一个 url 实现：<br>就是将cdn 改成 purge<br>举个例子吧！</p><pre><code class="highlight url">https://cdn.jsdelivr.net/gh/kasisama/Blog_images@main/background/Rem.png</code></pre><p>改为</p><pre><code class="highlight url">https://purge.jsdelivr.net/gh/kasisama/Blog_images@main/background/Rem.png</code></pre><p>即可</p><p><img src="https://cdn.jsdelivr.net/gh/kasisama/Blog_images@main/Codeimage/1-1.png"></p><p>重新访问一下网址查看刷新是否成功！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 日志 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CDN </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>你好！屏幕前的用户！</title>
+      <link href="/2022/04/08/%E4%BD%A0%E5%A5%BD%E4%B8%96%E7%95%8C%EF%BC%81/"/>
+      <url>/2022/04/08/%E4%BD%A0%E5%A5%BD%E4%B8%96%E7%95%8C%EF%BC%81/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>欢迎来到<a href="https://www.kasisama.top/">咔斯Sama</a>の小窝！</p><span id="more"></span><h2 id="欢迎你呀！"><a href="#欢迎你呀！" class="headerlink" title="欢迎你呀！"></a>欢迎你呀！</h2><p>嘻嘻，咔斯的博客正式迁移辣！<br>2022.4.8日，因服务器和域名到期，原博客地址<a href="http://www.kasisama.top迁移至www.ksmmhy.xyz/">www.kasisama.top迁移至www.ksmmhy.xyz</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 日志 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>仙玉尘缘-指令集合大全</title>
+      <link href="/2022/02/14/%E4%BB%99%E7%8E%89%E5%B0%98%E7%BC%98-%E6%8C%87%E4%BB%A4%E9%9B%86%E5%90%88%E5%A4%A7%E5%85%A8/"/>
+      <url>/2022/02/14/%E4%BB%99%E7%8E%89%E5%B0%98%E7%BC%98-%E6%8C%87%E4%BB%A4%E9%9B%86%E5%90%88%E5%A4%A7%E5%85%A8/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>使用指令在这里！</p><span id="more"></span><h1 id="基础功能指令"><a href="#基础功能指令" class="headerlink" title="基础功能指令"></a><strong>基础功能指令</strong></h1><p>注册+昵称#性别</p><p>注册一个游戏账户（每个QQ号只能注册一个）</p><p>种族信息</p><p>查看当前的种族信息</p><p>属性</p><p>查看当前的人物属性</p><p>信息</p><p>查看当前人物信息</p><p>钱包</p><p>查看当前货币数量</p><p>位置</p><p>查看当前所在地图</p><p>背包</p><p>查看我的背包物品</p><p>签到</p><p>每天签到一次</p><p>闭关</p><p>开始闭关修炼</p><p>出关</p><p>结束闭关修炼</p><p>突破</p><p>突破境界（游戏内属于境界制，没有等级制，你可以把突破理解为升级）</p><p>商店</p><p>查看当前所在地图上的商店</p><p>购买+物品</p><p>购买当前地图上商店内的物品</p><p>购买+物品*数量</p><p>购买当前地图上商店内的物品（多个数量购买）</p><p>使用+物品</p><p>使用背包内的物品</p><p>使用+物品*数量</p><p>使用背包内的物品（多个数量使用）</p><p>查询+物品名</p><p>查询指定物品</p><p>查询+怪物名</p><p>查询指定怪物</p><p>对话+NPC名称</p><p>和当前地图上的指定NPC对话</p><p>XX+排行榜</p><p>此功能需要自行配置【排行榜配置.ini】文件</p><p>加入队伍+队伍ID</p><p>加入一支队伍（需队员未满员）</p><p>开启自动战斗</p><p>开启自动战斗（开启后，每次打怪的战斗都会自动计算结果，不可使用功法）</p><p>关闭自动战斗</p><p>关闭自动战斗（关闭后，每次打怪的战斗都需要手动发送攻击，可使用功法）</p><p>本源</p><p>查看自己已经感悟的本源</p><p>感悟本源</p><p>感悟本源，随机获得本源</p><h1 id="活动功能指令"><a href="#活动功能指令" class="headerlink" title="活动功能指令"></a>活动功能指令</h1><p>异界战场</p><p>查看当前异界战场活动的参与数据</p><p>世界BOSS</p><p>查看当前降临的世界BOSS</p><p>世界攻击</p><p>攻击世界BOSS</p><p>世界攻击+功法名</p><p>攻击世界BOSS，使用功法</p><h1 id="任务功能指令"><a href="#任务功能指令" class="headerlink" title="任务功能指令"></a>任务功能指令</h1><p>主线任务</p><p>查看当前主线剧情任务</p><p>支线任务</p><p>查看当前随机的支线任务</p><p>完成主线</p><p>完成主线剧情任务</p><p>完成支线</p><p>完成随机支线任务</p><h1 id="地图功能指令"><a href="#地图功能指令" class="headerlink" title="地图功能指令"></a><strong>地图功能指令</strong></h1><p>界域</p><p>查看游戏内的所有界域</p><p>传送+界域名</p><p>传送进入指定的界域内（消耗传送时间）</p><p>地图</p><p>查看当前所在界域内的所有地图</p><p>进入+地图名</p><p>进入指定的地图（需在当前界域内）</p><h1 id="战斗功能指令"><a href="#战斗功能指令" class="headerlink" title="战斗功能指令"></a><strong>战斗功能指令</strong></h1><p>探索</p><p>在当前位置探索怪物（可能遇到机缘）</p><p>攻击</p><p>攻击探索遇到的怪物</p><p>攻击+功法名</p><p>使用功法攻击遇到的怪物</p><h1 id="沙盒功能指令"><a href="#沙盒功能指令" class="headerlink" title="沙盒功能指令"></a><strong>沙盒功能指令</strong></h1><p>采集</p><p>在当前地图上采集草药</p><p>垂钓</p><p>在当前地图上钓取鱼类</p><p>挖矿</p><p>在当前地图上挖取矿石</p><p>收货</p><p>结束采集、垂钓、挖矿</p><h1 id="炼丹炼器功能指令"><a href="#炼丹炼器功能指令" class="headerlink" title="炼丹炼器功能指令"></a><strong>炼丹炼器功能指令</strong></h1><p>丹方</p><p>查看可炼制的丹药的丹方</p><p>器谱</p><p>查看可炼制的器材的器谱</p><p>炼丹+丹药名</p><p>炼制指定的丹药</p><p>炼器+器材名</p><p>炼制指定的器材</p><p>收丹</p><p>收取当前炼制的丹药</p><p>凝器</p><p>凝炼当前炼制的器材</p><p>升级炼丹</p><p>升级炼丹等级</p><p>升级炼器</p><p>升级炼器等级</p><p>炼丹状态</p><p>查看当前炼丹的状态</p><p>炼器状态</p><p>查看当前炼器的状态</p><h1 id="邮箱功能指令"><a href="#邮箱功能指令" class="headerlink" title="邮箱功能指令"></a><strong>邮箱功能指令</strong></h1><p>邮箱</p><p>查看我的邮箱</p><p>阅读+邮件ID</p><p>阅读指定的邮件</p><p>收件+邮件ID</p><p>收取指定的邮件</p><p>删件+邮件ID</p><p>删除指定的邮件</p><h1 id="组队功能指令"><a href="#组队功能指令" class="headerlink" title="组队功能指令"></a><strong>组队功能指令</strong></h1><p>队伍列表</p><p>查看所有队伍信息</p><p>创建队伍</p><p>创建一支队伍</p><p>解散队伍</p><p>解散一支队伍（需是队长）</p><p>退出队伍</p><p>退出当前队伍（需是队员）</p><p>查看队伍</p><p>查看当前所在队伍</p><h1 id="功法功能指令"><a href="#功法功能指令" class="headerlink" title="功法功能指令"></a><strong>功法功能指令</strong></h1><p>我的功法</p><p>查看自己已经学习的功法</p><p>查看功法+功法名</p><p>查看指定的功法信息</p><h1 id="法宝功能指令"><a href="#法宝功能指令" class="headerlink" title="法宝功能指令"></a><strong>法宝功能指令</strong></h1><p>法宝</p><p>查看当前祭出的法宝信息</p><p>收回</p><p>收回当前已经祭出的法宝</p><p>法宝背包</p><p>查看我的法宝背包内的法宝</p><p>查询+法宝名</p><p>查询指定法宝（支持查询其他人的法宝）</p><p>强化+法宝名#强化材料</p><p>强化法宝背包内的法宝（优先扣除专属强化材料）</p><p>精炼+法宝名#精炼材料</p><p>精炼法宝背包内的法宝（优先扣除专属精炼材料）</p><p>预强化+法宝名#强化材料</p><p>预先查看强化法宝数据</p><p>预精炼+法宝名#精炼材料</p><p>预先查看精炼法宝数据</p><h1 id="客服功能指令"><a href="#客服功能指令" class="headerlink" title="客服功能指令"></a><strong>客服功能指令</strong></h1><p>充值货币1+QQ#数量</p><p>客服充值指令</p><p>充值货币2+QQ#数量</p><p>客服充值指令</p><p>充值货币3+QQ#数量</p><p>客服充值指令</p><p>充值货币4+QQ#数量</p><p>客服充值指令</p><p>充值物品+QQ#物品名*数量</p><p>客服充值指令</p><p>© 版权声明</p><p>文章版权归微香社区所有，未经允许请勿转载，谢谢~</p><p>THE END</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> wiki </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> wiki </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>宠物养成RE 更新日志集合</title>
+      <link href="//petupdata.html"/>
+      <url>//petupdata.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><strong>插件下载更新地址：<a href="https://url48.ctfile.com/d/11320748-43394040-e9da61">城通网盘</a> （访问密码：6725）</strong></p><span id="more"></span><h3 id="2-3-2-2022-2-27"><a href="#2-3-2-2022-2-27" class="headerlink" title="2.3.2  2022.2.27"></a><strong>2.3.2</strong>  2022.2.27</h3><ol><li>修复控制台拓展显示</li><li>修复频道支持拓展的问题</li><li>修复领养宠物不能翻页</li><li>修复宠物健身无响应</li><li>修复好感商店扣钱和显示问题</li><li>修复群开关发放奖励bug</li><li>新增单次购买上限(限制单次批量购买的数量，如果数量较大就可能会出现错误，建议10~30以内)</li></ol><p><strong>2.3.1</strong> 2022.2.25</p><ol><li>修复控制台错误分支bug</li><li>修复宠物银行bug</li><li>任何状态都可使用宠物商店</li><li>宠物进化觉醒清空成长改为减去成长</li><li>新增频道支持【拓展功能，目前只限小栗子框架】</li><li>新增家族神树属性自定义，【老用户请前往 控制台-互动-杂项 填写神树相关的设置，新用户用自带数据即可】</li><li>新增宠物进化觉醒需要好感限制【老用户请前往控制台填写进化好感，新用户用自带数据即可】</li><li>新增好感商店【老用户请前往 指令配置.ini里添加一个好感商店的指令，具体格式见公告尾】</li><li>新增新手积累七天签到奖励【老用户可下载最新数据包，单独提取出[新手签到配置.ini]文件安装】</li><li>注： 【重要】宠物进化觉醒需要好感限制，必须要配置，否则会出错（新用户请忽略） 【重要】好感商店指令的格式为：（老用户不配置将无法使用好感商店） [好感商店] 指令&#x3D;好感商店</li></ol><p><strong>2.3</strong> 2022.2.8</p><ol><li>重置整体框架</li><li>删除宠物逃跑功能</li><li>删除宠物重生道具</li><li>拓展授权方式已改为买断制，之前购买过的授权可以继续在老版本使用</li><li>UI重做</li><li>支持指令自定义（老版本升级，请把2.3压缩包里的“指令配置.ini”解压到数据目录）</li><li>优化部分控制台功能，提高体验</li><li>修复所有已知bug，同时重置后的初期几个版本可能不太稳定，需要大家帮助寻找bug，感谢大家的支持</li><li>老版本升级如果遇到图片失效的情况，请检查数据目录里的图片文件夹，新版本将图片文件夹“宠物养成”改为了“图片”</li></ol><p><strong>2.2.9</strong> 2021.10.27</p><ol><li>修复宠物时间系统</li><li>修复整体稳定性</li><li>修复宠物找回</li></ol><p><strong>2.2.8</strong> 2021.08.30</p><ol><li>修复所有已知bug</li><li>宠物银行拓展发布，请加群进行下载。</li></ol><p><strong>2.2.7</strong> 2021.08.29</p><ol><li>修复所有已知bug</li></ol><p><strong>2.2.6</strong> 2021.08.28</p><ol><li>修复所有已知bug</li><li>控制台优化</li></ol><p><strong>2.2.5</strong> 2021.08.10</p><ol><li>修复所有已知bug</li><li>重置交易系统</li></ol><p><strong>2.2.3</strong> 2021.06.22</p><ol><li>修复所有已知bug</li><li>新增控制台数据热更新（不用再频繁点击数据重载）</li></ol><p><strong>2.2</strong> 2021.04.23</p><ol><li>修复所有已知bug</li><li>重构整个游戏基层</li><li>新增放生宠物</li><li>新增发放补偿</li><li>单个宠物的打工、健身、学习、散步图片</li><li>控制台重塑，优化体验</li><li>宠物打工、健身支持图片</li><li>修复宠物锻炼完成后数据出错的问题</li></ol><p><strong>2.1.5.6</strong> 2020.08.25</p><ol><li>修复创建家族崩溃bug</li><li>修复进化觉醒饱食bug</li><li>修复攻击自己的bug</li><li>新增宠物饱食上限属性</li><li>新增指令：查看宠物＋宠物名</li><li>控制台新增点赞机器人QQ，请前往配置</li></ol><p><strong>2.1.5.5</strong> 2020.08.9</p><ol><li>修复数组崩溃问题</li><li>正式采用新分群机制</li><li>修复艾特失效问题</li><li>优化插件整体</li></ol><p><strong>2.1.5</strong> 2020.06.14</p><ol><li>修复宠物状态bug</li><li>修复宠物家族bug</li><li>修复学习限制bug</li><li>修复商店购买礼包bug</li><li>修复打开随机礼包bug</li><li>新增宠物进化分支</li><li>新增宠物健身</li></ol><p><strong>2.1.4</strong> 2020.06.03</p><ol><li>修复查看商品bug</li><li>修复一些状态bug</li><li>新增家族列表(指令)</li><li>新增家族成员(指令)</li><li>控制台玩家配置新增玩家QQ搜索</li><li>控制台物品配置新增快捷添加至商店</li><li>注：新增的两个指令需要在【屏蔽消息前缀】里添加上，不添加需要加上前缀使用</li></ol><p><strong>2.1.3</strong> 2020.05.27</p><ol><li>修复重启拓展停用bug</li><li>修复创建家族崩溃bug</li><li>修复接受交易货币bug</li></ol><p><strong>2.1.2</strong> 2020.05.18</p><ol><li>优化DLC用户的体验</li><li>修复所有已知BUG</li></ol><p><strong>2.1.1</strong> 2020.05.14</p><ol><li>修复宠物登录问题</li><li>修复拓展刷新问题</li></ol><p><strong>2.1.0</strong> 2020.05.14</p><ol><li>修复无法创建家族bug</li><li>修复宠物散步成长bug</li><li>开发DLC，欢迎各位玩家和开发者</li></ol><p><strong>2.0.9</strong> 2020.05.8</p><ol><li>修复宠物打工bug</li><li>优化控制台日志</li></ol><p><strong>2.0.8</strong> 2020.05.6</p><ol><li>修复对接货币失效bug</li><li>修复宠物交易导致崩溃bug</li><li>新增物品获取类型，请自行前往控制台配置</li></ol><p><strong>2.0.7</strong> 2020.05.5</p><ol><li>修复货币bug</li><li>修复宠物打工控制台bug</li><li>即将开放DLC，玩家可自己制作DLC</li></ol><p><strong>2.0.6</strong> 2020.05.4</p><ol><li>修复新增货币对接导致的bug</li><li>优化摸头、学习、锻炼</li><li>新增成长类型的物品</li><li>新增宠物打工</li></ol><p><strong>2.0.5</strong> 2020.05.4</p><ol><li>修复神树果实无法批量使用bug</li><li>修复重复领养宠物bug</li><li>修复重复领养宠物bug</li><li>新增货币对接</li><li>新增宠物交易</li><li>修复宠物抽奖抽到货币bug</li><li>优化控制台编辑框显示</li></ol><p><strong>2.0.4</strong> 2020.04.29</p><ol><li>修复宠物偷袭bug</li><li>神树果实已可使用</li><li>我的宠物显示宠物种类</li><li>修复批量使用礼包时只获得一次奖励bug</li></ol><p><strong>2.0.3</strong> 2020.04.27</p><ol><li>修复错误饱食心情扣除间隔bug</li><li>修改宠物治疗无濒死状态时也可使用</li><li>检测更新替换为自动更新</li></ol><p><strong>2.0.2</strong> 2020.04.27</p><ol><li>修复宠物逃跑后无法找回bug</li><li>控制台新增饱食心情扣除间隔选项</li><li>控制台新增防御的物品类型</li></ol><p><strong>2.0.1</strong> 2020.04.26</p><ol><li>修复宠物偷袭血量扣空依然可活动bug</li><li>修改宠物饥饿后仍可使用部分指令</li><li>控制台新增宠物钓鱼上钩几率</li><li>修复不会定时扣饱食度bug</li><li>修复检测更新bug</li></ol><p><strong>2.0.0</strong> 2020.04.25</p><ol><li>修复宠物偷袭bug</li><li>修复宠物改名bug</li><li>控制台新增删除玩家</li></ol><p><strong>1.1.9</strong> 2020.04.22</p><ol><li>不忘初心，重新启动</li><li>具体功能请自行体验</li></ol><p><strong>1.1.8</strong> 2019.04.13</p><ol><li>重写后因BUG过多已经下架。</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 日志 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 宠物养成 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>宠物养成使用教程</title>
+      <link href="//usepet.html"/>
+      <url>//usepet.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><strong>本篇教程尚未完成，仅供参考</strong></p><span id="more"></span><p>首先，应该先下载cpk文件和数据包（在论坛下载过的不需要再次下载） 插件本体：<a href="https://kasi.lanzous.com/ixe6jedp0uh">点我下载</a> 数据文件：<a href="https://kasi.lanzous.com/iVDEdedp5qd">点我下载</a> 图片文件：<a href="https://474b.com/file/11320748-439869900">点我下载</a> <strong>AIR用户无法发图，AIR即是免费版机器人</strong> 下载完成后，打开酷Q根目录，把压缩包内的文件全部拖入文件夹即可，然后重启机器人即可。 图片教程：<img src="https://i.loli.net/2020/05/09/Aa18mVHy2MPcGLh.gif"> [&#x2F;successbox] [infobox title&#x3D;”宠物养成指令”] 宠物养成默认指令如下： <img src="https://i.loli.net/2020/05/09/5zMAS2XK8gYImUy.jpg"> 补充： 宠物交易： 宠物交易@QQ*物品×数量#交易价格 接受交易、拒绝交易、取消交易 家族列表、家族成员 感谢主群群员@白鲮(24893****)的图片 [&#x2F;infobox] [infobox title&#x3D;”控制台部分解释”]</p><ol><li>核心配置<ol><li>初始宠物：分隔符#，可添加或减少宠物</li><li>消息前缀：可空，但最好有前缀</li><li>主人QQ：为以后的功能做铺垫，请务必填写</li><li>屏蔽前缀指令：不想使用前缀的指令，请添加到这里，可以无视前缀使用</li><li>开启群号：分隔符#，可以多群，不填默认全部群开启。</li></ol></li><li>货币对接<ol><li>货币对接路径：需要填写完整的路径，例如：F:\酷Q Pro\data\app\cc.kasiwuhui.Text\玩家数据\玩家信息.ini</li><li>货币配置节：配置节就是ini文件里“[]”中括号里面的文本，如果是群号就可以填写变量[群号]，如果是QQ就可以填写变量[QQ]</li><li>货币配置项：配置项就是ini文件里“[]”中括号下面&#x3D;等号前面的数据，如果是群号就可以填写变量[群号]，如果是QQ就可以填写变量[QQ]</li></ol></li><li>交易<ol><li>交易最低货币：交易时所出的货币最低不能少于这个数值</li><li>交易手续费：交易成功后所收取的手续费</li></ol></li><li>抽奖<ol><li>抽奖需要物品：物品*数量</li><li>抽奖奖励设置：即奖池，几率%物品*最低数量~最高数量，分隔符为#，至少配置一个100%的奖励，否则会崩溃</li></ol></li></ol><p>[&#x2F;infobox]</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> wiki </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> wiki </tag>
+            
+            <tag> 宠物养成 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>咔斯娱乐机器人娱乐使用及购买协议</title>
+      <link href="//buypet.html"/>
+      <url>//buypet.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h4 id="一旦你使用宠物养成的免费以及收费应用，请查看以下协议，且您必须遵循此协议！"><a href="#一旦你使用宠物养成的免费以及收费应用，请查看以下协议，且您必须遵循此协议！" class="headerlink" title="一旦你使用宠物养成的免费以及收费应用，请查看以下协议，且您必须遵循此协议！"></a>一旦你使用宠物养成的免费以及收费应用，请查看以下协议，且您必须遵循此协议！</h4><span id="more"></span><p>首先感谢您使用咔斯娱乐的宠物养成应用。本协议适用于本咔斯娱乐的所有收费、免费应用，如有特殊情况会另行通知。 本协议是您（或称”用户”）与咔斯娱乐之间使用咔斯娱乐制作的应用软件服务所订立的契约。在注册和登录本应用前，请您仔细阅读本协议的全部内容，特别是协议中以加粗字体显示的内容，您应重点阅读。如您对协议有任何疑问，可向咔斯娱乐提问。如果您不同意本协议或其中任何条款约定，请您立即停止注册和登录；您成功注册和登录后，本协议即构成对双方有约束力的法律文件。</p><h2 id="收费应用购买协议"><a href="#收费应用购买协议" class="headerlink" title="收费应用购买协议"></a><strong>收费应用购买协议</strong></h2><ol><li>购买应用即代表你已经了解且知道此应用的名称和作用，并且愿意接受收费应用提供的教学服务。</li><li>用户在完成注册或登录程序实际使用本应用提供服务时，应当是具备完全民事权利能力和完全民事行为能力的自然人、法人或其他组织。若用户不具备前述主体资格，则用户及用户的监护人应当依照法律规定承担因此而导致的一切后果，官方有权注销或永久冻结您的账户。</li><li>由于电脑应用程序的可复制性，用户一旦付费购买应用以后，咔斯娱乐不接受任何理由的退款申请。</li><li>使用本应用禁止用于违法违规用途，<strong>禁止使用本应用暴力、反动、赌博、诈骗、淫秽色情等有害信息</strong>，咔斯娱乐不对用户的类似使用行为负责。</li><li><strong>对于用户在使用或售后过程中出现不当言论、行为等，或在论坛、QQ群、QQ私聊等平台有故意诋毁咔斯娱乐任何人员和应用的，咔斯娱乐有权暂停或终止售后服务。</strong></li><li>用户在使用咔斯娱乐所有的应用时可能会遇到软件报错，崩溃等情况，或出现漏洞、缺陷等问题，用户应该及时提交，并且详细描述（附带全屏录屏或全屏截图），若确实是咔斯娱乐的应用的题，我们将会及时处理。若经过核实此问题并不是咔斯娱乐的应用出现的，群主和管理员在给出明确的答复后即可。</li><li><strong>所有用户未经允许，禁止私自将本人与咔斯娱乐群、咔斯娱乐群人员的任何交流记录，包括文字、图片、视频、表情包、文件等通过转发、截屏、上传等方式发布到论坛、其他QQ群、QQ空间等社交平台。</strong></li><li>如应用涨价，已经购买的用户不受影响也无需补差价，但在新的价格公布以后想要购买的用户须按照现行价格。</li><li>如应用降价，已经购买的用户不受影响也无法申请退差价，但在新的价格公布以后想要购买的用户须按照现行价格。</li><li>如遇不可抗力导致的数据丢失、授权失效等非正常情况，咔斯娱乐会尽力恢复，但不保证。</li><li><strong>*应用异常崩溃情况说明</strong><br>1.  残留进程导致的崩溃（这种情况是极少数的，存在几率很少）<br>2.  你挂机器人的虚拟机系统不完整（一般出现情况为影子系统导致的）<br>3.  你的机器上存在调试器类型的软件正在运行（请关闭调试器类型的软件即可正常打开）<br>4.  网络不通畅导致的授权连接不稳定（可挂在稳定的云服务器上即可正常使用，推荐：腾讯云学生机、华为云学生机）</li><li><strong>用户应当自行妥善保管自己在本应用的账号、密码等个人信息</strong>，避免使用过于简单的密码。您在服务使用过程中可以根据本应用规定更改密码。非经本应用事先同意，账号和密码不得出借、转让、继承或者赠与。非因本应用原因导致您的账号、密码遗失、遗忘或被他人窃取的，本应用不承担责任。如果您发现自己的个人信息泄密，尤其是本应用账户及密码发生泄露，请您立即和咔斯娱乐反馈。</li><li>用户只能在本应用和内容提供者授权下才能使用由本应用享有权利的内容，且无权擅自复制、修改这些内容，或创造与内容有关的派生产品。任何对本应用享有的基于该信息及&#x2F;或其载体，及&#x2F;或其表现形式，及&#x2F;或服务的权利的侵犯，均属于对本应用权利的侵犯。</li></ol><h2 id="收费应用违反执行协议"><a href="#收费应用违反执行协议" class="headerlink" title="收费应用违反执行协议"></a><strong>收费应用违反执行协议</strong></h2><ol><li>若用户未遵守本协议的，须对自己在网上的言论和行为承担法律责任，且咔斯娱乐有权作出独立判断并采取暂停或关闭用户帐号服务等措施。</li><li>咔斯娱乐会对违反协议的用户造成的影响进行判断，视情节轻重包括但不限于以下处理办法：<ol><li>不再提供任何售后帮助服务但保留用户的应用授权和后期更新权利。</li><li>不再提供任何售后帮助服务。</li><li>封禁应用授权7天~永久不等。</li><li>向公安机关提交投诉。</li></ol></li></ol><h2 id="免费应用使用协议"><a href="#免费应用使用协议" class="headerlink" title="免费应用使用协议"></a><strong>免费应用使用协议</strong></h2><ol><li>也请遵从以上收费应用的使用协议。</li><li>免费应用为完全免费使用，官方有权不提供任何售后服务，如遇到问题请自行解决（如遇到崩溃问题请查看收费应用购买协议的第十一条）</li></ol><h2 id="关于本协议的修改"><a href="#关于本协议的修改" class="headerlink" title="关于本协议的修改"></a><strong>关于本协议的修改</strong></h2><p>咔斯娱乐有权根据法律法规变化和实际运营需要，对本协议不定时地进行修改。本协议一旦发生变动，咔斯娱乐将通告用户，修改后的协议一经通告即生效。用户如果不同意所改动的内容，应主动停止使用咔斯娱乐提供的软件、服务。如果用户继续享用咔斯娱乐提供的软件、服务，则视为接受本协议的变动。一切以最新版本的协议为准。</p><h2 id="用户与咔斯娱乐一致同意（以上所有条款）"><a href="#用户与咔斯娱乐一致同意（以上所有条款）" class="headerlink" title="用户与咔斯娱乐一致同意（以上所有条款）"></a><strong>用户与咔斯娱乐一致同意（以上所有条款）</strong></h2><p><strong>（1）双方应持平等、友好、争取合理解决问题的态度；</strong><br><strong>（2）发生纠纷时首先以协商方式解决，如协商未果，任何一方可向相关社区管理部门反应。</strong></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 公告 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 咔斯娱乐 </tag>
+            
+            <tag> 服务条款 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>欢迎呀！咔斯的博客正式开启啦！</title>
+      <link href="/2020/02/11/hello-world/"/>
+      <url>/2020/02/11/hello-world/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><span id="more"></span><p>2020年2月11日，咔斯的博客搭建完毕！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 日志 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> QWQ </tag>
+            
+            <tag> 博客 </tag>
+            
+            <tag> 咔斯 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
