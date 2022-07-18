@@ -34,6 +34,7 @@
   width: 15px;
   height: 15px;
   border-radius: 50%;
+  z-index: -1;
   background-color: $theme_color;
 }
 #nexmoe-header .nexmoe-count .nexmoe-count-item .item-right {
