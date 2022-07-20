@@ -212,6 +212,24 @@ article pre .txt {
   color: $theme_color;
   font-size: 17px;
 }
+#nexmoe-content .nexmoe-post .nexmoe-comment .v img.vimg {
+  transition: all 1s /* 旋转时间为 1s */;
+}
+#nexmoe-content .nexmoe-post .nexmoe-comment .v img.vimg:hover {
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+}
+#nexmoe-content .nexmoe-post .nexmoe-comment .v .vwrap {
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  position: relative;
+  padding: 10px;
+}
 #nexmoe-content .nexmoe-post .nexmoe-comment .v a::before {
   background: $theme_color;
 }
@@ -222,25 +240,39 @@ article pre .txt {
   background-repeat: no-repeat;
   background-color: #fff;
 }
+#nexmoe-content .nexmoe-post .nexmoe-comment .v .vinput:focus {
+  border-bottom-color: $theme_color !important;
+}
 #nexmoe-content .nexmoe-post .nexmoe-comment .v .vlist .vcard .vhead .vnick {
   color: $theme_color;
-}
-#nexmoe-content .nexmoe-post .nexmoe-comment .v .vlist .vcard .vhead .vnick::before {
-  background: $theme_color;
+  position: relative;
+  font-size: 0.875em;
+  font-weight: 500;
+  margin-right: 0.875em;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
 }
 #nexmoe-content .nexmoe-post .nexmoe-comment .v button {
   background: $theme_color_time;
   color: $theme_color;
+  border: none;
 }
 #nexmoe-content .nexmoe-post .nexmoe-comment .v button:hover {
   background: $theme_color;
   color: #fff;
   border-color: $theme_color;
 }
+#nexmoe-content .nexmoe-post .nexmoe-comment .v button:active {
+  transform: scale(0.95);
+}
 #nexmoe-content .nexmoe-post .nexmoe-comment .v .vcontrol .col-20 a {
   display: none;
 }
 #nexmoe-content .nexmoe-post .nexmoe-comment .v .info {
+  display: none;
+}
+#nexmoe-content .nexmoe-post .nexmoe-comment .v .vpower {
   display: none;
 }
 #nexmoe-content .nexmoe-post .nexmoe-post-copyright a {
