@@ -1702,21 +1702,25 @@ font.douyin {
   }
 }
 .nexmoe-post-right .nexmoe-toc {
-  width: 280px;
+  width: auto;
   text-align: left;
   box-shadow: 0 0 1rem rgba(161,177,204,0.4);
   background-color: #fff;
   position: absolute;
-  bottom: 75px;
+  bottom: 0;
   right: 0;
   border-radius: 16px;
   padding: 20px;
   font-size: 16px;
-  opacity: 0;
-  z-index: -1;
+  display: none;
+  z-index: 0;
   max-height: calc(100vh - 130px);
   overflow-y: scroll;
   transition: all 0.3s ease-in;
+}
+.nexmoe-tool .catalog:hover .nexmoe-toc {
+  display: block;
+  color: #09f;
 }
 .nexmoe-toc a {
   color: rgba(0,0,0,0.6);
@@ -1728,7 +1732,6 @@ font.douyin {
 .nexmoe-toc ol {
   padding-left: 1em;
   margin: 0;
-  display: none;
 }
 .nexmoe-toc li {
   margin: 0;
@@ -1745,24 +1748,24 @@ photos img {
   width: 25%;
 }
 .nexmoe-rainbow a:nth-child(7n+1) {
-  background-color: rgba(78,255,208,0.15);
-  color: #29eb7d;
+  background-color: rgba(72,182,255,0.15);
+  color: #09f;
 }
 .nexmoe-rainbow a:nth-child(7n+2) {
-  background-color: rgba(63,192,247,0.15);
-  color: #07acf2;
+  background-color: rgba(88,108,255,0.15);
+  color: #001eff;
 }
 .nexmoe-rainbow a:nth-child(7n+3) {
-  background-color: rgba(69,172,251,0.15);
-  color: #0091ff;
+  background-color: rgba(244,229,65,0.15);
+  color: #cfbe00;
 }
 .nexmoe-rainbow a:nth-child(7n+4) {
-  background-color: rgba(89,97,247,0.15);
-  color: #1f29ea;
+  background-color: rgba(250,71,134,0.15);
+  color: #ff065d;
 }
 .nexmoe-rainbow a:nth-child(7n+5) {
-  background-color: rgba(137,93,232,0.15);
-  color: #5913f0;
+  background-color: rgba(83,246,96,0.15);
+  color: #00ff15;
 }
 .nexmoe-rainbow a:nth-child(7n+6) {
   background-color: rgba(208,92,246,0.15);

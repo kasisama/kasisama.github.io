@@ -5,7 +5,7 @@
 <head>
   
   <meta name="baidu-site-verification" content="code-J1Qg17G6wT" />
-  <title>文章归档：2020/5 - 咔斯の小窝</title>
+  <title>web学习笔记3 - Js基础 - 咔斯の小窝</title>
   <meta charset="UTF-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
@@ -16,19 +16,25 @@
     <meta name="baidu-site-verification" content="code-7bF3wXCwO5" />
 
   <link rel="shortcut icon" href="https://s2.loli.net/2022/07/19/xKNvsPHqcyCL37d.png" type="image/png" />
-  <meta property="og:type" content="website">
-<meta property="og:title" content="咔斯の小窝">
-<meta property="og:url" content="https://www.kassama.top/archives/2020/05/index.html">
+  <meta name="description" content="2022-07-07 学习总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="web学习笔记3 - Js基础">
+<meta property="og:url" content="https://www.kassama.top/webNotes3.html">
 <meta property="og:site_name" content="咔斯の小窝">
+<meta property="og:description" content="2022-07-07 学习总结">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-07-07T09:35:00.000Z">
+<meta property="article:modified_time" content="2022-07-21T11:18:44.148Z">
 <meta property="article:author" content="咔斯Sama">
+<meta property="article:tag" content="web">
+<meta property="article:tag" content="HTML">
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css?v=233" crossorigin>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css">
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_cksn56jaae6.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1658402367892">
+  <link rel="stylesheet" href="/css/style.css?v=1658402367798">
 <meta name="generator" content="Hexo 6.1.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -222,32 +228,219 @@
   </div>
   <div id="nexmoe-content">
     <div class="nexmoe-primary">
-        <section class="nexmoe-posts">
+        <div class="nexmoe-post">
     
-    <div class="nexmoe-post">
-        <a href="/usepet.html">
-            
-                <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 24.305555555555554%;">
-                    <img data-src="https://tva1.sinaimg.cn/large/006RYYI7ly1h4bb6rlw2nj328g1bc79p.jpg" data-sizes="auto" alt="宠物养成使用教程" class="lazyload">
-                    <h1>宠物养成使用教程</h1>
-                </div>
-            
-        </a>
-        
-        <div class="nexmoe-post-meta nexmoe-rainbow">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2020年05月09日</a>
-            <a><i class="nexmoefont icon-areachart"></i>540 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
+        <div class="nexmoe-post-cover"
+             style="padding-bottom: 24.305555555555554%;">
+            <img data-src="https://tva1.sinaimg.cn/large/006RYYI7ly1h4bb6rlw2nj328g1bc79p.jpg" data-sizes="auto" alt="web学习笔记3 - Js基础" class="lazyload">
+            <h1>web学习笔记3 - Js基础</h1>
         </div>
+    
+
+        <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2022年07月07日</a>
+    <a><i class="nexmoefont icon-areachart"></i>513 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
+</div>
+
 
         <article>
-            
-                <p><strong>本篇教程尚未完成，仅供参考</strong></p>
-            
+            <p>2022-07-07 学习总结</p>
+<span id="more"></span>
+<h2 id="js更改样式"><a href="#js更改样式" class="headerlink" title="js更改样式"></a>js更改样式</h2><pre><code class="highlight html"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;d1&quot;</span>&gt;</span>更改样式<span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+<span class="comment">&lt;!-- onclick 当点击的时候， changeStyle() 点击执行changeStyle功能--&gt;</span>
+<span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">&quot;changeStyle()&quot;</span>&gt;</span>点击更改样式<span class="tag">&lt;/<span class="name">button</span>&gt;</span>
+<span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span>
+<span class="language-javascript">    </span>
+<span class="language-javascript"><span class="comment">//  定义函数</span></span>
+<span class="language-javascript"><span class="keyword">function</span> <span class="title function_">changeStyle</span>(<span class="params"></span>)&#123;</span>
+<span class="language-javascript">    <span class="comment">// 1查找div元素 通过函数进行查找的 document 文档，getElementById() 通过id获取元素</span></span>
+<span class="language-javascript">    <span class="comment">// .style 添加行内样式 ; .color 字体颜色；</span></span>
+<span class="language-javascript">    <span class="comment">// document.getElementById(&quot;d1&quot;).style.color=&quot;red&quot;</span></span>
+<span class="language-javascript"></span>
+<span class="language-javascript">    <span class="comment">// 2 如果标签设置了id，js可以简单通过id直接获取标签, document.getElementById (&quot;d1&quot;) 类似于 d1</span></span>
+<span class="language-javascript">    d1.<span class="property">style</span>.<span class="property">color</span>=<span class="string">&quot;red&quot;</span></span>
+<span class="language-javascript">&#125;</span>
+<span class="language-javascript"></span>
+<span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></code></pre>
+
+<h2 id="流程控制语句"><a href="#流程控制语句" class="headerlink" title="流程控制语句"></a>流程控制语句</h2><p><code>if</code> : 条件控制语句<br><code>switch...case</code> : 条件控制语句<br><code>for</code> : 循环控制语句<br><code>do...while</code> : 循环语句<br><code>while</code> : 循环语句<br><code>try...catch...finally</code> : 语句用于处理代码中可能出现的错误信息</p>
+<h3 id="if"><a href="#if" class="headerlink" title="if"></a>if</h3><ol>
+<li><p><code>单独if条件</code> 如果条件成了 执行{代码块}</p>
+ <pre><code class="highlight js"><span class="keyword">var</span> age = <span class="number">33</span>
+<span class="keyword">if</span> (age&gt;<span class="number">40</span>) &#123;
+<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;大叔一枚&quot;</span>)
+&#125;</code></pre></li>
+<li><p><code>多条件判断</code><br> <code>=</code> 赋值 ，name&#x3D;”刘能” 证明name是”刘能, 非空字符串作为if条件 这个时候成立的<br> <code>==</code> 比较相等的<br> <code>===</code> 恒等的 值和类型必须都一样<br> 建议多条件判断不要使用<code>if...if</code> 弊端在于，每个<code>if</code>都会去判断，导致执行时间过长</p>
+ <pre><code class="highlight js"><span class="keyword">var</span> name = <span class="string">&quot;刘德华&quot;</span>
+<span class="keyword">if</span>(name==<span class="string">&quot;刘德华&quot;</span>)&#123;
+    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;能执行到不?&quot;</span>)
+    name = <span class="string">&quot;李嘉诚&quot;</span>
+&#125;
+<span class="keyword">if</span>(name==<span class="string">&quot;李嘉诚&quot;</span>)&#123;
+    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;帅哥一枚&quot;</span>)
+&#125;</code></pre></li>
+<li><p><code>if...else</code>  如果…其他的…<br> <code>if...else...</code> 只会判断一次</p>
+ <pre><code class="highlight js"><span class="keyword">var</span> score = <span class="number">80</span>
+<span class="keyword">if</span>(score&gt;<span class="number">60</span>)&#123;
+    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;我及格了&quot;</span>)
+    score = <span class="number">59</span>
+&#125;<span class="keyword">else</span>&#123; <span class="comment">// 相当小于等于60</span>
+    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;来年再战&quot;</span>)
+&#125;</code></pre></li>
+<li><p><code>数字作为if条件</code>，非0数字都是true都是成立，0未fasle 不成立的。</p>
+ <pre><code class="highlight js"><span class="keyword">var</span> a = <span class="number">0</span>
+<span class="keyword">if</span>(a)&#123;
+    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;33333333333333333333333&#x27;</span>)
+&#125;</code></pre></li>
+<li><p><code>if...else if...else</code></p>
+ <pre><code class="highlight js">score=<span class="number">80</span>
+<span class="keyword">if</span>(score&gt;<span class="number">90</span>)&#123;
+    <span class="title function_">alert</span>(<span class="string">&quot;优秀&quot;</span>)
+&#125;<span class="keyword">else</span> <span class="keyword">if</span>(score&gt;=<span class="number">80</span>&amp;&amp;score&lt;=<span class="number">90</span>)&#123;
+    <span class="title function_">alert</span>(<span class="string">&quot;良好&quot;</span>)
+&#125;<span class="keyword">else</span>&#123;
+    <span class="title function_">alert</span>(<span class="string">&quot;还凑合&quot;</span>)
+&#125;</code></pre></li>
+</ol>
+
         </article>
-    </div>
+
+        
+            
+  <div class="nexmoe-post-copyright">
+    <strong>本文作者：</strong>咔斯Sama<br>
     
+    <strong>本文链接：</strong><a href="https://www.kassama.top/webNotes3.html" title="https:&#x2F;&#x2F;www.kassama.top&#x2F;webNotes3.html" target="_blank" rel="noopener">https:&#x2F;&#x2F;www.kassama.top&#x2F;webNotes3.html</a><br>
+
+    
+      <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+    
+  </div>
+
+
+        
+
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/web%E7%AC%94%E8%AE%B0/">web笔记</a>
+    
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/HTML/" rel="tag">HTML</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/web/" rel="tag">web</a>
+    
+</div>
+
+    <div class="nexmoe-post-footer">
+        <section class="nexmoe-comment">
+    <div class="valine ks-valine-box"></div>
+<script src='https://unpkg.com/valine@1.5.1/dist/Valine.min.js'></script>
+<script>
+    // 使用方法 https://valine.js.org/quickstart.html
+    new Valine({
+        el: '.valine',
+        appId: '6Om9oV6sycmCPkRcrF9VR7Vd-gzGzoHsz',
+        appKey: 'cas3l5T4L8EkjrOFGsfzD8vM',
+        enableQQ: true,
+        placeholder: '阁下要说点什么嘛！',
+        requiredFields:['nick','mail'],
+
+        emojiCDN: '//cdn.bilicdn.tk/gh/kasisama/ValineCDN@master/',
+        // 表情title和图片映射
+        emojiMaps: {
+            "bilibilitv2": "bilibilitv/[tv_doge].png",
+            "bilibilitv3": "bilibilitv/[tv_亲亲].png",
+            "bilibilitv4": "bilibilitv/[tv_偷笑].png",
+            "bilibilitv5": "bilibilitv/[tv_再见].png",
+            "bilibilitv6": "bilibilitv/[tv_冷漠].png",
+            "bilibilitv7": "bilibilitv/[tv_发怒].png",
+            "bilibilitv8": "bilibilitv/[tv_发财].png",
+            "bilibilitv9": "bilibilitv/[tv_可爱].png",
+            "bilibilitv10": "bilibilitv/[tv_吐血].png",
+            "bilibilitv11": "bilibilitv/[tv_呆].png",
+            "bilibilitv12": "bilibilitv/[tv_呕吐].png",
+            "bilibilitv13": "bilibilitv/[tv_困].png",
+            "bilibilitv14": "bilibilitv/[tv_坏笑].png",
+            "bilibilitv15": "bilibilitv/[tv_大佬].png",
+            "bilibilitv16": "bilibilitv/[tv_大哭].png",
+            "bilibilitv17": "bilibilitv/[tv_委屈].png",
+            "bilibilitv18": "bilibilitv/[tv_害羞].png",
+            "bilibilitv19": "bilibilitv/[tv_尴尬].png",
+            "bilibilitv20": "bilibilitv/[tv_微笑].png",
+            "bilibilitv21": "bilibilitv/[tv_思考].png",
+            "bilibilitv22": "bilibilitv/[tv_惊吓].png",
+            "bilibilitv23": "bilibilitv/[tv_打脸].png",
+            "bilibilitv24": "bilibilitv/[tv_抓狂].png",
+            "bilibilitv25": "bilibilitv/[tv_抠鼻].png",
+            "bilibilitv26": "bilibilitv/[tv_斜眼笑].png",
+            "bilibilitv27": "bilibilitv/[tv_无奈].png",
+            "bilibilitv28": "bilibilitv/[tv_晕].png",
+            "bilibilitv29": "bilibilitv/[tv_流汗].png",
+            "bilibilitv30": "bilibilitv/[tv_流泪].png",
+            "bilibilitv31": "bilibilitv/[tv_流鼻血].png",
+            "bilibilitv32": "bilibilitv/[tv_点赞].png",
+            "bilibilitv33": "bilibilitv/[tv_生气].png",
+            "bilibilitv34": "bilibilitv/[tv_生病].png",
+            "bilibilitv35": "bilibilitv/[tv_疑问].png",
+            "bilibilitv36": "bilibilitv/[tv_白眼].png",
+            "bilibilitv37": "bilibilitv/[tv_皱眉].png",
+            "bilibilitv38": "bilibilitv/[tv_目瞪口呆].png",
+            "bilibilitv39": "bilibilitv/[tv_睡着].png",
+            "bilibilitv40": "bilibilitv/[tv_笑哭].png",
+            "bilibilitv41": "bilibilitv/[tv_腼腆].png",
+            "bilibilitv42": "bilibilitv/[tv_色].png",
+            "bilibilitv43": "bilibilitv/[tv_调侃].png",
+            "bilibilitv44": "bilibilitv/[tv_调皮].png",
+            "bilibilitv45": "bilibilitv/[tv_鄙视].png",
+            "bilibilitv46": "bilibilitv/[tv_闭嘴].png",
+            "bilibilitv47": "bilibilitv/[tv_难过].png",
+            "bilibilitv48": "bilibilitv/[tv_馋].png",
+            "bilibilitv49": "bilibilitv/[tv_鬼脸].png",
+            "bilibilitv50": "bilibilitv/[tv_黑人问号].png",
+            "bilibilitv51": "bilibilitv/[tv_鼓掌].png",
+            "Heybox1": "Heybox/expression_cube.png",
+            "Heybox2": "Heybox/expression_cube_bingbujiandan.png",
+            "Heybox3": "Heybox/expression_cube_bizui.png",
+            "Heybox4": "Heybox/expression_cube_cangsang.png",
+            "Heybox5": "Heybox/expression_cube_dalian.png",
+            "Heybox6": "Heybox/expression_cube_doge.png",
+            "Heybox7": "Heybox/expression_cube_gandong.png",
+            "Heybox8": "Heybox/expression_cube_guai.png",
+            "Heybox9": "Heybox/expression_cube_gugu.png",
+            "Heybox10": "Heybox/expression_cube_han.png",
+            "Heybox11": "Heybox/expression_cube_hbi.png",
+            "Heybox12": "Heybox/expression_cube_heirenwenhao.png",
+            "Heybox13": "Heybox/expression_cube_huaji.png",
+            "Heybox14": "Heybox/expression_cube_jiayou.png",
+            "Heybox15": "Heybox/expression_cube_jingya.png",
+            "Heybox16": "Heybox/expression_cube_kaixin.png",
+            "Heybox17": "Heybox/expression_cube_ku.png",
+            "Heybox18": "Heybox/expression_cube_kun.png",
+            "Heybox19": "Heybox/expression_cube_kuqi.png",
+            "Heybox20": "Heybox/expression_cube_nu.png",
+            "Heybox21": "Heybox/expression_cube_penshui.png",
+            "Heybox22": "Heybox/expression_cube_qiliang.png",
+            "Heybox23": "Heybox/expression_cube_shengqi.png",
+            "Heybox24": "Heybox/expression_cube_shuijiao.png",
+            "Heybox25": "Heybox/expression_cube_tanqi.png",
+            "Heybox26": "Heybox/expression_cube_tanshou.png",
+            "Heybox27": "Heybox/expression_cube_tu.png",
+            "Heybox28": "Heybox/expression_cube_wa.png",
+            "Heybox29": "Heybox/expression_cube_weiqu.png",
+            "Heybox30": "Heybox/expression_cube_weixiao.png",
+            "Heybox31": "Heybox/expression_cube_wulianku.png",
+            "Heybox32": "Heybox/expression_cube_xia.png",
+            "Heybox33": "Heybox/expression_cube_xiaocry.png",
+            "Heybox34": "Heybox/expression_cube_xihuan.png",
+            "Heybox35": "Heybox/expression_cube_xuexi.png",
+            "Heybox36": "Heybox/expression_cube_yun.png",
+            "Heybox37": "Heybox/expression_cube_zan.png"
+        }
+    })
+    
+</script>
 </section>
+    </div>
+</div>
 
 
         <div class="nexmoe-post-right">
@@ -256,6 +449,13 @@
                 
                 
                     
+                        <button class="mdui-fab catalog" style="overflow:unset;">
+                            <i class="nexmoefont icon-i-catalog"></i>
+                            <div class="nexmoe-toc">
+                              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#js%E6%9B%B4%E6%94%B9%E6%A0%B7%E5%BC%8F"><span class="toc-number">1.</span> <span class="toc-text">js更改样式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5"><span class="toc-number">2.</span> <span class="toc-text">流程控制语句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#if"><span class="toc-number">2.1.</span> <span class="toc-text">if</span></a></li></ol></li></ol>
+                            </div>
+                        </button>
+                        
                   
                 
                   <a href="#" aria-label="回到顶部" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
@@ -963,7 +1163,7 @@
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
 
-<script src="/js/app.js?v=1658402367894"></script>
+<script src="/js/app.js?v=1658402367810"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
 <script>
