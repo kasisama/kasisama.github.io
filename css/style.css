@@ -1090,9 +1090,6 @@ article ul li::after {
 article ul li:last-child:after {
   display: none;
 }
-article ul span {
-  margin-right: 15px;
-}
 article.nexmoe-py ul {
   list-style-type: none;
   padding: 0;
