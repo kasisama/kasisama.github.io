@@ -53,15 +53,18 @@ $(document).ready(function () {
     $(".nexmoe-toc").css('opacity','1');
     $(".nexmoe-toc").css('z-index','0');
     $(".toc").css('display','block')
-  })
+  });
   $('.nexmoe-toc').mouseleave(function(){
     $('.nexmoe-toc').css('opacity','0');
     $(".nexmoe-toc").css('z-index','-1');
     // $(".toc").css('display','none');
+  });
+  $(".toc").mouseleave(function(){
     var timer=setTimeout(function(){
       $(".toc").css('display','none');
       clearTimeout(timer);
-    },350);
-})
+    },50);
+    clearTimeout(timer);
+  });
 });
 
