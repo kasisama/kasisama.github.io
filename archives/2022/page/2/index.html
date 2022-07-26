@@ -5,7 +5,7 @@
 <head>
   
   <meta name="baidu-site-verification" content="code-J1Qg17G6wT" />
-  <title>web学习笔记4 - js基础2 - 咔斯の小窝</title>
+  <title>文章归档：2022 - 咔斯の小窝</title>
   <meta charset="UTF-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
@@ -16,25 +16,19 @@
     <meta name="baidu-site-verification" content="code-7bF3wXCwO5" />
 
   <link rel="shortcut icon" href="https://s2.loli.net/2022/07/19/xKNvsPHqcyCL37d.png" type="image/png" />
-  <meta name="description" content="2022-07-08 学习总结">
-<meta property="og:type" content="article">
-<meta property="og:title" content="web学习笔记4 - js基础2">
-<meta property="og:url" content="https://www.kassama.top/webNotes4.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="咔斯の小窝">
+<meta property="og:url" content="https://www.kassama.top/archives/2022/page/2/index.html">
 <meta property="og:site_name" content="咔斯の小窝">
-<meta property="og:description" content="2022-07-08 学习总结">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-07-08T12:44:07.000Z">
-<meta property="article:modified_time" content="2022-07-21T13:54:17.593Z">
 <meta property="article:author" content="咔斯Sama">
-<meta property="article:tag" content="web">
-<meta property="article:tag" content="HTML">
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css?v=233" crossorigin>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css">
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_cksn56jaae6.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1658829623184">
+  <link rel="stylesheet" href="/css/style.css?v=1658829623248">
 <meta name="generator" content="Hexo 6.1.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -228,328 +222,37 @@
   </div>
   <div id="nexmoe-content">
     <div class="nexmoe-primary">
-        <div class="nexmoe-post">
+        <section class="nexmoe-posts">
     
-        <div class="nexmoe-post-cover"
-             style="padding-bottom: 24.305555555555554%;">
-            <img data-src="https://tva1.sinaimg.cn/large/006RYYI7ly1h4bb6rlw2nj328g1bc79p.jpg" data-sizes="auto" alt="web学习笔记4 - js基础2" class="lazyload">
-            <h1>web学习笔记4 - js基础2</h1>
+    <div class="nexmoe-post">
+        <a href="/2022/02/14/%E4%BB%99%E7%8E%89%E5%B0%98%E7%BC%98-%E6%8C%87%E4%BB%A4%E9%9B%86%E5%90%88%E5%A4%A7%E5%85%A8/">
+            
+                <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 24.305555555555554%;">
+                    <img data-src="https://tva1.sinaimg.cn/large/006RYYI7ly1h4bb6rlw2nj328g1bc79p.jpg" data-sizes="auto" alt="仙玉尘缘-指令集合大全" class="lazyload">
+                    <h1>仙玉尘缘-指令集合大全</h1>
+                </div>
+            
+        </a>
+        
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2022年02月14日</a>
+            <a><i class="nexmoefont icon-areachart"></i>1.3k 字</a>
+            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 5 分钟</a>
         </div>
-    
-
-        <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
-    <a><i class="nexmoefont icon-calendar-fill"></i>2022年07月08日</a>
-    <a><i class="nexmoefont icon-areachart"></i>1.2k 字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 5 分钟</a>
-</div>
-
 
         <article>
-            <p>2022-07-08 学习总结</p>
-<span id="more"></span>
-<h2 id="JS拼接"><a href="#JS拼接" class="headerlink" title="JS拼接"></a>JS拼接</h2><ul>
-<li>拼接的四种方法<ol>
-<li>拼接1：通过 <strong>+</strong> 进行拼接</li>
-<li>拼接2： <strong>`${a}&#96;</strong></li>
-<li>拼接之后结果都是<strong>字符串</strong>和<strong>基本数据类型</strong>进行拼接</li>
-</ol>
-</li>
-</ul>
-<pre><code class="highlight js"><span class="keyword">var</span> a = <span class="number">10</span>
-<span class="comment">// 1 数字和字符串进行拼接 +</span>
-<span class="keyword">var</span> s1 = <span class="string">&quot;我的年龄是&quot;</span>+ a + <span class="string">&quot;岁&quot;</span>
-<span class="variable language_">console</span>.<span class="title function_">log</span>(s1)
-
-<span class="comment">// 2 es6字符串模板的写法$&#123;a&#125; 给a标量占位置的</span>
-<span class="keyword">var</span> s2 = <span class="string">`我的年龄是<span class="subst">$&#123;a&#125;</span>岁，他的年龄也是<span class="subst">$&#123;a&#125;</span>岁`</span>
-<span class="variable language_">console</span>.<span class="title function_">log</span>(s2)
-
-
-<span class="comment">// 把数字转成字符串的功能 可以是拼接进行转换</span>
-
-<span class="comment">// 把字符串转化成数字 字符串必须数字字符串</span>
-<span class="keyword">var</span> b = <span class="string">&quot;10&quot;</span>
-<span class="comment">// 1 直接*1, 先把b字符串转成数字，再乘以1，这种转换称为隐式转换</span>
-<span class="variable language_">console</span>.<span class="title function_">log</span>(b*<span class="number">1</span>) 
-
-
-<span class="comment">// 2 通过一些api进行转换属于强制转换（显式转换） parseInt() 转换成整型的， parseFloat() 转成浮点数</span>
-<span class="keyword">var</span> c = <span class="built_in">parseInt</span>(b)
-<span class="variable language_">console</span>.<span class="title function_">log</span>(c)
-
-
-<span class="keyword">var</span> a1 = <span class="string">&quot;10&quot;</span>
-<span class="keyword">var</span> a2 = <span class="number">2</span>
-<span class="keyword">var</span> a3 = (a1*<span class="number">1</span>+a2) / a2 == <span class="string">&quot;6&quot;</span>
-<span class="variable language_">console</span>.<span class="title function_">log</span>(a3)
-
-<span class="keyword">var</span> img1 = <span class="string">&quot;./pro-logo.jpg&quot;</span>
-<span class="keyword">var</span> img2 = <span class="string">&quot;./pro-logo2.jpg&quot;</span>
-
-<span class="keyword">var</span> p1 = <span class="string">&quot;钢筋结构1&quot;</span>
-<span class="keyword">var</span> p2 = <span class="string">&quot;钢筋结构2&quot;</span>
-
-<span class="keyword">var</span> htmlStr = <span class="string">`</span>
-<span class="string">        &lt;div&gt;</span>
-<span class="string">            &lt;img src=<span class="subst">$&#123;img1&#125;</span> alt=&#x27;&#x27; &gt;</span>
-<span class="string">            &lt;p&gt;<span class="subst">$&#123;p1&#125;</span>&lt;/p&gt;</span>
-<span class="string">        &lt;/div&gt;</span>
-<span class="string">        &lt;div&gt;</span>
-<span class="string">            &lt;img src=<span class="subst">$&#123;img2&#125;</span> alt=&#x27;&#x27; &gt;</span>
-<span class="string">            &lt;p&gt;<span class="subst">$&#123;p2&#125;</span>&lt;/p&gt;</span>
-<span class="string">        &lt;/div&gt;</span>
-<span class="string">`</span>
-<span class="variable language_">document</span>.<span class="title function_">write</span>(htmlStr)</code></pre>
-<blockquote>
-<p>原理：把之前的div标签写成一个字符串，通过for循环 可以拼接多个div，把多个div直接渲染在body里面</p>
-<pre><code class="highlight js"><span class="keyword">var</span> s = <span class="string">&quot;&quot;</span>
-<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i&lt;<span class="number">3</span>;i++)&#123;
-   s+= <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>
-&#125;
-<span class="variable language_">console</span>.<span class="title function_">log</span>(s)
-<span class="comment">// 输出：&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;</span></code></pre>
-</blockquote>
-<h2 id="显式转换和隐式转换"><a href="#显式转换和隐式转换" class="headerlink" title="显式转换和隐式转换"></a>显式转换和隐式转换</h2><p><code>显式转化</code> 通过一些api进行转换 parseInt() parseFloat()</p>
-<ul>
-<li><code>parseInt()</code> 把目标转化为整数型</li>
-<li><code>parseFloat()</code> 把目标转化为浮点型（小数型）<br><code>隐式转换</code> “10” * 1 &#x3D; 10  “10”&#x2F;2</li>
-</ul>
-<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h3 id="普通数组"><a href="#普通数组" class="headerlink" title="普通数组"></a>普通数组</h3><p><code>数组</code> 用来存储数据的，每一个元素都是有索引值，通过该元素的索引值进行访问的，索引值从0开始，数组的个数从1开始。<br>例如：</p>
-<blockquote>
-<p><code>var arr1 = [&quot;蕾姆&quot;,&quot;拉姆&quot;,&quot;塞尔达&quot;,&quot;林克&quot;,&quot;米法&quot;]</code><br><code>arr1[0]</code> 就是 “蕾姆”  <code>arr1[4]</code> 就是 “米法”</p>
-</blockquote>
-<h3 id="数组遍历"><a href="#数组遍历" class="headerlink" title="数组遍历"></a>数组遍历</h3><pre><code class="highlight js"><span class="comment">//  数组遍历</span>
-    <span class="comment">// array.length 数组的长度</span>
-     <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr1.<span class="property">length</span>; i++) &#123;
-           <span class="keyword">var</span> e = arr1[i];
-           <span class="variable language_">console</span>.<span class="title function_">log</span>(e)
-     &#125;</code></pre>
-
-<h3 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h3><pre><code class="highlight js"><span class="keyword">var</span> arr = [[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="string">&quot;安培死了&quot;</span>,<span class="string">&quot;百度已经更新安培的年龄消息&quot;</span>]] <span class="comment">// 二维数组</span>
-<span class="keyword">var</span> a1 = arr[<span class="number">1</span>]
-<span class="comment">// a1[0] 就是 &quot;安倍死了&quot;</span>
-<span class="comment">// arr[0][0] 就是 1</span>
-<span class="comment">// arr [一维数组] [二维数组] [三维数组] 以此类推</span>
-<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i&lt;arr.<span class="property">length</span>;i++)&#123; <span class="keyword">var</span> e = arr[i] &#125;</code></pre>
-
-<h2 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h2><p><code>对象</code> 可以表示多个数据 ，多个数据是属于一个整体，<br><code>对象</code> 包含<code>属性</code>和<code>方法</code><br><code>属性值</code>可以是<code>任意类型</code></p>
-<pre><code class="highlight js"><span class="keyword">var</span> obj = &#123;
-    <span class="attr">name</span>: <span class="string">&quot;蕾姆&quot;</span>,
-    <span class="attr">age</span>: <span class="number">18</span>,
-    <span class="attr">cp</span>:&#123;
-        <span class="attr">name</span>: <span class="string">&quot;莱月卯&quot;</span>
-    &#125;,
-    <span class="attr">sister</span>:&#123;
-        <span class="attr">name</span>: <span class="string">&quot;拉姆&quot;</span>,
-        <span class="attr">age</span>: <span class="number">18</span>
-    &#125;,
-    <span class="attr">friend</span>:[
-        &#123;
-            <span class="attr">name</span>: <span class="string">&#x27;艾米利亚&#x27;</span>,
-            <span class="attr">age</span>: <span class="number">20</span>
-        &#125;,
-        &#123;
-            <span class="attr">name</span>: <span class="string">&#x27;路人甲A&#x27;</span>,
-            <span class="attr">age</span>: <span class="number">18</span>
-        &#125;,
-        &#123;
-            <span class="attr">name</span>: <span class="string">&#x27;路人乙B&#x27;</span>,
-            <span class="attr">age</span>: <span class="number">16</span>
-        &#125;
-    ]
-&#125;
-<span class="variable language_">console</span>.<span class="title function_">log</span>(obj.<span class="property">name</span>) <span class="comment">//对象如何访问属性</span>
-<span class="variable language_">console</span>.<span class="title function_">log</span>(obj.<span class="property">son</span>.<span class="property">name</span>) 
-<span class="variable language_">console</span>.<span class="title function_">log</span>(obj.<span class="property">guinv</span>[<span class="number">1</span>].<span class="property">name</span>)
-
-<span class="comment">//  获取所有名字</span>
-<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i&lt;obj.<span class="property">guinv</span>.<span class="property">length</span>;i++)&#123;
-<span class="variable language_">console</span>.<span class="title function_">log</span>(obj.<span class="property">guinv</span>[i].<span class="property">name</span>)
-&#125;</code></pre>
-
-<h2 id="数据分析"><a href="#数据分析" class="headerlink" title="数据分析"></a>数据分析</h2><p>数据分析，遇见 <code>&#123;&#125;</code> 代表对象； 遇见 <code>[]</code> 代表数组;<br><code>d1.innerHTML = &quot;&lt;h1&gt;M&lt;/h1&gt;&quot;</code>    在d1插入html字符串</p>
-<pre><code class="highlight js"><span class="keyword">var</span> data = [
-    &#123;
-        <span class="attr">id</span>:<span class="number">1</span>, <span class="comment">//商品id</span>
-        <span class="comment">// 图片url</span>
-        <span class="attr">imgUrl</span>:<span class="string">&quot;./img/pro-logo.jpg&quot;</span>,
-        <span class="attr">info</span>:<span class="string">&quot;厂家直销，不要999，只要99元&quot;</span>,
-        <span class="attr">company</span>:<span class="string">&quot;河南佰辰机械设备有限公司&quot;</span>,
-        <span class="attr">tips</span>:[<span class="string">&quot;诚&quot;</span>,<span class="string">&quot;钻石版&quot;</span>],
-        <span class="attr">price</span>:<span class="number">60000</span>
-    &#125;,
-    &#123;
-        <span class="attr">id</span>:<span class="number">2</span>, <span class="comment">//商品id</span>
-        <span class="comment">// 图片url</span>
-        <span class="attr">imgUrl</span>:<span class="string">&quot;./img/pro-logo2.jpg&quot;</span>,
-        <span class="attr">info</span>:<span class="string">&quot;厂家直销，不要999，只要99元&quot;</span>,
-        <span class="attr">company</span>:<span class="string">&quot;河南佰辰机械设备有限公司&quot;</span>,
-        <span class="attr">tips</span>:[<span class="string">&quot;诚&quot;</span>,<span class="string">&quot;钻石版&quot;</span>],
-        <span class="attr">price</span>:<span class="number">110000</span>
-    &#125;,
-    &#123;
-        <span class="attr">id</span>:<span class="number">3</span>, <span class="comment">//商品id</span>
-        <span class="comment">// 图片url</span>
-        <span class="attr">imgUrl</span>:<span class="string">&quot;./img/pro-logo.jpg&quot;</span>,
-        <span class="attr">info</span>:<span class="string">&quot;厂家直销，不要999，只要99元&quot;</span>,
-        <span class="attr">company</span>:<span class="string">&quot;河南佰辰机械设备有限公司&quot;</span>,
-        <span class="attr">tips</span>:[<span class="string">&quot;诚&quot;</span>,<span class="string">&quot;钻石版&quot;</span>],
-        <span class="attr">price</span>:<span class="number">60000</span>
-    &#125;
-]
-<span class="keyword">var</span> s = <span class="string">&quot;&quot;</span>
-<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i&lt;data.<span class="property">length</span>;i++)&#123;  
-    s+= <span class="string">`&lt;div class=&quot;c1&quot;&gt;</span>
-<span class="string">        &lt;img src=<span class="subst">$&#123;data[i].imgUrl&#125;</span> alt=&quot;&quot;&gt;</span>
-<span class="string">        &lt;p&gt;<span class="subst">$&#123;data[i].info&#125;</span>&lt;/p&gt;</span>
-<span class="string">        &lt;p&gt;<span class="subst">$&#123;data[i].company&#125;</span>&lt;/p&gt;</span>
-<span class="string">        &lt;p&gt;<span class="subst">$&#123;data[i].price&#125;</span>&lt;/p&gt;</span>
-<span class="string">        &lt;/div&gt;`</span>
-
-&#125;   
-
-<span class="comment">// innerHTML 给元素添加一个html字符串</span>
-    d1.<span class="property">innerHTML</span> = s
-<span class="comment">// document.write(s)</span></code></pre>
-
-        </article>
-
-        
             
-  <div class="nexmoe-post-copyright">
-    <strong>本文作者：</strong>咔斯Sama<br>
-    
-    <strong>本文链接：</strong><a href="https://www.kassama.top/webNotes4.html" title="https:&#x2F;&#x2F;www.kassama.top&#x2F;webNotes4.html" target="_blank" rel="noopener">https:&#x2F;&#x2F;www.kassama.top&#x2F;webNotes4.html</a><br>
-
-    
-      <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
-    
-  </div>
-
-
-        
-
-        <div class="nexmoe-post-meta nexmoe-rainbow">
-    
-        <a class="nexmoefont icon-appstore-fill -link" href="/categories/web%E7%AC%94%E8%AE%B0/">web笔记</a>
-    
-    
-        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/HTML/" rel="tag">HTML</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/web/" rel="tag">web</a>
-    
-</div>
-
-    <div class="nexmoe-post-footer">
-        <section class="nexmoe-comment">
-    <div class="valine ks-valine-box"></div>
-<script src='https://unpkg.com/valine@1.5.1/dist/Valine.min.js'></script>
-<script>
-    // 使用方法 https://valine.js.org/quickstart.html
-    new Valine({
-        el: '.valine',
-        appId: '6Om9oV6sycmCPkRcrF9VR7Vd-gzGzoHsz',
-        appKey: 'cas3l5T4L8EkjrOFGsfzD8vM',
-        enableQQ: true,
-        placeholder: '阁下要说点什么嘛！',
-        requiredFields:['nick','mail'],
-
-        emojiCDN: '//cdn.bilicdn.tk/gh/kasisama/ValineCDN@master/',
-        // 表情title和图片映射
-        emojiMaps: {
-            "bilibilitv2": "bilibilitv/[tv_doge].png",
-            "bilibilitv3": "bilibilitv/[tv_亲亲].png",
-            "bilibilitv4": "bilibilitv/[tv_偷笑].png",
-            "bilibilitv5": "bilibilitv/[tv_再见].png",
-            "bilibilitv6": "bilibilitv/[tv_冷漠].png",
-            "bilibilitv7": "bilibilitv/[tv_发怒].png",
-            "bilibilitv8": "bilibilitv/[tv_发财].png",
-            "bilibilitv9": "bilibilitv/[tv_可爱].png",
-            "bilibilitv10": "bilibilitv/[tv_吐血].png",
-            "bilibilitv11": "bilibilitv/[tv_呆].png",
-            "bilibilitv12": "bilibilitv/[tv_呕吐].png",
-            "bilibilitv13": "bilibilitv/[tv_困].png",
-            "bilibilitv14": "bilibilitv/[tv_坏笑].png",
-            "bilibilitv15": "bilibilitv/[tv_大佬].png",
-            "bilibilitv16": "bilibilitv/[tv_大哭].png",
-            "bilibilitv17": "bilibilitv/[tv_委屈].png",
-            "bilibilitv18": "bilibilitv/[tv_害羞].png",
-            "bilibilitv19": "bilibilitv/[tv_尴尬].png",
-            "bilibilitv20": "bilibilitv/[tv_微笑].png",
-            "bilibilitv21": "bilibilitv/[tv_思考].png",
-            "bilibilitv22": "bilibilitv/[tv_惊吓].png",
-            "bilibilitv23": "bilibilitv/[tv_打脸].png",
-            "bilibilitv24": "bilibilitv/[tv_抓狂].png",
-            "bilibilitv25": "bilibilitv/[tv_抠鼻].png",
-            "bilibilitv26": "bilibilitv/[tv_斜眼笑].png",
-            "bilibilitv27": "bilibilitv/[tv_无奈].png",
-            "bilibilitv28": "bilibilitv/[tv_晕].png",
-            "bilibilitv29": "bilibilitv/[tv_流汗].png",
-            "bilibilitv30": "bilibilitv/[tv_流泪].png",
-            "bilibilitv31": "bilibilitv/[tv_流鼻血].png",
-            "bilibilitv32": "bilibilitv/[tv_点赞].png",
-            "bilibilitv33": "bilibilitv/[tv_生气].png",
-            "bilibilitv34": "bilibilitv/[tv_生病].png",
-            "bilibilitv35": "bilibilitv/[tv_疑问].png",
-            "bilibilitv36": "bilibilitv/[tv_白眼].png",
-            "bilibilitv37": "bilibilitv/[tv_皱眉].png",
-            "bilibilitv38": "bilibilitv/[tv_目瞪口呆].png",
-            "bilibilitv39": "bilibilitv/[tv_睡着].png",
-            "bilibilitv40": "bilibilitv/[tv_笑哭].png",
-            "bilibilitv41": "bilibilitv/[tv_腼腆].png",
-            "bilibilitv42": "bilibilitv/[tv_色].png",
-            "bilibilitv43": "bilibilitv/[tv_调侃].png",
-            "bilibilitv44": "bilibilitv/[tv_调皮].png",
-            "bilibilitv45": "bilibilitv/[tv_鄙视].png",
-            "bilibilitv46": "bilibilitv/[tv_闭嘴].png",
-            "bilibilitv47": "bilibilitv/[tv_难过].png",
-            "bilibilitv48": "bilibilitv/[tv_馋].png",
-            "bilibilitv49": "bilibilitv/[tv_鬼脸].png",
-            "bilibilitv50": "bilibilitv/[tv_黑人问号].png",
-            "bilibilitv51": "bilibilitv/[tv_鼓掌].png",
-            "Heybox1": "Heybox/expression_cube.png",
-            "Heybox2": "Heybox/expression_cube_bingbujiandan.png",
-            "Heybox3": "Heybox/expression_cube_bizui.png",
-            "Heybox4": "Heybox/expression_cube_cangsang.png",
-            "Heybox5": "Heybox/expression_cube_dalian.png",
-            "Heybox6": "Heybox/expression_cube_doge.png",
-            "Heybox7": "Heybox/expression_cube_gandong.png",
-            "Heybox8": "Heybox/expression_cube_guai.png",
-            "Heybox9": "Heybox/expression_cube_gugu.png",
-            "Heybox10": "Heybox/expression_cube_han.png",
-            "Heybox11": "Heybox/expression_cube_hbi.png",
-            "Heybox12": "Heybox/expression_cube_heirenwenhao.png",
-            "Heybox13": "Heybox/expression_cube_huaji.png",
-            "Heybox14": "Heybox/expression_cube_jiayou.png",
-            "Heybox15": "Heybox/expression_cube_jingya.png",
-            "Heybox16": "Heybox/expression_cube_kaixin.png",
-            "Heybox17": "Heybox/expression_cube_ku.png",
-            "Heybox18": "Heybox/expression_cube_kun.png",
-            "Heybox19": "Heybox/expression_cube_kuqi.png",
-            "Heybox20": "Heybox/expression_cube_nu.png",
-            "Heybox21": "Heybox/expression_cube_penshui.png",
-            "Heybox22": "Heybox/expression_cube_qiliang.png",
-            "Heybox23": "Heybox/expression_cube_shengqi.png",
-            "Heybox24": "Heybox/expression_cube_shuijiao.png",
-            "Heybox25": "Heybox/expression_cube_tanqi.png",
-            "Heybox26": "Heybox/expression_cube_tanshou.png",
-            "Heybox27": "Heybox/expression_cube_tu.png",
-            "Heybox28": "Heybox/expression_cube_wa.png",
-            "Heybox29": "Heybox/expression_cube_weiqu.png",
-            "Heybox30": "Heybox/expression_cube_weixiao.png",
-            "Heybox31": "Heybox/expression_cube_wulianku.png",
-            "Heybox32": "Heybox/expression_cube_xia.png",
-            "Heybox33": "Heybox/expression_cube_xiaocry.png",
-            "Heybox34": "Heybox/expression_cube_xihuan.png",
-            "Heybox35": "Heybox/expression_cube_xuexi.png",
-            "Heybox36": "Heybox/expression_cube_yun.png",
-            "Heybox37": "Heybox/expression_cube_zan.png"
-        }
-    })
-    
-</script>
-</section>
+                <p>使用指令在这里！</p>
+            
+        </article>
     </div>
-</div>
+    
+</section>
 
+    <nav class="nexmoe-page-nav">
+      <a class="extend prev" rel="prev" href="/archives/2022/"><i class="nexmoefont icon-left"></i></a><a class="page-number" href="/archives/2022/">1</a><span class="page-number current">2</span>
+    </nav>
+  
 
         <div class="nexmoe-post-right">
             <div class="nexmoe-fixed">
@@ -557,13 +260,6 @@
                 
                 
                     
-                        <button class="mdui-fab catalog" style="overflow:unset;">
-                            <i class="nexmoefont icon-i-catalog"></i>
-                            <div class="nexmoe-toc">
-                              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#JS%E6%8B%BC%E6%8E%A5"><span class="toc-number">1.</span> <span class="toc-text">JS拼接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%98%BE%E5%BC%8F%E8%BD%AC%E6%8D%A2%E5%92%8C%E9%9A%90%E5%BC%8F%E8%BD%AC%E6%8D%A2"><span class="toc-number">2.</span> <span class="toc-text">显式转换和隐式转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E7%BB%84"><span class="toc-number">3.</span> <span class="toc-text">数组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%99%AE%E9%80%9A%E6%95%B0%E7%BB%84"><span class="toc-number">3.1.</span> <span class="toc-text">普通数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E9%81%8D%E5%8E%86"><span class="toc-number">3.2.</span> <span class="toc-text">数组遍历</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84"><span class="toc-number">3.3.</span> <span class="toc-text">二维数组</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1"><span class="toc-number">4.</span> <span class="toc-text">对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90"><span class="toc-number">5.</span> <span class="toc-text">数据分析</span></a></li></ol>
-                            </div>
-                        </button>
-                        
                   
                 
                   <a href="#nexmoe-content" class="toc-link" aria-label="回到顶部" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
@@ -1271,7 +967,7 @@
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
 
-<script src="/js/app.js?v=1658829623197"></script>
+<script src="/js/app.js?v=1658829623250"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
 <script>
