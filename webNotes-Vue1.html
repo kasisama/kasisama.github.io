@@ -5,7 +5,7 @@
 <head>
   
   <meta name="baidu-site-verification" content="code-J1Qg17G6wT" />
-  <title>文章归档：2020/2 - 咔斯の小窝</title>
+  <title>web学习笔记 - Vue基础1 - 咔斯の小窝</title>
   <meta charset="UTF-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
@@ -16,19 +16,26 @@
     <meta name="baidu-site-verification" content="code-7bF3wXCwO5" />
 
   <link rel="shortcut icon" href="https://s2.loli.net/2022/07/19/xKNvsPHqcyCL37d.png" type="image/png" />
-  <meta property="og:type" content="website">
-<meta property="og:title" content="咔斯の小窝">
-<meta property="og:url" content="https://www.kassama.top/archives/2020/02/index.html">
+  <meta name="description" content="记录一下Vue学习过程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="web学习笔记 - Vue基础1">
+<meta property="og:url" content="https://www.kassama.top/webNotes-Vue1.html">
 <meta property="og:site_name" content="咔斯の小窝">
+<meta property="og:description" content="记录一下Vue学习过程">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-05-08T11:24:30.000Z">
+<meta property="article:modified_time" content="2022-07-28T11:53:44.042Z">
 <meta property="article:author" content="咔斯Sama">
+<meta property="article:tag" content="web">
+<meta property="article:tag" content="HTML">
+<meta property="article:tag" content="Vue">
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css?v=233" crossorigin>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css">
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_cksn56jaae6.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1659671787557">
+  <link rel="stylesheet" href="/css/style.css?v=1659671787426">
 <meta name="generator" content="Hexo 6.1.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -222,35 +229,249 @@
   </div>
   <div id="nexmoe-content">
     <div class="nexmoe-primary">
-        <section class="nexmoe-posts">
+        <div class="nexmoe-post">
     
-    <div class="nexmoe-post">
-        <a href="/2020/02/11/hello-world/">
-            
-                <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 24.175824175824175%;">
-                    <img data-src="https://i.loli.net/2020/04/13/9j7KAFZqBlk28Ud.jpg" data-sizes="auto" alt="欢迎呀！咔斯的博客正式开启啦！" class="lazyload">
-                    <h1>欢迎呀！咔斯的博客正式开启啦！</h1>
-                </div>
-            
-        </a>
-        
-        <div class="nexmoe-post-meta nexmoe-rainbow">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2020年02月11日</a>
-            <a><i class="nexmoefont icon-areachart"></i>13 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+        <div class="nexmoe-post-cover"
+             style="padding-bottom: 24.305555555555554%;">
+            <img data-src="https://tva1.sinaimg.cn/large/006RYYI7ly1h4bb6rlw2nj328g1bc79p.jpg" data-sizes="auto" alt="web学习笔记 - Vue基础1" class="lazyload">
+            <h1>web学习笔记 - Vue基础1</h1>
         </div>
+    
+
+        <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2020年05月08日</a>
+    <a><i class="nexmoefont icon-areachart"></i>749 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 3 分钟</a>
+</div>
+
 
         <article>
-            
-                <span id="more"></span>
+            <p>记录一下Vue学习过程</p>
+<span id="more"></span>
+<h2 id="一、Vue基础"><a href="#一、Vue基础" class="headerlink" title="一、Vue基础"></a>一、Vue基础</h2><h3 id="步骤："><a href="#步骤：" class="headerlink" title="步骤："></a>步骤：</h3><ul>
+<li>导入开发版本的Vie.js</li>
+<li>创建Vue实例对象，设置el属性和data属性</li>
+<li>使用简洁的模板语法把数据渲染到页面上</li>
+</ul>
+<h3 id="el-挂载点"><a href="#el-挂载点" class="headerlink" title="el:挂载点"></a>el:挂载点</h3><p>例如：<code>el: &quot;#app&quot;</code><br><span style="color: red;"> <strong>注意：</strong> </span>不能命中html和body</p>
+<h3 id="date-数据对象"><a href="#date-数据对象" class="headerlink" title="date:数据对象"></a>date:数据对象</h3><ul>
+<li>vue中用到的数据</li>
+<li>可以写复杂类型，渲染时遵守js语法</li>
+</ul>
+<h2 id="二、本地应用"><a href="#二、本地应用" class="headerlink" title="二、本地应用"></a>二、本地应用</h2><h3 id="v-text"><a href="#v-text" class="headerlink" title="v-text:"></a>v-text:</h3><ul>
+<li>设置标签的内容，只会解析为文本</li>
+<li>默认写法会替换全部内容，使用差值表达式<code>&#123;&#123;&#125;&#125;</code>可</li>
+<li>以替换指定内容</li>
+<li>内部支持写表达式</li>
+</ul>
+<h3 id="v-html"><a href="#v-html" class="headerlink" title="v-html:"></a>v-html:</h3><ul>
+<li>设置元素的innerHTML</li>
+<li>内容中有Html的结构会被解析为标签</li>
+</ul>
+<h3 id="v-on"><a href="#v-on" class="headerlink" title="v-on:"></a>v-on:</h3><ul>
+<li>为元素绑定事件</li>
+<li>事件名不用写on</li>
+<li>指令可以简写为@</li>
+<li>绑定方法定义在methods属性中</li>
+<li>方法内部可以用this访问data中的数据</li>
+<li>事件绑定方法写成函数调用的形式可以传入自定义参数</li>
+<li>定义方法时需要定义形参接收传入的实参</li>
+<li>事件后.修饰符可以限制事件，如.enter回车</li>
+</ul>
+<h3 id="v-show"><a href="#v-show" class="headerlink" title="v-show"></a>v-show</h3><ul>
+<li>根据真假切换元素显示状态</li>
+<li>原理是修改元素的display</li>
+<li>指令后的内容，最终都会解析为布尔值</li>
+</ul>
+<h3 id="v-if"><a href="#v-if" class="headerlink" title="v-if"></a>v-if</h3><ul>
+<li>根据真假切换元素显示状态</li>
+<li>本质是操纵dom元素，表达式为false时从dom树中移除</li>
+<li>频繁切换的元素用v-show，反之用v-if</li>
+</ul>
+<h3 id="v-bind"><a href="#v-bind" class="headerlink" title="v-bind"></a>v-bind</h3><ul>
+<li>为元素绑定属性</li>
+<li>指令可简写为:</li>
+<li>动态增删class建议使用对象的方式，</li>
+<li>例如{active:isActive}</li>
+</ul>
+<h3 id="v-for"><a href="#v-for" class="headerlink" title="v-for"></a>v-for</h3><ul>
+<li>根据数据生成列表结构</li>
+<li>数组经常和v-for结合使用</li>
+<li>语法是(item,index) in data</li>
+<li>item和index可以结合其他指令一起使用</li>
+<li>数组长度的更新会同步到页面上，是响应式的</li>
+</ul>
+<h3 id="v-model"><a href="#v-model" class="headerlink" title="v-model"></a>v-model</h3><ul>
+<li>便捷设置和获取表单元素的值</li>
+<li>绑定的数据会和表单元素值相关联</li>
+<li>绑定数据和表单元素值双向绑定</li>
+</ul>
+<h2 id="三、网络应用"><a href="#三、网络应用" class="headerlink" title="三、网络应用"></a>三、网络应用</h2><h3 id="axios"><a href="#axios" class="headerlink" title="axios"></a>axios</h3><ul>
+<li>使用get或post方法发送对应请求</li>
+<li>先导入再使用</li>
+<li>then方法回调函数会在请求成功或失败时触发</li>
+<li>通过回调函数的形参可以获得response内容或错误信息</li>
+</ul>
+<h3 id="axios-vue"><a href="#axios-vue" class="headerlink" title="axios+vue"></a>axios+vue</h3><ul>
+<li>axios中this已经改变，需要提前保存this方便赋值</li>
+</ul>
+<h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><ul>
+<li>应用的逻辑代码建议和页面分离，用单独的js文件写</li>
+<li>注意服务器返回数据的层级结构</li>
+<li>自定义参数可以让代码的复用性提高</li>
+<li>methods中定义方法内部可用this关键字调用方法</li>
+</ul>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="Vue页面加载时，触发某个函数的方法"><a href="#Vue页面加载时，触发某个函数的方法" class="headerlink" title="Vue页面加载时，触发某个函数的方法"></a>Vue页面加载时，触发某个函数的方法</h3><pre><code class="highlight js"><span class="attr">mounted</span>:<span class="keyword">function</span>(<span class="params"></span>)&#123;
+    <span class="variable language_">this</span>.<span class="title function_">createcode</span>();<span class="comment">//需要触发的函数</span>
+&#125;
+<span class="comment">//下面是createcode函数</span>
+<span class="title function_">createcode</span>(<span class="params"></span>)&#123;
+<span class="keyword">var</span> self = <span class="variable language_">this</span>;
+axios.<span class="title function_">post</span>(<span class="string">&quot;/verifycode&quot;</span>,&#123;<span class="attr">name</span>:<span class="variable language_">this</span>.<span class="property">name</span>,<span class="attr">id</span>:<span class="variable language_">this</span>.<span class="property">id</span>&#125;).<span class="title function_">then</span>(<span class="keyword">function</span>(<span class="params">res</span>)&#123;
+    <span class="comment">//console.log(res);</span>
+    <span class="keyword">var</span> url= <span class="title class_">JSON</span>.<span class="title function_">parse</span>(res.<span class="property">data</span>.<span class="property">code64</span>);
+    <span class="comment">//console.log(url)</span>
+    self.<span class="property">urlIMg</span>  = url.<span class="property">data</span>.<span class="property">base64Code</span>;
 
-<p>2020年2月11日，咔斯的博客搭建完毕！</p>
-
-            
+&#125;);
+&#125;,</code></pre>
         </article>
-    </div>
+
+        
+            
+  <div class="nexmoe-post-copyright">
+    <strong>本文作者：</strong>咔斯Sama<br>
     
+    <strong>本文链接：</strong><a href="https://www.kassama.top/webNotes-Vue1.html" title="https:&#x2F;&#x2F;www.kassama.top&#x2F;webNotes-Vue1.html" target="_blank" rel="noopener">https:&#x2F;&#x2F;www.kassama.top&#x2F;webNotes-Vue1.html</a><br>
+
+    
+      <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+    
+  </div>
+
+
+        
+
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/web%E7%AC%94%E8%AE%B0/">web笔记</a>
+    
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/HTML/" rel="tag">HTML</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/Vue/" rel="tag">Vue</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/web/" rel="tag">web</a>
+    
+</div>
+
+    <div class="nexmoe-post-footer">
+        <section class="nexmoe-comment">
+    <div class="valine ks-valine-box"></div>
+<script src='https://unpkg.com/valine@1.5.1/dist/Valine.min.js'></script>
+<script>
+    // 使用方法 https://valine.js.org/quickstart.html
+    new Valine({
+        el: '.valine',
+        appId: '6Om9oV6sycmCPkRcrF9VR7Vd-gzGzoHsz',
+        appKey: 'cas3l5T4L8EkjrOFGsfzD8vM',
+        enableQQ: true,
+        placeholder: '阁下要说点什么嘛！',
+        requiredFields:['nick','mail'],
+
+        emojiCDN: '//cdn.bilicdn.tk/gh/kasisama/ValineCDN@master/',
+        // 表情title和图片映射
+        emojiMaps: {
+            "bilibilitv2": "bilibilitv/[tv_doge].png",
+            "bilibilitv3": "bilibilitv/[tv_亲亲].png",
+            "bilibilitv4": "bilibilitv/[tv_偷笑].png",
+            "bilibilitv5": "bilibilitv/[tv_再见].png",
+            "bilibilitv6": "bilibilitv/[tv_冷漠].png",
+            "bilibilitv7": "bilibilitv/[tv_发怒].png",
+            "bilibilitv8": "bilibilitv/[tv_发财].png",
+            "bilibilitv9": "bilibilitv/[tv_可爱].png",
+            "bilibilitv10": "bilibilitv/[tv_吐血].png",
+            "bilibilitv11": "bilibilitv/[tv_呆].png",
+            "bilibilitv12": "bilibilitv/[tv_呕吐].png",
+            "bilibilitv13": "bilibilitv/[tv_困].png",
+            "bilibilitv14": "bilibilitv/[tv_坏笑].png",
+            "bilibilitv15": "bilibilitv/[tv_大佬].png",
+            "bilibilitv16": "bilibilitv/[tv_大哭].png",
+            "bilibilitv17": "bilibilitv/[tv_委屈].png",
+            "bilibilitv18": "bilibilitv/[tv_害羞].png",
+            "bilibilitv19": "bilibilitv/[tv_尴尬].png",
+            "bilibilitv20": "bilibilitv/[tv_微笑].png",
+            "bilibilitv21": "bilibilitv/[tv_思考].png",
+            "bilibilitv22": "bilibilitv/[tv_惊吓].png",
+            "bilibilitv23": "bilibilitv/[tv_打脸].png",
+            "bilibilitv24": "bilibilitv/[tv_抓狂].png",
+            "bilibilitv25": "bilibilitv/[tv_抠鼻].png",
+            "bilibilitv26": "bilibilitv/[tv_斜眼笑].png",
+            "bilibilitv27": "bilibilitv/[tv_无奈].png",
+            "bilibilitv28": "bilibilitv/[tv_晕].png",
+            "bilibilitv29": "bilibilitv/[tv_流汗].png",
+            "bilibilitv30": "bilibilitv/[tv_流泪].png",
+            "bilibilitv31": "bilibilitv/[tv_流鼻血].png",
+            "bilibilitv32": "bilibilitv/[tv_点赞].png",
+            "bilibilitv33": "bilibilitv/[tv_生气].png",
+            "bilibilitv34": "bilibilitv/[tv_生病].png",
+            "bilibilitv35": "bilibilitv/[tv_疑问].png",
+            "bilibilitv36": "bilibilitv/[tv_白眼].png",
+            "bilibilitv37": "bilibilitv/[tv_皱眉].png",
+            "bilibilitv38": "bilibilitv/[tv_目瞪口呆].png",
+            "bilibilitv39": "bilibilitv/[tv_睡着].png",
+            "bilibilitv40": "bilibilitv/[tv_笑哭].png",
+            "bilibilitv41": "bilibilitv/[tv_腼腆].png",
+            "bilibilitv42": "bilibilitv/[tv_色].png",
+            "bilibilitv43": "bilibilitv/[tv_调侃].png",
+            "bilibilitv44": "bilibilitv/[tv_调皮].png",
+            "bilibilitv45": "bilibilitv/[tv_鄙视].png",
+            "bilibilitv46": "bilibilitv/[tv_闭嘴].png",
+            "bilibilitv47": "bilibilitv/[tv_难过].png",
+            "bilibilitv48": "bilibilitv/[tv_馋].png",
+            "bilibilitv49": "bilibilitv/[tv_鬼脸].png",
+            "bilibilitv50": "bilibilitv/[tv_黑人问号].png",
+            "bilibilitv51": "bilibilitv/[tv_鼓掌].png",
+            "Heybox1": "Heybox/expression_cube.png",
+            "Heybox2": "Heybox/expression_cube_bingbujiandan.png",
+            "Heybox3": "Heybox/expression_cube_bizui.png",
+            "Heybox4": "Heybox/expression_cube_cangsang.png",
+            "Heybox5": "Heybox/expression_cube_dalian.png",
+            "Heybox6": "Heybox/expression_cube_doge.png",
+            "Heybox7": "Heybox/expression_cube_gandong.png",
+            "Heybox8": "Heybox/expression_cube_guai.png",
+            "Heybox9": "Heybox/expression_cube_gugu.png",
+            "Heybox10": "Heybox/expression_cube_han.png",
+            "Heybox11": "Heybox/expression_cube_hbi.png",
+            "Heybox12": "Heybox/expression_cube_heirenwenhao.png",
+            "Heybox13": "Heybox/expression_cube_huaji.png",
+            "Heybox14": "Heybox/expression_cube_jiayou.png",
+            "Heybox15": "Heybox/expression_cube_jingya.png",
+            "Heybox16": "Heybox/expression_cube_kaixin.png",
+            "Heybox17": "Heybox/expression_cube_ku.png",
+            "Heybox18": "Heybox/expression_cube_kun.png",
+            "Heybox19": "Heybox/expression_cube_kuqi.png",
+            "Heybox20": "Heybox/expression_cube_nu.png",
+            "Heybox21": "Heybox/expression_cube_penshui.png",
+            "Heybox22": "Heybox/expression_cube_qiliang.png",
+            "Heybox23": "Heybox/expression_cube_shengqi.png",
+            "Heybox24": "Heybox/expression_cube_shuijiao.png",
+            "Heybox25": "Heybox/expression_cube_tanqi.png",
+            "Heybox26": "Heybox/expression_cube_tanshou.png",
+            "Heybox27": "Heybox/expression_cube_tu.png",
+            "Heybox28": "Heybox/expression_cube_wa.png",
+            "Heybox29": "Heybox/expression_cube_weiqu.png",
+            "Heybox30": "Heybox/expression_cube_weixiao.png",
+            "Heybox31": "Heybox/expression_cube_wulianku.png",
+            "Heybox32": "Heybox/expression_cube_xia.png",
+            "Heybox33": "Heybox/expression_cube_xiaocry.png",
+            "Heybox34": "Heybox/expression_cube_xihuan.png",
+            "Heybox35": "Heybox/expression_cube_xuexi.png",
+            "Heybox36": "Heybox/expression_cube_yun.png",
+            "Heybox37": "Heybox/expression_cube_zan.png"
+        }
+    })
+    
+</script>
 </section>
+    </div>
+</div>
 
 
         <div class="nexmoe-post-right">
@@ -259,6 +480,13 @@
                 
                 
                     
+                        <button class="mdui-fab catalog" style="overflow:unset;">
+                            <i class="nexmoefont icon-i-catalog"></i>
+                            <div class="nexmoe-toc">
+                              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81Vue%E5%9F%BA%E7%A1%80"><span class="toc-number">1.</span> <span class="toc-text">一、Vue基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4%EF%BC%9A"><span class="toc-number">1.1.</span> <span class="toc-text">步骤：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#el-%E6%8C%82%E8%BD%BD%E7%82%B9"><span class="toc-number">1.2.</span> <span class="toc-text">el:挂载点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#date-%E6%95%B0%E6%8D%AE%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.3.</span> <span class="toc-text">date:数据对象</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%9C%AC%E5%9C%B0%E5%BA%94%E7%94%A8"><span class="toc-number">2.</span> <span class="toc-text">二、本地应用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#v-text"><span class="toc-number">2.1.</span> <span class="toc-text">v-text:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#v-html"><span class="toc-number">2.2.</span> <span class="toc-text">v-html:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#v-on"><span class="toc-number">2.3.</span> <span class="toc-text">v-on:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#v-show"><span class="toc-number">2.4.</span> <span class="toc-text">v-show</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#v-if"><span class="toc-number">2.5.</span> <span class="toc-text">v-if</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#v-bind"><span class="toc-number">2.6.</span> <span class="toc-text">v-bind</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#v-for"><span class="toc-number">2.7.</span> <span class="toc-text">v-for</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#v-model"><span class="toc-number">2.8.</span> <span class="toc-text">v-model</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8"><span class="toc-number">3.</span> <span class="toc-text">三、网络应用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#axios"><span class="toc-number">3.1.</span> <span class="toc-text">axios</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#axios-vue"><span class="toc-number">3.2.</span> <span class="toc-text">axios+vue</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A5%E5%85%85"><span class="toc-number">4.</span> <span class="toc-text">补充</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96"><span class="toc-number">5.</span> <span class="toc-text">其他</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Vue%E9%A1%B5%E9%9D%A2%E5%8A%A0%E8%BD%BD%E6%97%B6%EF%BC%8C%E8%A7%A6%E5%8F%91%E6%9F%90%E4%B8%AA%E5%87%BD%E6%95%B0%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">5.1.</span> <span class="toc-text">Vue页面加载时，触发某个函数的方法</span></a></li></ol></li></ol>
+                            </div>
+                        </button>
+                        
                   
                 
                   <a href="#nexmoe-content" class="toc-link" aria-label="回到顶部" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
@@ -966,7 +1194,7 @@
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
 
-<script src="/js/app.js?v=1659671787559"></script>
+<script src="/js/app.js?v=1659671787434"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
 <script>

@@ -5,7 +5,7 @@
 <head>
   
   <meta name="baidu-site-verification" content="code-J1Qg17G6wT" />
-  <title>文章归档：2020/2 - 咔斯の小窝</title>
+  <title>web学习笔记8 - 函数与作用域 - 咔斯の小窝</title>
   <meta charset="UTF-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
@@ -16,19 +16,25 @@
     <meta name="baidu-site-verification" content="code-7bF3wXCwO5" />
 
   <link rel="shortcut icon" href="https://s2.loli.net/2022/07/19/xKNvsPHqcyCL37d.png" type="image/png" />
-  <meta property="og:type" content="website">
-<meta property="og:title" content="咔斯の小窝">
-<meta property="og:url" content="https://www.kassama.top/archives/2020/02/index.html">
+  <meta name="description" content="函数与作用域 学习总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="web学习笔记8 - 函数与作用域">
+<meta property="og:url" content="https://www.kassama.top/webNotes8.html">
 <meta property="og:site_name" content="咔斯の小窝">
+<meta property="og:description" content="函数与作用域 学习总结">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-04-15T13:20:12.000Z">
+<meta property="article:modified_time" content="2022-08-05T03:55:21.765Z">
 <meta property="article:author" content="咔斯Sama">
+<meta property="article:tag" content="web">
+<meta property="article:tag" content="HTML">
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css?v=233" crossorigin>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css">
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_cksn56jaae6.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1659671787557">
+  <link rel="stylesheet" href="/css/style.css?v=1659671787442">
 <meta name="generator" content="Hexo 6.1.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -222,35 +228,274 @@
   </div>
   <div id="nexmoe-content">
     <div class="nexmoe-primary">
-        <section class="nexmoe-posts">
+        <div class="nexmoe-post">
     
-    <div class="nexmoe-post">
-        <a href="/2020/02/11/hello-world/">
-            
-                <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 24.175824175824175%;">
-                    <img data-src="https://i.loli.net/2020/04/13/9j7KAFZqBlk28Ud.jpg" data-sizes="auto" alt="欢迎呀！咔斯的博客正式开启啦！" class="lazyload">
-                    <h1>欢迎呀！咔斯的博客正式开启啦！</h1>
-                </div>
-            
-        </a>
-        
-        <div class="nexmoe-post-meta nexmoe-rainbow">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2020年02月11日</a>
-            <a><i class="nexmoefont icon-areachart"></i>13 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+        <div class="nexmoe-post-cover"
+             style="padding-bottom: 24.305555555555554%;">
+            <img data-src="https://tva1.sinaimg.cn/large/006RYYI7ly1h4bb6rlw2nj328g1bc79p.jpg" data-sizes="auto" alt="web学习笔记8 - 函数与作用域" class="lazyload">
+            <h1>web学习笔记8 - 函数与作用域</h1>
         </div>
+    
+
+        <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2020年04月15日</a>
+    <a><i class="nexmoefont icon-areachart"></i>1k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 4 分钟</a>
+</div>
+
 
         <article>
-            
-                <span id="more"></span>
+            <p>函数与作用域 学习总结</p>
+<span id="more"></span>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p><code>面向对象三大特点</code>: <code>继承</code> <code>多态</code> <code>封装</code>，<br><code>函数</code>: 代码集合体，把相同功能代码封装到一个函数体里面，以后这个函数重复使用了，</p>
+<h3 id="不带参数的函数封装"><a href="#不带参数的函数封装" class="headerlink" title="不带参数的函数封装"></a>不带参数的函数封装</h3><pre><code class="highlight js"><span class="comment">//  关键字 函数名 (形参)&#123;函数体&#125;</span>
+<span class="keyword">function</span> <span class="title function_">add</span>(<span class="params"></span>)&#123;
+  <span class="keyword">var</span> a = <span class="number">10</span>
+  <span class="keyword">var</span> b = <span class="string">&quot;10&quot;</span>
+    <span class="keyword">var</span> c = a+b  <span class="comment">//+ 加法运算，必须保证都是数字； </span>
+  <span class="comment">// var c = a / b   // 可以把字符串转成数字，然后再去计算</span>
+  <span class="comment">// var c = a * b    //  把字符串转成数字一种方式，这种方式称为隐式转换</span>
+  
+  <span class="keyword">if</span>(b)&#123;
+    <span class="comment">// 如果a数字，   非0都为true</span>
+    <span class="comment">// 如果字符串    非&quot;&quot;都为true</span>
+    <span class="comment">// 如果布尔值     true就是true，</span>
+    <span class="comment">// 如果是空数组    为true</span>
+    <span class="comment">// 如果是空对象    为true</span>
+    <span class="comment">// 如果undefined  为false</span>
+    <span class="comment">// null 不存在     为false</span>
+    <span class="variable language_">console</span>.<span class="title function_">log</span>(c) 
+  &#125;     
+&#125;
+<span class="comment">// 必须调用:函数名()</span>
+<span class="title function_">add</span>()</code></pre>
 
-<p>2020年2月11日，咔斯的博客搭建完毕！</p>
+<h3 id="递归引入"><a href="#递归引入" class="headerlink" title="递归引入"></a>递归引入</h3><pre><code class="highlight js"><span class="comment">// 1 1 2 3 5 8 13 21</span>
+<span class="keyword">function</span> <span class="title function_">f1</span>(<span class="params"></span>)&#123;
+  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;f1&quot;</span>)
+  <span class="comment">//  too much recursion 函数体里面调用自己 造成死循环，需要合适的地方跳出，就是递归思想</span>
+  <span class="comment">// f1()</span>
+&#125;
+<span class="title function_">f1</span>()</code></pre>
 
-            
+<h3 id="带参数的函数封装"><a href="#带参数的函数封装" class="headerlink" title="带参数的函数封装"></a>带参数的函数封装</h3><pre><code class="highlight js"><span class="comment">//  a,b,c 多个参数用逗号隔开，形参：在定义的时候没值</span>
+<span class="keyword">function</span> <span class="title function_">f2</span>(<span class="params">a,b,c</span>)&#123;
+  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;我的名字是&quot;</span>+a+<span class="string">&quot;年龄是&quot;</span>+b+<span class="string">&quot;性别是&quot;</span>+c)
+&#125;
+<span class="title function_">f2</span>(<span class="string">&quot;张三&quot;</span>,<span class="number">10</span>,<span class="string">&quot;男&quot;</span>) <span class="comment">// &quot;张三&quot; 实参， 函数调用的时候，把实参的赋值给形参</span></code></pre>
+
+<h3 id="带默认参数的函数的封装"><a href="#带默认参数的函数的封装" class="headerlink" title="带默认参数的函数的封装"></a>带默认参数的函数的封装</h3><p>带默认参数的函数的封装，把默认参数写在最后一位</p>
+<pre><code class="highlight js"><span class="keyword">function</span> <span class="title function_">f3</span>(<span class="params">name,stuid,sex=<span class="string">&quot;男&quot;</span></span>)&#123;
+  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;我的名字是&quot;</span>+name+<span class="string">&quot;性别是&quot;</span>+sex+<span class="string">&quot;学号是&quot;</span>+stuid)
+&#125;
+<span class="title function_">f3</span>(<span class="string">&quot;李四&quot;</span>,<span class="string">&quot;001&quot;</span>) <span class="comment">//如果给默认参数传值了，默认参数就是传递的数据，如果不传值，默认参数就是默认值</span>
+  <span class="title function_">f3</span>(<span class="string">&quot;张三&quot;</span>,<span class="string">&quot;002&quot;</span>,<span class="string">&quot;女&quot;</span>)
+  <span class="title function_">f3</span>(<span class="string">&quot;张三&quot;</span>,<span class="string">&quot;男&quot;</span>,<span class="string">&quot;003&quot;</span>)</code></pre>
+
+<h3 id="有返回值的函数"><a href="#有返回值的函数" class="headerlink" title="有返回值的函数"></a>有返回值的函数</h3><p>有返回值的函数，必须带关键字return</p>
+<pre><code class="highlight js"><span class="keyword">function</span> <span class="title function_">f4</span>(<span class="params">a,b,c</span>)&#123;
+  <span class="keyword">return</span> a * b *c
+&#125;
+<span class="keyword">var</span> aa = <span class="title function_">f4</span>(<span class="number">10</span>,<span class="number">10</span>,<span class="number">10</span>)
+<span class="variable language_">console</span>.<span class="title function_">log</span>(aa)</code></pre>
+
+<h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><ul>
+<li><code>全局作用域</code>: 在script标签定义的变量。就是一个全局变量，可以在任何地方去使用。</li>
+<li><code>局部作用域</code>: 在函数体定义的变量，就是一个局部变量，只能用在当前的函数体中</li>
+<li><code>块级作用域</code>: 在代码块{}定义的变量，采用let进行定义，只能用在当前代码块里面<pre><code class="highlight js"><span class="keyword">var</span> a = <span class="number">10</span> <span class="comment">//全局的变量</span>
+<span class="keyword">function</span> <span class="title function_">f1</span>(<span class="params"></span>)&#123;
+  <span class="variable language_">console</span>.<span class="title function_">log</span>(a)
+&#125;
+<span class="title function_">f1</span>()
+
+<span class="comment">//var 变量提升只会把变量声明提升到当前作用域最前面</span>
+<span class="keyword">function</span> <span class="title function_">f2</span>(<span class="params"></span>)&#123; 
+<span class="variable language_">console</span>.<span class="title function_">log</span>(b,<span class="string">&quot;--------&quot;</span>)
+  <span class="keyword">var</span> b = <span class="number">10</span> <span class="comment">//局部变量</span>
+  <span class="variable language_">console</span>.<span class="title function_">log</span>(b,<span class="string">&quot;--------&quot;</span>)
+&#125;
+<span class="title function_">f2</span>()
+<span class="comment">// console.log(b) // 局部变量只能用在定义函数体里面</span>
+
+
+<span class="comment">//  当全局变量和局部的变量如果冲突了，在局部作用域使用的是局部的变量，</span>
+<span class="comment">//  在全局里面使用的全局变量 </span>
+<span class="keyword">function</span> <span class="title function_">f3</span>(<span class="params"></span>)&#123;
+<span class="keyword">var</span> a = <span class="number">20</span>
+<span class="variable language_">console</span>.<span class="title function_">log</span>(a,<span class="string">&quot;++++++++&quot;</span>)
+&#125;
+
+<span class="title function_">f3</span>()
+<span class="variable language_">console</span>.<span class="title function_">log</span>(a,<span class="string">&quot;--------------&quot;</span>)
+
+<span class="comment">/*</span>
+<span class="comment">1 全局的用起来比较方便 只需要定义一次,全局变量不会被释放,一直占用内存空间</span>
+<span class="comment">2 局部的变量不能在函数体使用,当函数体执行完了,局部的变量就会直接被释放,</span>
+<span class="comment">*/</span>
+
+<span class="comment">//在局部定义变量如何间接使用在全局里面</span>
+<span class="keyword">function</span> <span class="title function_">f4</span>(<span class="params">e,f</span>)&#123;
+<span class="keyword">var</span> d = <span class="number">100</span> <span class="comment">// 局部</span>
+<span class="keyword">return</span> d
+&#125;
+<span class="keyword">var</span> f = <span class="title function_">f4</span>()
+<span class="variable language_">console</span>.<span class="title function_">log</span>(f)</code></pre></li>
+</ul>
+<h2 id="作用域链"><a href="#作用域链" class="headerlink" title="作用域链"></a>作用域链</h2><p>访问一个变量,按照作用域链进行访问,当访问一个变量,先当前作用域去找,如果找到了,就直接使用,如果没找到,去父级作用域去找,如果父级作用域没有,去他父级的父级作用域去找,直到找到全局作用域为止,这样就形成一个作用域链</p>
+<pre><code class="highlight js"><span class="keyword">var</span> a = <span class="number">100</span>
+<span class="keyword">function</span> <span class="title function_">f2</span>(<span class="params"></span>) &#123;
+    <span class="keyword">var</span> a = <span class="number">30</span>
+    <span class="keyword">function</span> <span class="title function_">f3</span>(<span class="params"></span>) &#123;
+        <span class="keyword">var</span> a = <span class="number">20</span>
+        <span class="keyword">function</span> <span class="title function_">f4</span>(<span class="params"></span>) &#123;
+            <span class="keyword">var</span> a = <span class="number">10</span>
+            <span class="variable language_">console</span>.<span class="title function_">log</span>(a, <span class="string">&quot;++++++&quot;</span>) <span class="comment">//10</span>
+        &#125;
+        <span class="title function_">f4</span>()
+        <span class="variable language_">console</span>.<span class="title function_">log</span>(a, <span class="string">&quot;-------&quot;</span>) <span class="comment">//20</span>
+    &#125;
+    <span class="title function_">f3</span>()
+    <span class="variable language_">console</span>.<span class="title function_">log</span>(a, <span class="string">&quot;????????&quot;</span>) <span class="comment">// 30</span>
+&#125;
+<span class="title function_">f2</span>()
+<span class="variable language_">console</span>.<span class="title function_">log</span>(a)      <span class="comment">//100</span></code></pre>
         </article>
-    </div>
+
+        
+            
+  <div class="nexmoe-post-copyright">
+    <strong>本文作者：</strong>咔斯Sama<br>
     
+    <strong>本文链接：</strong><a href="https://www.kassama.top/webNotes8.html" title="https:&#x2F;&#x2F;www.kassama.top&#x2F;webNotes8.html" target="_blank" rel="noopener">https:&#x2F;&#x2F;www.kassama.top&#x2F;webNotes8.html</a><br>
+
+    
+      <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+    
+  </div>
+
+
+        
+
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/web%E7%AC%94%E8%AE%B0/">web笔记</a>
+    
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/HTML/" rel="tag">HTML</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/web/" rel="tag">web</a>
+    
+</div>
+
+    <div class="nexmoe-post-footer">
+        <section class="nexmoe-comment">
+    <div class="valine ks-valine-box"></div>
+<script src='https://unpkg.com/valine@1.5.1/dist/Valine.min.js'></script>
+<script>
+    // 使用方法 https://valine.js.org/quickstart.html
+    new Valine({
+        el: '.valine',
+        appId: '6Om9oV6sycmCPkRcrF9VR7Vd-gzGzoHsz',
+        appKey: 'cas3l5T4L8EkjrOFGsfzD8vM',
+        enableQQ: true,
+        placeholder: '阁下要说点什么嘛！',
+        requiredFields:['nick','mail'],
+
+        emojiCDN: '//cdn.bilicdn.tk/gh/kasisama/ValineCDN@master/',
+        // 表情title和图片映射
+        emojiMaps: {
+            "bilibilitv2": "bilibilitv/[tv_doge].png",
+            "bilibilitv3": "bilibilitv/[tv_亲亲].png",
+            "bilibilitv4": "bilibilitv/[tv_偷笑].png",
+            "bilibilitv5": "bilibilitv/[tv_再见].png",
+            "bilibilitv6": "bilibilitv/[tv_冷漠].png",
+            "bilibilitv7": "bilibilitv/[tv_发怒].png",
+            "bilibilitv8": "bilibilitv/[tv_发财].png",
+            "bilibilitv9": "bilibilitv/[tv_可爱].png",
+            "bilibilitv10": "bilibilitv/[tv_吐血].png",
+            "bilibilitv11": "bilibilitv/[tv_呆].png",
+            "bilibilitv12": "bilibilitv/[tv_呕吐].png",
+            "bilibilitv13": "bilibilitv/[tv_困].png",
+            "bilibilitv14": "bilibilitv/[tv_坏笑].png",
+            "bilibilitv15": "bilibilitv/[tv_大佬].png",
+            "bilibilitv16": "bilibilitv/[tv_大哭].png",
+            "bilibilitv17": "bilibilitv/[tv_委屈].png",
+            "bilibilitv18": "bilibilitv/[tv_害羞].png",
+            "bilibilitv19": "bilibilitv/[tv_尴尬].png",
+            "bilibilitv20": "bilibilitv/[tv_微笑].png",
+            "bilibilitv21": "bilibilitv/[tv_思考].png",
+            "bilibilitv22": "bilibilitv/[tv_惊吓].png",
+            "bilibilitv23": "bilibilitv/[tv_打脸].png",
+            "bilibilitv24": "bilibilitv/[tv_抓狂].png",
+            "bilibilitv25": "bilibilitv/[tv_抠鼻].png",
+            "bilibilitv26": "bilibilitv/[tv_斜眼笑].png",
+            "bilibilitv27": "bilibilitv/[tv_无奈].png",
+            "bilibilitv28": "bilibilitv/[tv_晕].png",
+            "bilibilitv29": "bilibilitv/[tv_流汗].png",
+            "bilibilitv30": "bilibilitv/[tv_流泪].png",
+            "bilibilitv31": "bilibilitv/[tv_流鼻血].png",
+            "bilibilitv32": "bilibilitv/[tv_点赞].png",
+            "bilibilitv33": "bilibilitv/[tv_生气].png",
+            "bilibilitv34": "bilibilitv/[tv_生病].png",
+            "bilibilitv35": "bilibilitv/[tv_疑问].png",
+            "bilibilitv36": "bilibilitv/[tv_白眼].png",
+            "bilibilitv37": "bilibilitv/[tv_皱眉].png",
+            "bilibilitv38": "bilibilitv/[tv_目瞪口呆].png",
+            "bilibilitv39": "bilibilitv/[tv_睡着].png",
+            "bilibilitv40": "bilibilitv/[tv_笑哭].png",
+            "bilibilitv41": "bilibilitv/[tv_腼腆].png",
+            "bilibilitv42": "bilibilitv/[tv_色].png",
+            "bilibilitv43": "bilibilitv/[tv_调侃].png",
+            "bilibilitv44": "bilibilitv/[tv_调皮].png",
+            "bilibilitv45": "bilibilitv/[tv_鄙视].png",
+            "bilibilitv46": "bilibilitv/[tv_闭嘴].png",
+            "bilibilitv47": "bilibilitv/[tv_难过].png",
+            "bilibilitv48": "bilibilitv/[tv_馋].png",
+            "bilibilitv49": "bilibilitv/[tv_鬼脸].png",
+            "bilibilitv50": "bilibilitv/[tv_黑人问号].png",
+            "bilibilitv51": "bilibilitv/[tv_鼓掌].png",
+            "Heybox1": "Heybox/expression_cube.png",
+            "Heybox2": "Heybox/expression_cube_bingbujiandan.png",
+            "Heybox3": "Heybox/expression_cube_bizui.png",
+            "Heybox4": "Heybox/expression_cube_cangsang.png",
+            "Heybox5": "Heybox/expression_cube_dalian.png",
+            "Heybox6": "Heybox/expression_cube_doge.png",
+            "Heybox7": "Heybox/expression_cube_gandong.png",
+            "Heybox8": "Heybox/expression_cube_guai.png",
+            "Heybox9": "Heybox/expression_cube_gugu.png",
+            "Heybox10": "Heybox/expression_cube_han.png",
+            "Heybox11": "Heybox/expression_cube_hbi.png",
+            "Heybox12": "Heybox/expression_cube_heirenwenhao.png",
+            "Heybox13": "Heybox/expression_cube_huaji.png",
+            "Heybox14": "Heybox/expression_cube_jiayou.png",
+            "Heybox15": "Heybox/expression_cube_jingya.png",
+            "Heybox16": "Heybox/expression_cube_kaixin.png",
+            "Heybox17": "Heybox/expression_cube_ku.png",
+            "Heybox18": "Heybox/expression_cube_kun.png",
+            "Heybox19": "Heybox/expression_cube_kuqi.png",
+            "Heybox20": "Heybox/expression_cube_nu.png",
+            "Heybox21": "Heybox/expression_cube_penshui.png",
+            "Heybox22": "Heybox/expression_cube_qiliang.png",
+            "Heybox23": "Heybox/expression_cube_shengqi.png",
+            "Heybox24": "Heybox/expression_cube_shuijiao.png",
+            "Heybox25": "Heybox/expression_cube_tanqi.png",
+            "Heybox26": "Heybox/expression_cube_tanshou.png",
+            "Heybox27": "Heybox/expression_cube_tu.png",
+            "Heybox28": "Heybox/expression_cube_wa.png",
+            "Heybox29": "Heybox/expression_cube_weiqu.png",
+            "Heybox30": "Heybox/expression_cube_weixiao.png",
+            "Heybox31": "Heybox/expression_cube_wulianku.png",
+            "Heybox32": "Heybox/expression_cube_xia.png",
+            "Heybox33": "Heybox/expression_cube_xiaocry.png",
+            "Heybox34": "Heybox/expression_cube_xihuan.png",
+            "Heybox35": "Heybox/expression_cube_xuexi.png",
+            "Heybox36": "Heybox/expression_cube_yun.png",
+            "Heybox37": "Heybox/expression_cube_zan.png"
+        }
+    })
+    
+</script>
 </section>
+    </div>
+</div>
 
 
         <div class="nexmoe-post-right">
@@ -259,6 +504,13 @@
                 
                 
                     
+                        <button class="mdui-fab catalog" style="overflow:unset;">
+                            <i class="nexmoefont icon-i-catalog"></i>
+                            <div class="nexmoe-toc">
+                              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0"><span class="toc-number">1.</span> <span class="toc-text">函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8D%E5%B8%A6%E5%8F%82%E6%95%B0%E7%9A%84%E5%87%BD%E6%95%B0%E5%B0%81%E8%A3%85"><span class="toc-number">1.1.</span> <span class="toc-text">不带参数的函数封装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%92%E5%BD%92%E5%BC%95%E5%85%A5"><span class="toc-number">1.2.</span> <span class="toc-text">递归引入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%A6%E5%8F%82%E6%95%B0%E7%9A%84%E5%87%BD%E6%95%B0%E5%B0%81%E8%A3%85"><span class="toc-number">1.3.</span> <span class="toc-text">带参数的函数封装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%A6%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0%E7%9A%84%E5%87%BD%E6%95%B0%E7%9A%84%E5%B0%81%E8%A3%85"><span class="toc-number">1.4.</span> <span class="toc-text">带默认参数的函数的封装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%89%E8%BF%94%E5%9B%9E%E5%80%BC%E7%9A%84%E5%87%BD%E6%95%B0"><span class="toc-number">1.5.</span> <span class="toc-text">有返回值的函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-number">2.</span> <span class="toc-text">作用域</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%93%BE"><span class="toc-number">3.</span> <span class="toc-text">作用域链</span></a></li></ol>
+                            </div>
+                        </button>
+                        
                   
                 
                   <a href="#nexmoe-content" class="toc-link" aria-label="回到顶部" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
@@ -966,7 +1218,7 @@
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
 
-<script src="/js/app.js?v=1659671787559"></script>
+<script src="/js/app.js?v=1659671787446"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
 <script>

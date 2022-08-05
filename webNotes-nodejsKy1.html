@@ -5,7 +5,7 @@
 <head>
   
   <meta name="baidu-site-verification" content="code-J1Qg17G6wT" />
-  <title>文章归档：2020/2 - 咔斯の小窝</title>
+  <title>关于nodejs解决服务器跨域的方法 - 咔斯の小窝</title>
   <meta charset="UTF-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
@@ -16,19 +16,26 @@
     <meta name="baidu-site-verification" content="code-7bF3wXCwO5" />
 
   <link rel="shortcut icon" href="https://s2.loli.net/2022/07/19/xKNvsPHqcyCL37d.png" type="image/png" />
-  <meta property="og:type" content="website">
-<meta property="og:title" content="咔斯の小窝">
-<meta property="og:url" content="https://www.kassama.top/archives/2020/02/index.html">
+  <meta name="description" content="记录一下跨域问题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于nodejs解决服务器跨域的方法">
+<meta property="og:url" content="https://www.kassama.top/webNotes-nodejsKy1.html">
 <meta property="og:site_name" content="咔斯の小窝">
+<meta property="og:description" content="记录一下跨域问题">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-05-09T13:22:30.000Z">
+<meta property="article:modified_time" content="2022-08-01T08:40:05.703Z">
 <meta property="article:author" content="咔斯Sama">
+<meta property="article:tag" content="web">
+<meta property="article:tag" content="HTML">
+<meta property="article:tag" content="Vue">
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css?v=233" crossorigin>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css">
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_cksn56jaae6.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1659671787557">
+  <link rel="stylesheet" href="/css/style.css?v=1659671787419">
 <meta name="generator" content="Hexo 6.1.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -222,35 +229,182 @@
   </div>
   <div id="nexmoe-content">
     <div class="nexmoe-primary">
-        <section class="nexmoe-posts">
+        <div class="nexmoe-post">
     
-    <div class="nexmoe-post">
-        <a href="/2020/02/11/hello-world/">
-            
-                <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 24.175824175824175%;">
-                    <img data-src="https://i.loli.net/2020/04/13/9j7KAFZqBlk28Ud.jpg" data-sizes="auto" alt="欢迎呀！咔斯的博客正式开启啦！" class="lazyload">
-                    <h1>欢迎呀！咔斯的博客正式开启啦！</h1>
-                </div>
-            
-        </a>
-        
-        <div class="nexmoe-post-meta nexmoe-rainbow">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2020年02月11日</a>
-            <a><i class="nexmoefont icon-areachart"></i>13 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+        <div class="nexmoe-post-cover"
+             style="padding-bottom: 24.305555555555554%;">
+            <img data-src="https://tva1.sinaimg.cn/large/006RYYI7ly1h4bb6rlw2nj328g1bc79p.jpg" data-sizes="auto" alt="关于nodejs解决服务器跨域的方法" class="lazyload">
+            <h1>关于nodejs解决服务器跨域的方法</h1>
         </div>
+    
+
+        <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2020年05月09日</a>
+    <a><i class="nexmoefont icon-areachart"></i>302 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+</div>
+
 
         <article>
-            
-                <span id="more"></span>
+            <p>记录一下跨域问题</p>
+<span id="more"></span>
 
-<p>2020年2月11日，咔斯的博客搭建完毕！</p>
+<h4 id="首先，什么是跨域？"><a href="#首先，什么是跨域？" class="headerlink" title="首先，什么是跨域？"></a>首先，什么是跨域？</h4><p>浏览器从一个域名的网页去请求另一个域名的资源时，域名、端口、协议任一不同，都是跨域；<br>那么，如何解决跨域呢？</p>
+<p>1、采用jsonp方法解决跨域，<br>2、在服务器端利用nodejs设置头文件header来解决跨域，实例代码如下：</p>
+<pre><code class="highlight js"><span class="keyword">const</span> http = <span class="built_in">require</span>(“http”);
+http.<span class="title function_">createServer</span>(<span class="function">(<span class="params">req,res</span>)=&gt;</span>&#123;
 
-            
+<span class="comment">//设置返回格式 JSON, 解决跨域问题</span>
+<span class="comment">// res.setHeader(&#x27;Content-type&#x27;, &#x27;application/json&#x27;);</span>
+
+res.<span class="title function_">setHeader</span>(<span class="string">&quot;Access-Control-Allow-Origin&quot;</span>, <span class="string">&quot;*&quot;</span>);
+res.<span class="title function_">setHeader</span>(<span class="string">&quot;Access-Control-Allow-Headers&quot;</span>, <span class="string">&quot;Content-Type, Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild&quot;</span>);
+res.<span class="title function_">setHeader</span>(<span class="string">&quot;Access-Control-Allow-Methods&quot;</span>,<span class="string">&quot;PUT,POST,GET,DELETE,OPTIONS&quot;</span>);
+res.<span class="title function_">setHeader</span>(<span class="string">&quot;X-Powered-By&quot;</span>,<span class="string">&quot;3.2.1&quot;</span>);
+res.<span class="title function_">setHeader</span>(<span class="string">&quot;Content-Type&quot;</span>, <span class="string">&quot;application/json;charset=utf-8&quot;</span>);
+
+<span class="comment">//自己的逻辑代码</span>
+&#125;)</code></pre>
+
+<p>请注意上文中强调的setHeader，现在网上有不少博客都直接写成了header方法(原生node没有这个方法)，这是错误的(亲测)，目前Nodejs中res没有header()这个方法，虽然是一个很小的点，但可能在误导很多初学者。<br>同时，请注意头文件的第二行，这样设置会更全面些；</p>
+
         </article>
-    </div>
+
+        
+            
+  <div class="nexmoe-post-copyright">
+    <strong>本文作者：</strong>咔斯Sama<br>
     
+    <strong>本文链接：</strong><a href="https://www.kassama.top/webNotes-nodejsKy1.html" title="https:&#x2F;&#x2F;www.kassama.top&#x2F;webNotes-nodejsKy1.html" target="_blank" rel="noopener">https:&#x2F;&#x2F;www.kassama.top&#x2F;webNotes-nodejsKy1.html</a><br>
+
+    
+      <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+    
+  </div>
+
+
+        
+
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/web%E7%AC%94%E8%AE%B0/">web笔记</a>
+    
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/HTML/" rel="tag">HTML</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/Vue/" rel="tag">Vue</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/web/" rel="tag">web</a>
+    
+</div>
+
+    <div class="nexmoe-post-footer">
+        <section class="nexmoe-comment">
+    <div class="valine ks-valine-box"></div>
+<script src='https://unpkg.com/valine@1.5.1/dist/Valine.min.js'></script>
+<script>
+    // 使用方法 https://valine.js.org/quickstart.html
+    new Valine({
+        el: '.valine',
+        appId: '6Om9oV6sycmCPkRcrF9VR7Vd-gzGzoHsz',
+        appKey: 'cas3l5T4L8EkjrOFGsfzD8vM',
+        enableQQ: true,
+        placeholder: '阁下要说点什么嘛！',
+        requiredFields:['nick','mail'],
+
+        emojiCDN: '//cdn.bilicdn.tk/gh/kasisama/ValineCDN@master/',
+        // 表情title和图片映射
+        emojiMaps: {
+            "bilibilitv2": "bilibilitv/[tv_doge].png",
+            "bilibilitv3": "bilibilitv/[tv_亲亲].png",
+            "bilibilitv4": "bilibilitv/[tv_偷笑].png",
+            "bilibilitv5": "bilibilitv/[tv_再见].png",
+            "bilibilitv6": "bilibilitv/[tv_冷漠].png",
+            "bilibilitv7": "bilibilitv/[tv_发怒].png",
+            "bilibilitv8": "bilibilitv/[tv_发财].png",
+            "bilibilitv9": "bilibilitv/[tv_可爱].png",
+            "bilibilitv10": "bilibilitv/[tv_吐血].png",
+            "bilibilitv11": "bilibilitv/[tv_呆].png",
+            "bilibilitv12": "bilibilitv/[tv_呕吐].png",
+            "bilibilitv13": "bilibilitv/[tv_困].png",
+            "bilibilitv14": "bilibilitv/[tv_坏笑].png",
+            "bilibilitv15": "bilibilitv/[tv_大佬].png",
+            "bilibilitv16": "bilibilitv/[tv_大哭].png",
+            "bilibilitv17": "bilibilitv/[tv_委屈].png",
+            "bilibilitv18": "bilibilitv/[tv_害羞].png",
+            "bilibilitv19": "bilibilitv/[tv_尴尬].png",
+            "bilibilitv20": "bilibilitv/[tv_微笑].png",
+            "bilibilitv21": "bilibilitv/[tv_思考].png",
+            "bilibilitv22": "bilibilitv/[tv_惊吓].png",
+            "bilibilitv23": "bilibilitv/[tv_打脸].png",
+            "bilibilitv24": "bilibilitv/[tv_抓狂].png",
+            "bilibilitv25": "bilibilitv/[tv_抠鼻].png",
+            "bilibilitv26": "bilibilitv/[tv_斜眼笑].png",
+            "bilibilitv27": "bilibilitv/[tv_无奈].png",
+            "bilibilitv28": "bilibilitv/[tv_晕].png",
+            "bilibilitv29": "bilibilitv/[tv_流汗].png",
+            "bilibilitv30": "bilibilitv/[tv_流泪].png",
+            "bilibilitv31": "bilibilitv/[tv_流鼻血].png",
+            "bilibilitv32": "bilibilitv/[tv_点赞].png",
+            "bilibilitv33": "bilibilitv/[tv_生气].png",
+            "bilibilitv34": "bilibilitv/[tv_生病].png",
+            "bilibilitv35": "bilibilitv/[tv_疑问].png",
+            "bilibilitv36": "bilibilitv/[tv_白眼].png",
+            "bilibilitv37": "bilibilitv/[tv_皱眉].png",
+            "bilibilitv38": "bilibilitv/[tv_目瞪口呆].png",
+            "bilibilitv39": "bilibilitv/[tv_睡着].png",
+            "bilibilitv40": "bilibilitv/[tv_笑哭].png",
+            "bilibilitv41": "bilibilitv/[tv_腼腆].png",
+            "bilibilitv42": "bilibilitv/[tv_色].png",
+            "bilibilitv43": "bilibilitv/[tv_调侃].png",
+            "bilibilitv44": "bilibilitv/[tv_调皮].png",
+            "bilibilitv45": "bilibilitv/[tv_鄙视].png",
+            "bilibilitv46": "bilibilitv/[tv_闭嘴].png",
+            "bilibilitv47": "bilibilitv/[tv_难过].png",
+            "bilibilitv48": "bilibilitv/[tv_馋].png",
+            "bilibilitv49": "bilibilitv/[tv_鬼脸].png",
+            "bilibilitv50": "bilibilitv/[tv_黑人问号].png",
+            "bilibilitv51": "bilibilitv/[tv_鼓掌].png",
+            "Heybox1": "Heybox/expression_cube.png",
+            "Heybox2": "Heybox/expression_cube_bingbujiandan.png",
+            "Heybox3": "Heybox/expression_cube_bizui.png",
+            "Heybox4": "Heybox/expression_cube_cangsang.png",
+            "Heybox5": "Heybox/expression_cube_dalian.png",
+            "Heybox6": "Heybox/expression_cube_doge.png",
+            "Heybox7": "Heybox/expression_cube_gandong.png",
+            "Heybox8": "Heybox/expression_cube_guai.png",
+            "Heybox9": "Heybox/expression_cube_gugu.png",
+            "Heybox10": "Heybox/expression_cube_han.png",
+            "Heybox11": "Heybox/expression_cube_hbi.png",
+            "Heybox12": "Heybox/expression_cube_heirenwenhao.png",
+            "Heybox13": "Heybox/expression_cube_huaji.png",
+            "Heybox14": "Heybox/expression_cube_jiayou.png",
+            "Heybox15": "Heybox/expression_cube_jingya.png",
+            "Heybox16": "Heybox/expression_cube_kaixin.png",
+            "Heybox17": "Heybox/expression_cube_ku.png",
+            "Heybox18": "Heybox/expression_cube_kun.png",
+            "Heybox19": "Heybox/expression_cube_kuqi.png",
+            "Heybox20": "Heybox/expression_cube_nu.png",
+            "Heybox21": "Heybox/expression_cube_penshui.png",
+            "Heybox22": "Heybox/expression_cube_qiliang.png",
+            "Heybox23": "Heybox/expression_cube_shengqi.png",
+            "Heybox24": "Heybox/expression_cube_shuijiao.png",
+            "Heybox25": "Heybox/expression_cube_tanqi.png",
+            "Heybox26": "Heybox/expression_cube_tanshou.png",
+            "Heybox27": "Heybox/expression_cube_tu.png",
+            "Heybox28": "Heybox/expression_cube_wa.png",
+            "Heybox29": "Heybox/expression_cube_weiqu.png",
+            "Heybox30": "Heybox/expression_cube_weixiao.png",
+            "Heybox31": "Heybox/expression_cube_wulianku.png",
+            "Heybox32": "Heybox/expression_cube_xia.png",
+            "Heybox33": "Heybox/expression_cube_xiaocry.png",
+            "Heybox34": "Heybox/expression_cube_xihuan.png",
+            "Heybox35": "Heybox/expression_cube_xuexi.png",
+            "Heybox36": "Heybox/expression_cube_yun.png",
+            "Heybox37": "Heybox/expression_cube_zan.png"
+        }
+    })
+    
+</script>
 </section>
+    </div>
+</div>
 
 
         <div class="nexmoe-post-right">
@@ -259,6 +413,13 @@
                 
                 
                     
+                        <button class="mdui-fab catalog" style="overflow:unset;">
+                            <i class="nexmoefont icon-i-catalog"></i>
+                            <div class="nexmoe-toc">
+                              <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A6%96%E5%85%88%EF%BC%8C%E4%BB%80%E4%B9%88%E6%98%AF%E8%B7%A8%E5%9F%9F%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">首先，什么是跨域？</span></a></li></ol>
+                            </div>
+                        </button>
+                        
                   
                 
                   <a href="#nexmoe-content" class="toc-link" aria-label="回到顶部" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
@@ -966,7 +1127,7 @@
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
 
-<script src="/js/app.js?v=1659671787559"></script>
+<script src="/js/app.js?v=1659671787422"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
 <script>
