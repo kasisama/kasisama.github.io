@@ -1,0 +1,1979 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+  
+  <meta name="baidu-site-verification" content="code-J1Qg17G6wT" />
+  <title>ES6新特性 - 咔斯の小窝</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  
+  
+
+    <!-- Site Verification -->
+    <meta name="baidu-site-verification" content="code-7bF3wXCwO5" />
+
+  <link rel="shortcut icon" href="https://s2.loli.net/2022/07/19/xKNvsPHqcyCL37d.png" type="image/png" />
+  <meta name="description" content="ES6新特性">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6新特性">
+<meta property="og:url" content="https://www.kassama.top/webNotesES6.html">
+<meta property="og:site_name" content="咔斯の小窝">
+<meta property="og:description" content="ES6新特性">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/006RYYI7ly1h5lh3gadyjj30mx0h0dn7.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/006RYYI7ly1h5lksaufxrj30sl0kwalz.jpg">
+<meta property="article:published_time" content="2020-04-20T14:32:35.000Z">
+<meta property="article:modified_time" content="2022-08-27T12:38:46.914Z">
+<meta property="article:author" content="咔斯Sama">
+<meta property="article:tag" content="web">
+<meta property="article:tag" content="HTML">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tva1.sinaimg.cn/large/006RYYI7ly1h5lh3gadyjj30mx0h0dn7.jpg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css?v=233" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css">
+  
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_cksn56jaae6.css">
+  
+  <link rel="stylesheet" href="/css/style.css?v=1661604131494">
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+<body class="mdui-drawer-body-left">
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(https://tva1.sinaimg.cn/large/006RYYI7ly1h5llvrl5jgj30rs0h2k1o.jpg)"></div>
+    <div class="nexmoe-small" style="background-image: url(https://s2.loli.net/2022/07/19/QDhWb3BqyXLcdF8.png)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="/" title="咔斯Sama" class="mdui-btn mdui-btn-icon"><img src="https://tva1.sinaimg.cn/large/006RYYI7ly1h4bb67816lj30d70d6jrz.jpg" alt="咔斯Sama"></a>
+       </div>
+    </div>
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="咔斯Sama">
+            <img src="https://tva1.sinaimg.cn/large/006RYYI7ly1h4bb67816lj30d70d6jrz.jpg" alt="咔斯Sama" alt="咔斯Sama">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div id="ks-articlesBtn" class="nexmoe-count-item"><span>文章</span>26 <div class="item-radius"></div><div class="item-radius item-right"></div> </div>
+        <div id="ks-tagsBtn" class="nexmoe-count-item"><span>标签</span>11<div class="item-radius"></div><div class="item-radius item-right"></div></div>
+        <div id="ks-categoriesBtn" class="nexmoe-count-item"><span>分类</span>4<div class="item-radius"></div><div class="item-radius item-right"></div></div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-meishi"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/archives.html" title="文章归档">
+            <i class="mdui-list-item-icon nexmoefont icon-hanbao1"></i>
+            <div class="mdui-list-item-content">
+                文章归档
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/friend.html" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-cola"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/about.html" title="关于咔斯">
+            <i class="mdui-list-item-icon nexmoefont icon-jiubei1"></i>
+            <div class="mdui-list-item-content">
+                关于咔斯
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+  
+  
+<!-- 站内搜索 -->
+
+<div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search" >
+        <form id="search-form">
+            <label><input type="text" id="local-search-input" name="q" results="0" placeholder="站内搜索" class="input form-control" autocomplete="off" autocorrect="off"/></label>
+            <!-- 清空/重置搜索框 -->
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+        </form>
+    </div>
+    <div id="local-search-result"></div> <!-- 搜索结果区 -->
+    <!-- <p class='no-result'></p> 无匹配时显示，注意在 CSS 中设置默认隐藏 -->
+</div>
+
+
+  
+  <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="http://wpa.qq.com/msgrd?v=3&uin=1347993953&site=qq&menu=yes" target="_blank" mdui-tooltip="{content: 'QQ'}" style="color: rgb(64, 196, 255);background-color: rgba(64, 196, 255, .1);">
+            <i class="nexmoefont icon-QQ"></i>
+        </a><a class="mdui-ripple" href="https://steamcommunity.com/id/kasiwuhui/" target="_blank" mdui-tooltip="{content: 'steam'}" style="color: rgb(14, 71, 161);background-color: rgba(14, 71, 161, .15);">
+            <i class="nexmoefont icon-steam"></i>
+        </a><a class="mdui-ripple" href="mailto:kasiwuhui@vip.qq.com" target="_blank" mdui-tooltip="{content: 'mail'}" style="color: rgb(249,8,8);background-color: rgba(249,8,8,.1);">
+            <i class="nexmoefont icon-mail-fill"></i>
+        </a><a class="mdui-ripple" href="https://space.bilibili.com/93548600" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/kasisama/" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a><a class="mdui-ripple" href="https://gitee.com/kasi_sama" target="_blank" mdui-tooltip="{content: 'gitee'}" style="color: rgb(199, 29, 35);background-color: rgba(199, 29, 35, .15);">
+            <i class="nexmoefont icon-mayun"></i>
+        </a>
+    </div>
+</div>
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/web笔记/">web笔记</a>
+          <span class="category-list-count">19</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/wiki/">wiki</a>
+          <span class="category-list-count">2</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/公告/">公告</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/日志/">日志</a>
+          <span class="category-list-count">4</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/CDN/" style="font-size: 10px;">CDN</a> <a href="/tags/HTML/" style="font-size: 20px;">HTML</a> <a href="/tags/QWQ/" style="font-size: 10px;">QWQ</a> <a href="/tags/Vue/" style="font-size: 15px;">Vue</a> <a href="/tags/web/" style="font-size: 20px;">web</a> <a href="/tags/wiki/" style="font-size: 15px;">wiki</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 10px;">博客</a> <a href="/tags/%E5%92%94%E6%96%AF/" style="font-size: 10px;">咔斯</a> <a href="/tags/%E5%92%94%E6%96%AF%E5%A8%B1%E4%B9%90/" style="font-size: 10px;">咔斯娱乐</a> <a href="/tags/%E5%AE%A0%E7%89%A9%E5%85%BB%E6%88%90/" style="font-size: 15px;">宠物养成</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E6%9D%A1%E6%AC%BE/" style="font-size: 10px;">服务条款</a>
+    </div>
+    
+  </div>
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章归档</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a><span class="archive-list-count">22</span></li></ul>
+    </div>
+  </div>
+
+
+<style>
+.nexmoe-widget .archive-list-count{
+	position : absolute;
+	right: 15px;
+	top:9px;
+	color: #DDD;
+}
+</style>
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2022 咔斯Sama
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a><br/>
+        <a href="http://beian.miit.gov.cn" target="_blank"></a><br/>
+        
+        <div style="font-size: 12px">
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            本站总访问量  <a id="busuanzi_value_site_pv"></a> 次<br />
+            本站访客数<a id="busuanzi_value_site_uv"></a>人次
+        </div>
+        
+        
+    </div>
+
+</div><!-- .nexmoe-drawer -->
+
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+    
+        <div class="nexmoe-post-cover"
+             style="padding-bottom: 24.305555555555554%;">
+            <img data-src="https://tva1.sinaimg.cn/large/006RYYI7ly1h5llvrl5jgj30rs0h2k1o.jpg" data-sizes="auto" alt="ES6新特性" class="lazyload">
+            <h1>ES6新特性</h1>
+        </div>
+    
+
+        <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2020年04月20日</a>
+    <a><i class="nexmoefont icon-areachart"></i>7.4k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 34 分钟</a>
+</div>
+
+
+        <article>
+            <p>ES6新特性</p>
+<span id="more"></span>
+<h2 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h2><p><strong>es6: ECMA script 6</strong></p>
+<ul>
+<li><code>ECMAScript</code> 是javascript的一种语法标准</li>
+<li><code>es6</code> 第六版js语法     </li>
+<li><code>ECMA</code> : European Computer Manufacturers Association，欧洲计算机制造商协会。负责javascript语言标准的制定。</li>
+</ul>
+<p>截止目前，各大浏览器都已经实现了es6标准的90%以上。nodejs几乎完全支持es6。</p>
+<p>参考教程: <a target="_blank" rel="noopener" href="http://jsrun.net/t/cZKKp">http://jsrun.net/t/cZKKp</a></p>
+<h2 id="语义化"><a href="#语义化" class="headerlink" title="语义化"></a>语义化</h2><p><strong>语义化</strong>: 看到它就知道它是干啥的<br><strong>语义化标签</strong>: 使用单词作为标签,使标签更容易被识别</p>
+<h3 id="常见的语义化标签"><a href="#常见的语义化标签" class="headerlink" title="常见的语义化标签"></a>常见的语义化标签</h3><p><strong>结构化标签</strong>: <u>header</u>, <u>main</u>, <u>footer</u>, <u>nav</u>, <u>aside</u>, <u>hr</u><br><strong>文本标签</strong>: <u>p</u>, <u>h1-h6</u>, <u>strong</u>, <u>i</u>, <u>del</u></p>
+<h2 id="语义化概念"><a href="#语义化概念" class="headerlink" title="语义化概念"></a>语义化概念</h2><p><strong><u>什么是HTML语义化？HTML语义化的好处是什么？</u></strong><br><code>html语义化</code>让页面的内容<code>结构化</code>，<code>结构更清晰</code>，<code>便于对浏览器、搜索引擎解析</code>;<br>即使在没有样式CSS情况下也以一种文档格式显示，并且是容易阅读的;<br>搜索引擎的爬虫也依赖于HTML标记来确定上下文和各个关键字的权重，利于SEO;<br>使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解。</p>
+<h3 id="什么是SEO-如何做SEO优化"><a href="#什么是SEO-如何做SEO优化" class="headerlink" title="什么是SEO? 如何做SEO优化?"></a>什么是SEO? 如何做SEO优化?</h3><p><strong>SEO</strong>，是英文<strong>SearchEngineOptimization</strong>的缩写，中文的意思: <strong>搜索引擎优化</strong>。<u>SEO的目的就是让网站或者网页在搜索结果中，处于靠前的位置</u>。</p>
+<h4 id="实现SEO优化的方式有"><a href="#实现SEO优化的方式有" class="headerlink" title="实现SEO优化的方式有:"></a>实现SEO优化的方式有:</h4><ol>
+<li>合理的title、description、keywords：<u>搜索对着三项的权重逐个减小，<code>title</code>值强调重点即可；<code>description</code>把页面内容高度概括，不可过分堆砌关键词；<code>keywords</code>列举出重要关键词</u>。</li>
+<li>语义化的HTML代码，符合W3C规范：语义化代码让搜索引擎容易理解网页</li>
+<li>重要内容HTML代码放在最前：<u>搜索引擎抓取HTML顺序是从上到下，保证重要内容一定会被抓取</u></li>
+<li>重要内容不要用js输出：<u>爬虫不会执行js获取内容</u></li>
+<li>少用iframe：<u>搜索引擎不会抓取iframe中的内容</u></li>
+<li><strong>非装饰性图片必须加alt</strong></li>
+<li>提高网站速度：<u><code>网站速度</code>是搜索引擎排序的一个重要指标</u>。</li>
+</ol>
+<h2 id="音视频标签"><a href="#音视频标签" class="headerlink" title="音视频标签"></a>音视频标签</h2><p><strong>音视频标签的四个属性:</strong></p>
+<blockquote>
+<p>src 属性设置音视频资源路径<br>  controls 属性设置播放控制器<br>  autoplay 属性设置自动播放, 需要开启浏览器授权<br>  loop  属性设置循环播放</p>
+</blockquote>
+<pre><code class="highlight html"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">src</span>=<span class="string">&quot;https://music.163.com/song/media/outer/url?id=28263184.mp3&quot;</span> <span class="attr">controls</span> <span class="attr">loop</span>&gt;</span>此浏览器不支持播放<span class="tag">&lt;/<span class="name">audio</span>&gt;</span>
+<span class="tag">&lt;<span class="name">video</span> <span class="attr">src</span>=<span class="string">&quot;./demo.mp4&quot;</span> <span class="attr">controls</span> <span class="attr">loop</span>&gt;</span><span class="tag">&lt;/<span class="name">video</span>&gt;</span></code></pre>
+<p>audio演示：<br><audio src="https://music.163.com/song/media/outer/url?id=28263184.mp3" controls loop>此浏览器不支持播放</audio><br><video preload="auto" src="blob:https://player.bilibili.com/38254246-1f43-408b-a6ba-0d220c6a4f01" controls loop>此浏览器不支持播放</video></p>
+<!-- <iframe src="//player.bilibili.com/player.html?aid=64647289&bvid=BV1L4411d7bh&cid=112229983&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe> -->
+
+<h2 id="弹性布局"><a href="#弹性布局" class="headerlink" title="弹性布局"></a>弹性布局</h2><p><strong>流式布局</strong>: 网页默认的布局方式, 元素按照行标签从左向右,块标签从上向下依次排列, 尽量不使标签重叠<br><strong>弹性布局</strong>: html5新增的网页布局方式, 需要手动设置, 有如下特点: </p>
+<ul>
+<li>1，弹性布局总是给父元素设置， 对第一级子元素起效</li>
+<li>2，弹性布局元素默认从左向右排列，不换行，高度为100%（包含margin）</li>
+<li>3，弹性布局元素没有行标签块标签之分，可以正常设置宽距和宽高</li>
+<li>4，弹性布局元素不能使用浮动， 可以使用定位</li>
+</ul>
+<h3 id="弹性布局中的属性设置："><a href="#弹性布局中的属性设置：" class="headerlink" title="弹性布局中的属性设置："></a>弹性布局中的属性设置：</h3><p><strong>弹性容器</strong> 的属性设置：<br><code>display: flex;</code>   设置弹性容器<br><code>flex-wrap: wrap;</code> 设置换行<br><code>justify-content: space-evenly;</code>  设置说水平对齐方式<br><code>align-items: center;</code>    设置单行对齐方式<br><code>align-content: flex-start;</code>  设置多行对齐方式<br><strong>弹性元素</strong> 的属性设置：<br><code>align-self: flex-end; </code>弹性元素单独对齐<br><code>order: 1; </code> 弹性元素的排列顺序<br><code>flex-grow: 2</code>  元素扩展比例<br><code>flex-shrink: 0;</code>  元素压缩比例</p>
+<h2 id="布局-适配-兼容"><a href="#布局-适配-兼容" class="headerlink" title="布局 适配 兼容"></a>布局 适配 兼容</h2><h3 id="响应式布局"><a href="#响应式布局" class="headerlink" title="响应式布局"></a>响应式布局</h3><p>  概念: 在浏览器窗口尺寸变化时, 使一个网页在不同宽度的窗口上显示不同的排版样式和内容<br>  使用场景: 一般用于PC端网页<br>  实现原理: 使用媒体查询</p>
+<h3 id="浏览器适配"><a href="#浏览器适配" class="headerlink" title="浏览器适配"></a>浏览器适配</h3><p>  概念: 在浏览器窗口尺寸变化时, 使一个网页在不同宽度的窗口上显示相同的排版样式和内容<br>  使用场景: 一般用于移动端网页<br>  实现原理: 视口单位 vw &#x2F; vh</p>
+<h3 id="浏览器兼容"><a href="#浏览器兼容" class="headerlink" title="浏览器兼容"></a>浏览器兼容</h3><p>  概念: 在不同内核的浏览器上, 使一个网页在不同浏览器的上显示相同的排版样式和内容<br>  使用场景: 在不同内核和不同版本浏览器上的兼容(兼容低版本浏览器)<br>  实现原理: 代码优化</p>
+<h2 id="媒体查询"><a href="#媒体查询" class="headerlink" title="媒体查询"></a>媒体查询</h2><p>媒体查询的结构:  </p>
+<pre><code class="highlight html">@media 媒体类型 and (媒体特性) &#123;
+    条件满足时,渲染的css样式
+&#125;</code></pre>
+<p><strong>媒体类型</strong>: 此样式会在什么设备上生效 all &#x2F; screen<br><strong>媒体特性</strong>: 此样式渲染的条件, min-width &#x2F; max-height</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://tva1.sinaimg.cn/large/006RYYI7ly1h5lh3gadyjj30mx0h0dn7.jpg" alt="媒体特性.png" class="lazyload"></p>
+<h2 id="移动端适配"><a href="#移动端适配" class="headerlink" title="移动端适配"></a>移动端适配</h2><p><strong>适配</strong>: 在不同的设备上显示相同的样式</p>
+<ul>
+<li><code>viewport</code>: 视口, 可视窗口, 一般指移动端屏幕窗口</li>
+<li>移动端视口中有两个长度单位 <code>vw</code> 和  <code>vh</code></li>
+<li><code>vw: viewportWidth</code> 视口宽度   100vw &#x3D;&#x3D; 视口宽度 </li>
+<li><code>vh: viewportHeight</code> 视口高度  100vh &#x3D;&#x3D; 视口高度</li>
+</ul>
+<p><strong>100% 和 100vw 的区别</strong></p>
+<ul>
+<li>100% 指的是父标签宽度</li>
+<li>100vw 指得是宽口宽度</li>
+</ul>
+<p><strong>注意</strong>: 移动端竖向滚动条不占宽度, 所以移动端  100vw &#x3D;&#x3D; 100%<br><strong>结论</strong>: 建议PC端用100%, 移动端用100vw</p>
+<h2 id="requestAnimationFrame"><a href="#requestAnimationFrame" class="headerlink" title="requestAnimationFrame"></a>requestAnimationFrame</h2><p><code>requestAnimationFrame</code> 和 <code>setTimeout</code> 类似, 都是一个短暂不重复的计时器</p>
+<ul>
+<li>setTimeout可自定义计时时间</li>
+<li>requestAnimationFrame 的计时时间是默认的, 一帧的时间,约等于16.67ms</li>
+</ul>
+<p><code>requestAnimationFrame</code> 优点: 在保证动画流畅运行的前提下, 最大限度的节约性能消耗</p>
+<blockquote>
+<p>由于收到设备性能的影响, 网页的刷新率(帧率)不一定准确维持在60帧&#x2F;s, 可能偏高或偏低, 所以16.67ms的帧时间是一个大概的值,不是定值</p>
+</blockquote>
+<pre><code class="highlight js"><span class="comment">// 使用setInterval实现小球d1运动</span>
+<span class="keyword">var</span> y1 = <span class="number">0</span>
+<span class="built_in">setInterval</span>(<span class="function">() =&gt;</span> &#123;
+    y1 += <span class="number">1</span>
+    <span class="keyword">if</span>(y1 &gt;= <span class="number">600</span>) y1 = <span class="number">0</span>
+    d1.<span class="property">style</span>.<span class="property">top</span> = y1 + <span class="string">&quot;px&quot;</span>
+&#125;, <span class="number">16.67</span>);
+
+
+<span class="comment">// 使用setTimeout实现小球d2运动</span>
+<span class="keyword">var</span> y2 = <span class="number">0</span>
+<span class="keyword">function</span> <span class="title function_">move</span>(<span class="params"></span>)&#123;
+    y2 += <span class="number">1</span>
+    <span class="keyword">if</span>(y2 &gt;= <span class="number">600</span>) y2 = <span class="number">0</span>
+    d2.<span class="property">style</span>.<span class="property">top</span> = y2 + <span class="string">&quot;px&quot;</span>
+    <span class="built_in">setTimeout</span>(move, <span class="number">16.67</span>); <span class="comment">// 递归</span>
+&#125;
+<span class="built_in">setTimeout</span>(move, <span class="number">16.67</span>);
+
+
+<span class="comment">// 使用requestAnimationFrame实现小球d3运动</span>
+<span class="keyword">var</span> y3 = <span class="number">0</span>
+<span class="keyword">function</span> <span class="title function_">move1</span>(<span class="params"></span>)&#123;
+    y3 += <span class="number">1</span>
+    <span class="keyword">if</span>(y3 &gt;= <span class="number">600</span>) y3 = <span class="number">0</span>
+    d3.<span class="property">style</span>.<span class="property">top</span> = y3 + <span class="string">&quot;px&quot;</span>
+    <span class="title function_">requestAnimationFrame</span>(move1); <span class="comment">// 递归</span>
+&#125;
+<span class="title function_">requestAnimationFrame</span>(move1);</code></pre>
+
+<h2 id="地理定位"><a href="#地理定位" class="headerlink" title="地理定位"></a>地理定位</h2><p><code>navigator.geolocation</code> 是H5新增的API,用于浏览器获取位置信息</p>
+<pre><code class="highlight js"><span class="variable language_">window</span>.<span class="property">navigator</span>.<span class="property">geolocation</span>.<span class="title function_">getCurrentPosition</span>(<span class="function"><span class="params">res</span>=&gt;</span>&#123;
+    <span class="variable language_">console</span>.<span class="title function_">log</span>(res.<span class="property">coords</span>)
+    <span class="comment">// accuracy: 55   定位精度</span>
+    <span class="comment">// ​</span>
+    <span class="comment">// altitude: 0    海拔高度</span>
+    <span class="comment">// ​</span>
+    <span class="comment">// altitudeAccuracy: 0   海拔精确度</span>
+    <span class="comment">// ​</span>
+    <span class="comment">// heading: null     移动方向</span>
+    <span class="comment">// ​</span>
+    <span class="comment">// latitude: 34.72326699999999   纬度</span>
+    <span class="comment">// ​</span>
+    <span class="comment">// longitude: 113.75165477777777   经度</span>
+    <span class="comment">// ​</span>
+    <span class="comment">// speed: null    移动速度</span>
+&#125;)  <span class="comment">// 开启位置监视后, 直接获取位置失效</span>
+
+<span class="comment">// 开始监控位置</span>
+<span class="keyword">var</span> watch = navigator.<span class="property">geolocation</span>.<span class="title function_">watchPosition</span>(<span class="function"><span class="params">res</span>=&gt;</span>&#123;
+    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;位置更新&quot;</span>, res)
+&#125;)
+
+<span class="comment">// 取消监听</span>
+<span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;
+    navigator.<span class="property">geolocation</span>.<span class="title function_">clearWatch</span>(watch)
+&#125;, <span class="number">10000</span>);</code></pre>
+
+<h3 id="百度地图"><a href="#百度地图" class="headerlink" title="百度地图"></a>百度地图</h3><pre><code class="highlight html"><span class="comment">&lt;!-- 引用百度地图API3.0文件 --&gt;</span>
+<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://api.map.baidu.com/api?v=3.0&amp;ak=你自己の密钥&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
+<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://api.map.baidu.com/api?v=1.0&amp;&amp;type=webgl&amp;ak=你自己の密钥&quot;</span>&gt;</span>
+<span class="tag">&lt;/<span class="name">script</span>&gt;</span>
+<span class="comment">&lt;!-- 创建地图容器元素 --&gt;</span>
+<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;container&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span> 
+<span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">&quot;getEarth()&quot;</span>&gt;</span>开启地球模式<span class="tag">&lt;/<span class="name">button</span>&gt;</span>
+<span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span>
+<span class="language-javascript">    <span class="comment">// 创建地图实例</span></span>
+<span class="language-javascript">    <span class="keyword">var</span> map = <span class="keyword">new</span> <span class="title class_">BMap</span>.<span class="title class_">Map</span>(<span class="string">&quot;container&quot;</span>); </span>
+<span class="language-javascript">    <span class="comment">// 设置中心点坐标</span></span>
+<span class="language-javascript">    <span class="keyword">var</span> point = <span class="keyword">new</span> <span class="title class_">BMap</span>.<span class="title class_">Point</span>(<span class="number">116.404</span>, <span class="number">39.915</span>); </span>
+<span class="language-javascript">    <span class="comment">// 地图初始化，同时设置地图展示级别</span></span>
+<span class="language-javascript">    map.<span class="title function_">centerAndZoom</span>(point, <span class="number">15</span>);  </span>
+<span class="language-javascript">    <span class="comment">// 获取当前位置</span></span>
+<span class="language-javascript">    navigator.<span class="property">geolocation</span>.<span class="title function_">getCurrentPosition</span>(<span class="function"><span class="params">res</span>=&gt;</span>&#123;</span>
+<span class="language-javascript">        <span class="comment">// panTo()方法将让地图平滑移动至新中心点</span></span>
+<span class="language-javascript">        map.<span class="title function_">panTo</span>(<span class="keyword">new</span> <span class="title class_">BMap</span>.<span class="title class_">Point</span>(res.<span class="property">coords</span>.<span class="property">longitude</span>, res.<span class="property">coords</span>.<span class="property">latitude</span>)); </span>
+<span class="language-javascript">        <span class="comment">// 逆地址解析  // 创建地理编码实例, 并配置参数获取乡镇级数据</span></span>
+<span class="language-javascript">        <span class="keyword">var</span> myGeo = <span class="keyword">new</span> <span class="title class_">BMap</span>.<span class="title class_">Geocoder</span>(&#123;<span class="attr">extensions_town</span>: <span class="literal">true</span>&#125;); </span>
+<span class="language-javascript">        <span class="comment">// 根据坐标得到地址描述    </span></span>
+<span class="language-javascript">        myGeo.<span class="title function_">getLocation</span>(<span class="keyword">new</span> <span class="title class_">BMap</span>.<span class="title class_">Point</span>(res.<span class="property">coords</span>.<span class="property">longitude</span>, res.<span class="property">coords</span>.<span class="property">latitude</span>), <span class="keyword">function</span>(<span class="params">result</span>)&#123;      </span>
+<span class="language-javascript">            <span class="keyword">if</span> (result)&#123;      </span>
+<span class="language-javascript">                <span class="title function_">alert</span>(result.<span class="property">address</span>);      </span>
+<span class="language-javascript">            &#125;      </span>
+<span class="language-javascript">        &#125;);</span>
+<span class="language-javascript"></span>
+<span class="language-javascript">    &#125;)</span>
+<span class="language-javascript">    <span class="comment">//开启鼠标滚轮缩放</span></span>
+<span class="language-javascript">    map.<span class="title function_">enableScrollWheelZoom</span>(<span class="literal">true</span>);  </span>
+<span class="language-javascript">    <span class="comment">// 添加平移缩放控件</span></span>
+<span class="language-javascript">    map.<span class="title function_">addControl</span>(<span class="keyword">new</span> <span class="title class_">BMap</span>.<span class="title class_">NavigationControl</span>()); </span>
+<span class="language-javascript">    <span class="comment">// 比例尺控件</span></span>
+<span class="language-javascript">    map.<span class="title function_">addControl</span>(<span class="keyword">new</span> <span class="title class_">BMap</span>.<span class="title class_">ScaleControl</span>()); </span>
+<span class="language-javascript">    <span class="comment">// 缩略图控件 </span></span>
+<span class="language-javascript">    map.<span class="title function_">addControl</span>(<span class="keyword">new</span> <span class="title class_">BMap</span>.<span class="title class_">OverviewMapControl</span>());   </span>
+<span class="language-javascript">    <span class="comment">// 地图类型</span></span>
+<span class="language-javascript">    map.<span class="title function_">addControl</span>(<span class="keyword">new</span> <span class="title class_">BMap</span>.<span class="title class_">MapTypeControl</span>());</span>
+<span class="language-javascript">    <span class="comment">// 添加路况图层</span></span>
+<span class="language-javascript">    <span class="keyword">var</span> traffic = <span class="keyword">new</span> <span class="title class_">BMap</span>.<span class="title class_">TrafficLayer</span>();      </span>
+<span class="language-javascript">    map.<span class="title function_">addTileLayer</span>(traffic); </span>
+<span class="language-javascript">    <span class="comment">// 圆形区域搜索</span></span>
+<span class="language-javascript">    <span class="keyword">var</span> local = <span class="keyword">new</span> <span class="title class_">BMap</span>.<span class="title class_">LocalSearch</span>(map,&#123; </span>
+<span class="language-javascript">        <span class="attr">renderOptions</span>:&#123;</span>
+<span class="language-javascript">            <span class="attr">map</span>: map, </span>
+<span class="language-javascript">            <span class="attr">autoViewport</span>: <span class="literal">true</span></span>
+<span class="language-javascript">        &#125;</span>
+<span class="language-javascript">    &#125;);      </span>
+<span class="language-javascript">    <span class="comment">// 在天安门附近搜索银行</span></span>
+<span class="language-javascript">    local.<span class="title function_">searchNearby</span>(<span class="string">&quot;漫展&quot;</span>,<span class="string">&quot;上海&quot;</span>);   </span>
+<span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
+<span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span>
+<span class="language-javascript">    <span class="comment">// 点击按钮切换地球模式</span></span>
+<span class="language-javascript">    <span class="keyword">function</span> <span class="title function_">getEarth</span>(<span class="params"></span>)&#123;</span>
+<span class="language-javascript">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">123</span>)</span>
+<span class="language-javascript">        <span class="keyword">var</span> map = <span class="keyword">new</span> <span class="title class_">BMapGL</span>.<span class="title class_">Map</span>(<span class="string">&quot;container&quot;</span>);</span>
+<span class="language-javascript">        <span class="keyword">var</span> point = <span class="keyword">new</span> <span class="title class_">BMapGL</span>.<span class="title class_">Point</span>(<span class="number">116.404</span>, <span class="number">39.915</span>);</span>
+<span class="language-javascript">        map.<span class="title function_">centerAndZoom</span>(point, <span class="number">1</span>); </span>
+<span class="language-javascript">        map.<span class="title function_">enableScrollWheelZoom</span>(<span class="literal">true</span>);</span>
+<span class="language-javascript">        map.<span class="title function_">setMapType</span>(<span class="variable constant_">BMAP_EARTH_MAP</span>);</span>
+<span class="language-javascript">    &#125;</span>
+<span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></code></pre>
+
+<h2 id="canvas画布"><a href="#canvas画布" class="headerlink" title="canvas画布"></a>canvas画布</h2><h3 id="canvas绘图Api"><a href="#canvas绘图Api" class="headerlink" title="canvas绘图Api"></a>canvas绘图Api</h3><p>在script标签中添加如下注释,即可自动提示canvas API<br><strong><code>/** @type &#123;HTMLCanvasElement&#125; 添加canvas API语法提示*/</code></strong><br>(一) 方法:</p>
+<p><code>getContext(&quot;2d&quot;)</code>       创建绘图对象</p>
+<p><code>beginPath();</code>          开始绘制路径</p>
+<p><code>closePath();</code>    结束绘制路径,闭合线框</p>
+<p><code>moveTo(x,y);</code>    移动到绘制起点</p>
+<p><code>lineTo(x,y);</code>    画线段到指定点</p>
+<p><code>arc(x,y,r,start,end);</code>    绘制圆形(弧度单位)</p>
+<p><code>quadraticCurveTo(x,y,endX,endY)</code> 二次贝塞尔曲线</p>
+<p><code>bezierCurveTo(x1,y1,x2,y2,endX,endY)</code> 三次贝塞尔曲线</p>
+<p><code>stroke();</code>        线条类型 </p>
+<p><code>fill();</code>        填充类型</p>
+<p><code>fillRect(x,y,w,h)</code>    填充矩形</p>
+<p><code>strokeRect(x,y,w,h)</code>    线框矩形</p>
+<p><code>clearRect(x,y,w,h)</code>    清除矩形</p>
+<p><code>strokeText(string,x,y)</code> 绘制线条文字(空心)</p>
+<p><code>fillText(string,x,y)</code>    绘制填充文字(实心)</p>
+<p><code>drawImage(img,x,y,width,height)</code>  绘制图片(需在img的load函数中)</p>
+<p><code>save()</code>        保存当前状态设定</p>
+<p><code>restore()</code>        恢复到保存之前的状态设定</p>
+<p><code>rotate()</code>        旋转画布角度(弧度制)</p>
+<p>(二) 属性:</p>
+<p><code>fillStyle</code>        填充颜色(支持rgb(),#fff,red)</p>
+<p><code>strokeStyle</code>    线条颜色</p>
+<p><code>lineWidth</code>        线条宽度(整数值,默认单位px)</p>
+<p><code>lineJoin</code>        折线拐角类型 (round表示圆角)</p>
+<p><code>font</code>         支持多个值, 例如”10px 宋体”    </p>
+<p><code>textBaseline</code>    文字基点(默认bottom左下为基准点, top为左上)</p>
+<p><code>globalCompositeOperation</code> 绘制合成(具体值参考附件)</p>
+<h3 id="canvas语法"><a href="#canvas语法" class="headerlink" title="canvas语法"></a>canvas语法</h3><pre><code class="highlight html"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span>
+<span class="language-css">    <span class="selector-tag">canvas</span>&#123;</span>
+<span class="language-css">        <span class="attribute">border</span>: <span class="number">1px</span> solid;</span>
+<span class="language-css">        <span class="comment">/* css设置尺寸只能缩放画布,不能改变画布实际尺寸 */</span></span>
+<span class="language-css">        <span class="comment">/* height: 600px; */</span></span>
+<span class="language-css">    &#125;</span>
+<span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span>
+<span class="tag">&lt;<span class="name">body</span>&gt;</span>
+    <span class="comment">&lt;!-- 属性height/width设置的才是画布的实际尺寸 --&gt;</span>
+    <span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">&quot;myCanvas&quot;</span> <span class="attr">height</span>=<span class="string">&quot;600&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span>
+<span class="language-javascript">        <span class="comment">// 获取canvas标签元素</span></span>
+<span class="language-javascript">        <span class="comment">/** <span class="doctag">@type</span> &#123;<span class="type">HTMLCanvasElement</span>&#125; 添加canvas API语法提示*/</span></span>
+<span class="language-javascript">        <span class="keyword">var</span> canvas = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;myCanvas&quot;</span>)</span>
+<span class="language-javascript">        <span class="comment">// 通过canvas标签获取一个绘图对象</span></span>
+<span class="language-javascript">        <span class="keyword">var</span> ctx = canvas.<span class="title function_">getContext</span>(<span class="string">&quot;2d&quot;</span>)</span>
+<span class="language-javascript"></span>
+<span class="language-javascript">        <span class="comment">// 1, 绘制线段</span></span>
+<span class="language-javascript">        ctx.<span class="title function_">moveTo</span>(<span class="number">20</span>, <span class="number">20</span>); <span class="comment">// 设置绘制起点</span></span>
+<span class="language-javascript">        ctx.<span class="title function_">lineTo</span>(<span class="number">120</span>, <span class="number">20</span>); <span class="comment">// 绘制线段到终点</span></span>
+<span class="language-javascript">        ctx.<span class="title function_">lineTo</span>(<span class="number">120</span>, <span class="number">120</span>); <span class="comment">// 绘制线段到另一个终点</span></span>
+<span class="language-javascript">        ctx.<span class="title function_">lineTo</span>(<span class="number">20</span>, <span class="number">120</span>);</span>
+<span class="language-javascript">        ctx.<span class="title function_">lineTo</span>(<span class="number">20</span>, <span class="number">20</span>);</span>
+<span class="language-javascript">        ctx.<span class="title function_">moveTo</span>(<span class="number">20</span>,<span class="number">70</span>);  <span class="comment">// 设置另一个绘制起点</span></span>
+<span class="language-javascript">        ctx.<span class="title function_">lineTo</span>(<span class="number">120</span>,<span class="number">70</span>);</span>
+<span class="language-javascript">        ctx.<span class="title function_">moveTo</span>(<span class="number">70</span>, <span class="number">20</span>);  <span class="comment">// 设置另一个绘制起点</span></span>
+<span class="language-javascript">        ctx.<span class="title function_">lineTo</span>(<span class="number">70</span>,<span class="number">120</span>);</span>
+<span class="language-javascript">        ctx.<span class="title function_">stroke</span>(); <span class="comment">// 执行绘制线段</span></span>
+<span class="language-javascript"></span>
+<span class="language-javascript"></span>
+<span class="language-javascript">        <span class="comment">// 2, 绘制线框矩形</span></span>
+<span class="language-javascript">        ctx.<span class="title function_">strokeRect</span>(<span class="number">150</span>, <span class="number">20</span>, <span class="number">100</span>, <span class="number">60</span>);</span>
+<span class="language-javascript">        <span class="comment">// 绘制填充矩形</span></span>
+<span class="language-javascript">        ctx.<span class="title function_">fillRect</span>(<span class="number">150</span>, <span class="number">100</span>, <span class="number">100</span>, <span class="number">60</span>);</span>
+<span class="language-javascript">        <span class="comment">// 清理矩形区域</span></span>
+<span class="language-javascript">        ctx.<span class="title function_">clearRect</span>(<span class="number">180</span>, <span class="number">130</span>, <span class="number">20</span>, <span class="number">20</span>);</span>
+<span class="language-javascript"></span>
+<span class="language-javascript">        <span class="comment">// 3, 绘制弧形和扇形</span></span>
+<span class="language-javascript">        <span class="comment">// ctx.moveTo(120, 200) // 先移动移动到圆弧起点</span></span>
+<span class="language-javascript">        ctx.<span class="title function_">beginPath</span>()  <span class="comment">// 开始另一个绘制路径</span></span>
+<span class="language-javascript">        ctx.<span class="title function_">arc</span>(<span class="number">70</span>, <span class="number">200</span>, <span class="number">50</span>, <span class="number">0</span>, <span class="title class_">Math</span>.<span class="property">PI</span>);</span>
+<span class="language-javascript">        <span class="comment">// ctx.stroke()  // 圆弧</span></span>
+<span class="language-javascript">        ctx.<span class="title function_">fill</span>()       <span class="comment">// 扇形区域</span></span>
+<span class="language-javascript">        ctx.<span class="title function_">closePath</span>() <span class="comment">// 结束另一个绘制路径</span></span>
+<span class="language-javascript"></span>
+<span class="language-javascript">        <span class="comment">// 4, 绘制曲线</span></span>
+<span class="language-javascript">        <span class="comment">// 二次贝塞尔曲线</span></span>
+<span class="language-javascript">        ctx.<span class="title function_">moveTo</span>(<span class="number">20</span>, <span class="number">300</span>);  <span class="comment">// 曲线起点</span></span>
+<span class="language-javascript">        ctx.<span class="title function_">quadraticCurveTo</span>(<span class="number">100</span>, <span class="number">200</span>, <span class="number">240</span>, <span class="number">300</span>);</span>
+<span class="language-javascript">        ctx.<span class="title function_">stroke</span>()</span>
+<span class="language-javascript">        </span>
+<span class="language-javascript">        <span class="comment">// 三次内塞尔曲线</span></span>
+<span class="language-javascript">        ctx.<span class="title function_">beginPath</span>()</span>
+<span class="language-javascript">        ctx.<span class="property">strokeStyle</span> = <span class="string">&quot;yellow&quot;</span>;</span>
+<span class="language-javascript">        ctx.<span class="property">lineWidth</span> = <span class="number">2</span>;</span>
+<span class="language-javascript">        ctx.<span class="title function_">moveTo</span>(<span class="number">20</span>, <span class="number">400</span>);<span class="comment">// 曲线起点</span></span>
+<span class="language-javascript">        ctx.<span class="title function_">bezierCurveTo</span>(<span class="number">100</span>, <span class="number">200</span>, <span class="number">200</span>, <span class="number">500</span>, <span class="number">240</span>, <span class="number">330</span>);</span>
+<span class="language-javascript">        ctx.<span class="title function_">stroke</span>()</span>
+<span class="language-javascript">        ctx.<span class="title function_">closePath</span>()</span>
+<span class="language-javascript"></span>
+<span class="language-javascript"></span>
+<span class="language-javascript">        <span class="comment">// 5, 绘制文字</span></span>
+<span class="language-javascript">        ctx.<span class="property">font</span> = <span class="string">&quot;50px 楷体&quot;</span>;</span>
+<span class="language-javascript">        ctx.<span class="property">strokeStyle</span> = <span class="string">&quot;red&quot;</span>;</span>
+<span class="language-javascript">        ctx.<span class="property">lineWidth</span> = <span class="number">1</span></span>
+<span class="language-javascript">        ctx.<span class="property">fillStyle</span> = <span class="string">&quot;green&quot;</span></span>
+<span class="language-javascript">        ctx.<span class="title function_">strokeText</span>(<span class="string">&quot;饕餮&quot;</span>, <span class="number">20</span>, <span class="number">500</span>);</span>
+<span class="language-javascript">        ctx.<span class="title function_">fillText</span>(<span class="string">&quot;王粲博&quot;</span>, <span class="number">150</span>, <span class="number">500</span>);  </span>
+<span class="language-javascript"></span>
+<span class="language-javascript">        <span class="comment">// 6, 绘制图片</span></span>
+<span class="language-javascript">        <span class="keyword">var</span> img = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&quot;img&quot;</span>)</span>
+<span class="language-javascript">        img.<span class="property">src</span> = <span class="string">&quot;./item338.gif&quot;</span></span>
+<span class="language-javascript">        <span class="comment">// 不能直接绘制图片,需要在img的load事件中绘制</span></span>
+<span class="language-javascript">        img.<span class="property">onload</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span>
+<span class="language-javascript">            ctx.<span class="title function_">drawImage</span>(img, <span class="number">20</span>, <span class="number">520</span>, <span class="number">260</span>, <span class="number">80</span>)</span>
+<span class="language-javascript">        &#125;</span>
+<span class="language-javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
+<span class="tag">&lt;/<span class="name">body</span>&gt;</span></code></pre>
+
+<h3 id="实例：刮刮乐"><a href="#实例：刮刮乐" class="headerlink" title="实例：刮刮乐"></a>实例：刮刮乐</h3><pre><code class="highlight html"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span>
+<span class="language-css">        <span class="selector-tag">canvas</span>&#123;</span>
+<span class="language-css">            <span class="attribute">position</span>: relative;</span>
+<span class="language-css">            <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">item338.gif</span>);</span>
+<span class="language-css">            <span class="attribute">background-size</span>: <span class="number">100%</span> <span class="number">100%</span>;</span>
+<span class="language-css">        &#125;</span>
+<span class="language-css">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span>
+<span class="tag">&lt;<span class="name">body</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">&quot;canvas&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span>
+<span class="language-javascript">        <span class="comment">/** <span class="doctag">@type</span> &#123;<span class="type">HTMLCanvasElement</span>&#125; 添加canvas API语法提示*/</span></span>
+<span class="language-javascript">        <span class="keyword">var</span> canvas = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;canvas&quot;</span>)</span>
+<span class="language-javascript">        <span class="keyword">var</span> ctx = canvas.<span class="title function_">getContext</span>(<span class="string">&quot;2d&quot;</span>)</span>
+<span class="language-javascript"></span>
+<span class="language-javascript">        <span class="comment">// 先绘制灰色图层</span></span>
+<span class="language-javascript">        ctx.<span class="property">fillStyle</span> = <span class="string">&#x27;gray&#x27;</span>;</span>
+<span class="language-javascript">        ctx.<span class="title function_">fillRect</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">300</span>,<span class="number">150</span>);</span>
+<span class="language-javascript">        </span>
+<span class="language-javascript">        <span class="comment">// 再绘制提示文字</span></span>
+<span class="language-javascript">        ctx.<span class="property">font</span> = <span class="string">&quot;30px 黑体&quot;</span></span>
+<span class="language-javascript">        ctx.<span class="property">fillStyle</span> = <span class="string">&quot;green&quot;</span></span>
+<span class="language-javascript">        ctx.<span class="title function_">fillText</span>(<span class="string">&#x27;刮开有惊喜&#x27;</span>, <span class="number">60</span>, <span class="number">80</span>);</span>
+<span class="language-javascript"></span>
+<span class="language-javascript">        <span class="comment">// 图层叠加 (目标图像是已经绘制的图层, 源图像是即将绘制的图像)</span></span>
+<span class="language-javascript">        ctx.<span class="property">globalCompositeOperation</span> = <span class="string">&quot;destination-out&quot;</span></span>
+<span class="language-javascript"></span>
+<span class="language-javascript">        <span class="comment">// 刮图层的函数</span></span>
+<span class="language-javascript">        <span class="keyword">function</span> <span class="title function_">gua</span>(<span class="params">e</span>)&#123;</span>
+<span class="language-javascript">            ctx.<span class="title function_">beginPath</span>()</span>
+<span class="language-javascript">            <span class="comment">// e.pageX 相对于网页,  e.layerX 相对于非静态定位元素</span></span>
+<span class="language-javascript">            ctx.<span class="title function_">arc</span>(e.<span class="property">layerX</span>, e.<span class="property">layerY</span>, <span class="number">20</span>, <span class="number">0</span>, <span class="title class_">Math</span>.<span class="property">PI</span>*<span class="number">2</span>)</span>
+<span class="language-javascript">            ctx.<span class="title function_">fill</span>()</span>
+<span class="language-javascript">        &#125;</span>
+<span class="language-javascript"></span>
+<span class="language-javascript">        <span class="comment">// 鼠标按下,开始绘制圆形</span></span>
+<span class="language-javascript">        canvas.<span class="property">onmousedown</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span>
+<span class="language-javascript">            canvas.<span class="title function_">addEventListener</span>(<span class="string">&quot;mousemove&quot;</span>, gua)</span>
+<span class="language-javascript">        &#125;</span>
+<span class="language-javascript">        <span class="comment">// 鼠标抬起, 停止绘制</span></span>
+<span class="language-javascript">        canvas.<span class="property">onmouseup</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span>
+<span class="language-javascript">            canvas.<span class="title function_">removeEventListener</span>(<span class="string">&quot;mousemove&quot;</span>, gua)</span>
+<span class="language-javascript">        &#125;</span>
+<span class="language-javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
+<span class="tag">&lt;/<span class="name">body</span>&gt;</span></code></pre>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://tva1.sinaimg.cn/large/006RYYI7ly1h5lksaufxrj30sl0kwalz.jpg" alt="globalCompositeOperation.png" class="lazyload"></p>
+<h2 id="WebWoker"><a href="#WebWoker" class="headerlink" title="WebWoker"></a>WebWoker</h2><p><strong>概念</strong><br><code>进程</code>: 一个应用的代码执行流程, 一个应用有且仅有一个进程<br><code>线程</code>: 也叫分线程, 可以独立于主线程执行, 通过代码创建, 可以没有也可以有多个<br><code>主线程</code>: 同 进程<br><code>分线程</code>: 同 线程</p>
+<p><strong>总结</strong>:<br>分线程使用的API:<br><code>new Worker()</code>  创建分线程<br><code>postMessage()</code>  线程之间发送数据<br><code>onmessage</code>   事件,接收线程发送的数据</p>
+<blockquote>
+<p>注意事项:<br>    1, 分线程不能调用界面相关API,只有主线程可以操作界面<br>    2, 线程之能同源访问, 跨域无法引入分线程脚本, 网页不能使用file协议本地打开<br>    3, 分线程和主线程作用域相互隔离,不能直接调用数据, 需要使用postMessage和onmessage发送和接收<br>    4, 分线程不能执行界面相关的alert()等API,但可以执行与界面无关的ajax请求<br>    5, 分线程无法读取本地文件, 分线程中的数据都要来源于网络</p>
+</blockquote>
+<p>参考教程: <a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2018/07/web-worker.html">http://www.ruanyifeng.com/blog/2018/07/web-worker.html</a></p>
+<h2 id="块级作用域"><a href="#块级作用域" class="headerlink" title="块级作用域"></a>块级作用域</h2><p><code>var</code> 关键字定义变量有两个作用域  全局作用域 和 局部作用域<br><code>let</code> 关键字定义变量有三个作用域  全局作用域, 局部作用域 和 块级作用域<br><code>全局变量</code>:  在全局范围内定义的变量<br><code>局部变量</code>:  在函数内部定义的变量<br><code>块级变量</code>:  在语法块中定义的变量  比如循环,判断语法块</p>
+<p><strong>举例</strong>: 使用在语法块中定义的变量,只能在语法块中使用</p>
+<pre><code class="highlight js"><span class="keyword">if</span>(<span class="literal">true</span>)&#123;
+    <span class="keyword">var</span> d = <span class="number">4</span>;
+    <span class="keyword">let</span> e = <span class="number">5</span>;
+&#125;
+<span class="comment">// console.log(d)  // 4</span>
+<span class="comment">// console.log(e)  // undefined</span></code></pre>
+
+<p><strong>举例</strong>: 在循环中, 实现延时打印</p>
+<pre><code class="highlight js"><span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++)&#123;
+    <span class="comment">// 在循环中使用var定义变量, 这个变量是全局变量, 每次循环的count共享同一个作用域, 所以下次循环的count把替换上次循环的count, 循环之后,全局只有一个count,值为4</span>
+    <span class="keyword">var</span> count = i;
+    <span class="comment">// console.log(count) // 0,1,2,3,4</span>
+    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;
+        <span class="variable language_">console</span>.<span class="title function_">log</span>(count) <span class="comment">// 4,4,4,4,4</span>
+    &#125;, <span class="number">100</span>);
+
+
+    <span class="comment">// 在循环中使用let定义变量, 这个变量是块级变量, 每次循环都会在一个新的块级作用域中定义一个独立块级变量number, 循环结束后, 就有5个块级变量number,他们的值各不相同, 互补影响</span>
+    <span class="keyword">let</span> number = i;
+    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;
+        <span class="variable language_">console</span>.<span class="title function_">log</span>(number) <span class="comment">// 0,1,2,3,4</span>
+    &#125;, <span class="number">200</span>);
+&#125;
+<span class="comment">// console.log(i) // undefined 循环变量i建议使用let定义, 再循环之外无法调用, 也就避免了全局作用域污染 </span></code></pre>
+
+<p>如果要在循环中添加计时器或事件绑定, 需要保留每次循环的变量值, 有以下两种解决方案, </p>
+<ol>
+<li>使用let定义块级变量<pre><code class="highlight js"><span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i ++)&#123;
+    <span class="built_in">setTimeout</span>(<span class="function">()=&gt;</span>&#123;
+        <span class="variable language_">console</span>.<span class="title function_">log</span>(i)
+    &#125;, <span class="number">300</span>);
+&#125;</code></pre></li>
+<li>使用闭包, 保持count局部变量<pre><code class="highlight js"><span class="keyword">function</span> <span class="title function_">outter</span>(<span class="params">count</span>)&#123;
+    <span class="keyword">return</span> <span class="keyword">function</span> <span class="title function_">inner</span>(<span class="params"></span>)&#123;
+        <span class="variable language_">console</span>.<span class="title function_">log</span>(count)
+    &#125;
+&#125;
+<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i ++)&#123;
+    <span class="built_in">setTimeout</span>(<span class="title function_">outter</span>(i), <span class="number">300</span>);
+&#125;</code></pre></li>
+</ol>
+<p><strong>let和var的两点主要区别</strong>:</p>
+<ol>
+<li>var 在同一作用域可以重复定义同一个变量, let不行</li>
+<li>var 没有块级作用域, 在循环中定义的变量都是全局的, 会相互覆盖,  let在循环中定义的变量都是独立的,互不影响</li>
+</ol>
+<h2 id="const常量"><a href="#const常量" class="headerlink" title="const常量"></a>const常量</h2><p>ES6新增了两个关键字</p>
+<ol>
+<li>let 定义变量</li>
+<li>const 定义常量<br><code>const</code> 定义值类型数据, 绝对不能改<br><code>const</code> 定义引用类型数据, 数据内容(对象&#x2F;数组中的数据)可以改, 引用类型本身(内存地址)不能改</li>
+</ol>
+<h2 id="字符串模板"><a href="#字符串模板" class="headerlink" title="字符串模板"></a>字符串模板</h2><p>如果要把字符串和变量拼接到一起, 有两种写法</p>
+<pre><code class="highlight js"><span class="keyword">var</span> year = <span class="number">2020</span>, month = <span class="number">4</span>, day = <span class="number">20</span>;
+<span class="comment">// 1, ES5字符串拼接</span>
+<span class="variable language_">console</span>.<span class="title function_">log</span>(year + <span class="string">&quot;年&quot;</span> + month + <span class="string">&#x27;月&#x27;</span> + day + <span class="string">&quot;日&quot;</span>)
+
+<span class="comment">// 2, es6模板字符串</span>
+<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`<span class="subst">$&#123;year&#125;</span>年<span class="subst">$&#123;month&#125;</span>月<span class="subst">$&#123;day&#125;</span>日`</span>)
+
+<span class="comment">// 由于模板字符串支持换行, 所以可以用来渲染标签字符串</span>
+<span class="keyword">var</span> htmlStr = <span class="string">`</span>
+<span class="string">    &lt;ul&gt;</span>
+<span class="string">        &lt;li&gt;<span class="subst">$&#123;year&#125;</span>年&lt;/li&gt;</span>
+<span class="string">        &lt;li&gt;<span class="subst">$&#123;month&#125;</span>月&lt;/li&gt;</span>
+<span class="string">        &lt;li&gt;<span class="subst">$&#123;day&#125;</span>日&lt;/li&gt;</span>
+<span class="string">    &lt;/ul&gt;</span>
+<span class="string">`</span>
+<span class="variable language_">console</span>.<span class="title function_">log</span>(htmlStr)</code></pre>
+
+<h2 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h2><p>箭头函数用法:</p>
+<ol>
+<li>在事件函数或计时器或异步回调函数中可以保留this上下文指向</li>
+<li>箭头函数在参数和返回值处,满足条件时,都可以简化</li>
+<li>在对象中有一个简化的函数写法</li>
+</ol>
+<pre><code class="highlight js"><span class="comment">// 普通的function函数不能转化为箭头函数</span>
+<span class="keyword">function</span> <span class="title function_">add</span>(<span class="params"></span>)&#123; &#125;
+<span class="comment">// 只有匿名函数可以转化为箭头函数</span>
+<span class="keyword">var</span> add = <span class="keyword">function</span>(<span class="params"></span>)&#123; &#125;
+<span class="keyword">var</span> <span class="title function_">add</span> = (<span class="params"></span>)=&gt;&#123;&#125;
+
+<span class="comment">// 在node环境下, this默认指向空对象</span>
+<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">1</span>, <span class="variable language_">this</span>)  <span class="comment">// &#123;&#125;</span>
+<span class="comment">// 可以修改这个对象</span>
+<span class="variable language_">this</span>.<span class="property">name</span> = <span class="string">&quot;zhangsan&quot;</span>
+<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">2</span>, <span class="variable language_">this</span>)  <span class="comment">// &#123;name: &quot;zhangsan&quot;&#125;</span>
+
+
+<span class="comment">// setTimeout会把this指向修改为Timeout对象</span>
+<span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;
+    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">3</span>, <span class="variable language_">this</span>) <span class="comment">// Timeout</span>
+&#125;, <span class="number">1000</span>);
+
+<span class="comment">// 箭头函数会保留this的上下文指向, 使this指向和setTimeout外部相同</span>
+<span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;
+    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">4</span>, <span class="variable language_">this</span>) <span class="comment">// &#123;name: &quot;zhangsan&quot;&#125;</span>
+&#125;, <span class="number">1000</span>);
+
+<span class="comment">// 箭头函数的简化</span>
+<span class="keyword">var</span> <span class="title function_">add</span> = (<span class="params">count</span>)=&gt;&#123;
+    <span class="comment">// return count ++</span>
+    <span class="keyword">return</span> ++ count 
+&#125;
+<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">add</span>(<span class="number">5</span>)) 
+<span class="comment">// 如果箭头函数只有一个参数, 可以省略小括号</span>
+<span class="keyword">var</span> <span class="title function_">add</span> = count =&gt; &#123; <span class="keyword">return</span> ++ count; &#125;
+<span class="comment">// 如果箭头函数的函数体中只有一句return返回,  return和&#123;&#125;可同时省略</span>
+<span class="keyword">var</span> <span class="title function_">add</span> = count =&gt; ++count; 
+<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">add</span>(<span class="number">100</span>))
+
+<span class="comment">// 箭头函数在对象中的写法, 对象中的函数有以下三种写法</span>
+<span class="keyword">var</span> student = &#123;
+    <span class="attr">name</span>: <span class="string">&quot;张三&quot;</span>,
+    <span class="attr">age</span>: <span class="number">20</span>,
+    <span class="comment">// ES5函数的写法, 其中的this是当前对象</span>
+    <span class="attr">eat</span>: <span class="keyword">function</span>(<span class="params"></span>)&#123;
+        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">name</span>+<span class="string">&quot;吃饭&quot;</span>)
+    &#125;,
+    <span class="comment">// ES6箭头函数写法, 其中的this是对象上下文(全局作用域)指向</span>
+    <span class="attr">drink</span>: <span class="function">()=&gt;</span>&#123;
+        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">name</span>+<span class="string">&quot;喝水&quot;</span>)
+    &#125;,
+    <span class="comment">// 简化写法, 其中this的指向还是当前对象</span>
+    <span class="title function_">sleep</span>(<span class="params"></span>)&#123;
+        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">name</span>+<span class="string">&quot;睡觉&quot;</span>)
+    &#125;
+&#125;
+student.<span class="title function_">eat</span>()
+student.<span class="title function_">drink</span>()
+student.<span class="title function_">sleep</span>()</code></pre>
+
+<h2 id="数组对象"><a href="#数组对象" class="headerlink" title="数组对象"></a>数组对象</h2><p>数组解构:  <code>var [count1,count2,...count3] = array</code><br>数组赋值1:  array.push(…array2)<br>数组赋值2:  array &#x3D; […array, …array2, 5,6,7]<br>对象解构:  var { age } &#x3D; student<br>对象赋值:  {…student, height:120}</p>
+<pre><code class="highlight js"><span class="comment">// 数组的解构</span>
+<span class="keyword">var</span> array = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]
+<span class="comment">// 一般,使用数组中的数据要使用索引取值</span>
+<span class="variable language_">console</span>.<span class="title function_">log</span>(array[<span class="number">1</span>])
+<span class="comment">// 数组解构允许我们直接使用变量读取数组中的数据</span>
+<span class="keyword">let</span> [count1, count2, count3, count4] = array
+<span class="variable language_">console</span>.<span class="title function_">log</span>(count3)
+<span class="comment">// 注意: 由于数组有顺序,在解构时,一般前边变量个数和数组中数据个数要一一对应</span>
+
+<span class="comment">// 可以使用 ... 语法解构数组中的一部分数据(靠后的好几条数据)</span>
+<span class="keyword">let</span> [num1, ...num2] = array
+<span class="variable language_">console</span>.<span class="title function_">log</span>(num2)
+
+<span class="comment">// 数组的赋值</span>
+<span class="keyword">var</span> array2 = [<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>]
+<span class="comment">// 需求: 把array2拼接到array中</span>
+<span class="comment">// 方法1: 循环array2把array2的每一条数据加入array中</span>
+<span class="comment">// array2.forEach(item=&gt;&#123;</span>
+<span class="comment">//     array.push(item)</span>
+<span class="comment">// &#125;)</span>
+<span class="comment">// console.log(array)</span>
+<span class="comment">// 方法2: 使用concat数组拼接API</span>
+<span class="comment">// array = array.concat(array2)</span>
+<span class="comment">// console.log(array)</span>
+<span class="comment">// 方法3: 使用 ... 数组赋值</span>
+array.<span class="title function_">push</span>(...array2)
+<span class="variable language_">console</span>.<span class="title function_">log</span>(array)
+<span class="comment">// 数组也可以如下拼接</span>
+array = [...array, ...array2, <span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>]
+<span class="variable language_">console</span>.<span class="title function_">log</span>(array)
+
+
+
+<span class="comment">// 对象的解构</span>
+<span class="keyword">var</span> student = &#123;
+    <span class="attr">name</span>: <span class="string">&quot;张三&quot;</span>,
+    <span class="attr">age</span>: <span class="number">12</span>,
+    <span class="attr">sex</span>: <span class="string">&quot;男&quot;</span>,
+    <span class="attr">phone</span>: <span class="string">&quot;110&quot;</span>
+&#125;
+<span class="variable language_">console</span>.<span class="title function_">log</span>(student)
+<span class="comment">// 如果要获取一个对象中的某个字段, 直接用对象打点调用即可</span>
+<span class="variable language_">console</span>.<span class="title function_">log</span>(student.<span class="property">phone</span>)
+<span class="comment">// 也可以使用对象解构写法获取某个字段值</span>
+<span class="keyword">var</span> &#123; age, sex &#125; = student;
+<span class="variable language_">console</span>.<span class="title function_">log</span>(age, sex)
+<span class="comment">// 注意: 由于对象中的数据没有顺序, 所有对象解构无需把所有字段都写上,可以按需定义变量读取对象中的某一个或几个字段即可, 但必须保证变量名和字段名相同</span>
+
+
+<span class="comment">// 把student这个对象中的数据拼接到people对象中</span>
+<span class="keyword">var</span> people = &#123;
+    <span class="attr">height</span>: <span class="number">120</span>,
+    <span class="attr">weight</span>: <span class="number">180</span>,
+    ...student
+&#125;
+<span class="variable language_">console</span>.<span class="title function_">log</span>(people)
+
+
+
+<span class="comment">// 字符串解构, 和数组解构类似</span>
+<span class="keyword">var</span> string = <span class="string">&quot;ABC&quot;</span>
+<span class="keyword">var</span> [a,b,c] = string;
+<span class="variable language_">console</span>.<span class="title function_">log</span>(a,b,c)</code></pre>
+
+<h2 id="数组对象拼接"><a href="#数组对象拼接" class="headerlink" title="数组对象拼接"></a>数组对象拼接</h2><p><strong>数组拼接</strong><br><code>var array1 = [1,2,3]</code><br><code>var array2 = [4,5,6]</code><br><code>console.log([...array1, ...array2, 7,8,9])</code></p>
+<blockquote>
+<p>[<br>    1, 2, 3, 4, 5,<br>    6, 7, 8, 9<br>    ]</p>
+</blockquote>
+<p><strong>对象拼接</strong><br><code>var obj1 = &#123; age: 20 &#125;</code><br><code>var obj2 = &#123; sex: true &#125;</code><br><code>console.log(&#123;...obj1, ...obj2&#125;)</code></p>
+<blockquote>
+<p>{ age: 20, sex: true }</p>
+</blockquote>
+<h2 id="参数的默认值"><a href="#参数的默认值" class="headerlink" title="参数的默认值"></a>参数的默认值</h2><pre><code class="highlight js"><span class="keyword">function</span> <span class="title function_">add1</span>(<span class="params">a,b</span>)&#123;
+    <span class="variable language_">console</span>.<span class="title function_">log</span>(a+b)
+&#125;
+<span class="title function_">add1</span>()      <span class="comment">// NaN</span>
+<span class="title function_">add1</span>(<span class="number">3</span>)     <span class="comment">// NaN</span>
+<span class="title function_">add1</span>(<span class="number">3</span>,<span class="number">4</span>)   <span class="comment">// 7</span>
+<span class="title function_">add1</span>(<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>) <span class="comment">// 7</span>
+
+<span class="comment">// js函数定义时有两个参数, 调用时就必须传入至少两个参数,</span>
+<span class="comment">// 如果传入的实参少于形参的个数,为防止错误, 可以给形参设置默认值</span>
+
+<span class="comment">// ES5中使用 || 设置默认值</span>
+<span class="keyword">function</span> <span class="title function_">add2</span>(<span class="params">a,b</span>)&#123;
+    a = a || <span class="number">0</span>; <span class="comment">//设置默认值</span>
+    b = b || <span class="number">0</span>; <span class="comment">//设置默认值</span>
+    <span class="variable language_">console</span>.<span class="title function_">log</span>( a + b )
+&#125;
+<span class="title function_">add2</span>()      <span class="comment">// 0</span>
+<span class="title function_">add2</span>(<span class="number">3</span>)     <span class="comment">// 3</span>
+<span class="title function_">add2</span>(<span class="number">3</span>,<span class="number">4</span>)   <span class="comment">// 7</span>
+<span class="title function_">add2</span>(<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>) <span class="comment">// 7</span>
+
+<span class="comment">// ES6中使用 初始化形参 设置默认值</span>
+<span class="keyword">function</span> <span class="title function_">add3</span>(<span class="params">a=<span class="number">0</span>, b=<span class="number">0</span></span>)&#123;
+    <span class="variable language_">console</span>.<span class="title function_">log</span>( a + b )
+&#125;
+<span class="title function_">add3</span>()      <span class="comment">// 0</span>
+<span class="title function_">add3</span>(<span class="number">3</span>)     <span class="comment">// 3</span>
+<span class="title function_">add3</span>(<span class="number">3</span>,<span class="number">4</span>)   <span class="comment">// 7</span>
+<span class="title function_">add3</span>(<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>) <span class="comment">// 7</span>
+
+<span class="comment">// 关于函数的参数, 如果参数个数不确定, 如果获取所有参数</span>
+<span class="comment">// ES5中通过arguments字段获取参数数组</span>
+<span class="keyword">function</span> <span class="title function_">add4</span>(<span class="params"></span>)&#123;
+    <span class="comment">// arguments是一个类数组, 里边放了所有参数</span>
+    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">arguments</span>, <span class="title class_">Array</span>.<span class="title function_">from</span>(<span class="variable language_">arguments</span>))
+&#125;
+<span class="title function_">add4</span>()      <span class="comment">// &#123;&#125;   []</span>
+<span class="title function_">add4</span>(<span class="number">3</span>)     <span class="comment">// &#123;&quot;0&quot;: 3&#125;   [3]</span>
+<span class="title function_">add4</span>(<span class="number">3</span>,<span class="number">4</span>)   <span class="comment">// &#123;&quot;0&quot;:3, &quot;1&quot;: 4&#125;   [3,4]</span>
+<span class="title function_">add4</span>(<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>) <span class="comment">// &#123;&#x27;0&#x27;: 3, &#x27;1&#x27;: 4, &#x27;2&#x27;: 5 &#125;  [3,4,5]</span>
+
+
+<span class="comment">// ES6中通过形参...arr获取参数数组</span>
+<span class="keyword">function</span> <span class="title function_">add5</span>(<span class="params">...array</span>)&#123;
+    <span class="comment">// 形参array是所有参数所在的数组</span>
+    <span class="variable language_">console</span>.<span class="title function_">log</span>(array)
+&#125;
+<span class="title function_">add5</span>()      <span class="comment">// []</span>
+<span class="title function_">add5</span>(<span class="number">3</span>)     <span class="comment">// [3]</span>
+<span class="title function_">add5</span>(<span class="number">3</span>,<span class="number">4</span>)   <span class="comment">// [3,4]</span>
+<span class="title function_">add5</span>(<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>) <span class="comment">// [3,4,5]</span></code></pre>
+
+<h2 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h2><h3 id="Promise的由来"><a href="#Promise的由来" class="headerlink" title="Promise的由来"></a>Promise的由来</h3><p>js代码执行过程中,分为<code>同步执行</code>和<code>异步执行</code>的两种代码执行逻辑<br><code>同步执行</code>: 代码总是<code>从上向下依次执行</code>,只有上一句执行完,才会执行下一句, 默认js是通过<br><code>异步执行</code>: 特殊形况下,异步代码可以和其他代码同时执行,相互不影响,不严格按照顺序执行, 常见的异步执行逻辑有  计时器, js事件, ajax, promise调用<br>异步代码的<code>标志性特点</code>是: <code>回调函数</code><br>结论: 一段逻辑代码中,总是<code>先执行同步代码</code>, <code>再执行异步代码</code></p>
+<p>上代码：</p>
+<pre><code class="highlight js"><span class="comment">// 这是正常的函数返回值调用</span>
+<span class="keyword">function</span> <span class="title function_">getRandom</span>(<span class="params"></span>)&#123;
+    <span class="keyword">return</span> <span class="title class_">Math</span>.<span class="title function_">random</span>()
+&#125;
+<span class="keyword">var</span> random = <span class="title function_">getRandom</span>()
+<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">1</span>, random)
+
+
+<span class="comment">// 当函数中有异步操作时,能否return返回异步结果</span>
+<span class="keyword">function</span> <span class="title function_">getRandom2</span>(<span class="params"></span>)&#123;
+    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;
+        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">3</span>)
+        <span class="keyword">return</span> <span class="title class_">Math</span>.<span class="title function_">random</span>()<span class="comment">// 异步函数中的return是无效的</span>
+    &#125;, <span class="number">100</span>);
+&#125;
+<span class="keyword">var</span> random2 = <span class="title function_">getRandom2</span>()
+<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">2</span>, random2)  <span class="comment">// 2 undefined</span></code></pre>
+
+<h3 id="Promise的语法"><a href="#Promise的语法" class="headerlink" title="Promise的语法"></a>Promise的语法</h3><pre><code class="highlight js"><span class="comment">// Promise 在es6中属于一个 类  要通过new创建promise对象使用,  如下</span>
+
+<span class="comment">// 新建一个promise对象, 参数是一个同步函数, 同步函数的参数是成功和失败的回调函数 </span>
+<span class="keyword">var</span> p = <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="keyword">function</span>(<span class="params">resolve, reject</span>)&#123;
+    <span class="comment">// 使用new创建promise对象这个操作是同步操作还是异步操作?   同步的</span>
+    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">1</span>)
+    <span class="comment">// 在promise对象中执行异步任务</span>
+    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;
+        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">3</span>)
+        <span class="keyword">var</span> random = <span class="title class_">Math</span>.<span class="title function_">random</span>()
+        <span class="keyword">if</span>(random &gt; <span class="number">0.5</span>)&#123;
+            <span class="title function_">resolve</span>(<span class="string">&quot;成功&quot;</span>)
+        &#125;<span class="keyword">else</span>&#123;
+            <span class="title function_">reject</span>(<span class="string">&quot;失败&quot;</span>)
+        &#125;
+    &#125;, <span class="number">100</span>);
+&#125;)
+<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">2</span>)
+<span class="comment">// 使用promise对象调用函数then拿成功的数据, 调用catch拿失败的数据</span>
+p.<span class="title function_">then</span>(<span class="function"><span class="params">data</span>=&gt;</span>&#123;
+    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">4</span>, data)
+&#125;)
+p.<span class="title function_">catch</span>(<span class="function"><span class="params">err</span>=&gt;</span>&#123;
+    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">4</span>, err)
+&#125;)
+
+
+<span class="comment">// promise支持链式调用</span>
+p.<span class="title function_">then</span>().<span class="title function_">catch</span>().<span class="title function_">then</span>().<span class="title function_">then</span>(<span class="function"><span class="params">data</span>=&gt;</span>&#123;
+    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">5</span>, data)
+&#125;).<span class="title function_">then</span>()
+
+<span class="comment">// promise无论何时,何地,多次调用then,总能拿到成功时的数据</span>
+
+<span class="comment">// 注意: Promise对象的创建过程是同步的, then函数的调用是异步的, 简单说peomise是异步的</span></code></pre>
+
+<h3 id="Promise示例"><a href="#Promise示例" class="headerlink" title="Promise示例"></a>Promise示例</h3><pre><code class="highlight js"><span class="comment">// 需求: 在四个异步操作中打印四句话,而且要保证打印顺序</span>
+<span class="comment">// setTimeout(() =&gt; &#123;</span>
+<span class="comment">//     console.log(&quot;窗前明月光&quot;)</span>
+<span class="comment">// &#125;, Math.random()*1000);</span>
+<span class="comment">// setTimeout(() =&gt; &#123;</span>
+<span class="comment">//     console.log(&quot;疑似地上霜&quot;)</span>
+<span class="comment">// &#125;, Math.random()*1000);</span>
+<span class="comment">// setTimeout(() =&gt; &#123;</span>
+<span class="comment">//     console.log(&quot;举头望明月&quot;)</span>
+<span class="comment">// &#125;, Math.random()*1000);</span>
+<span class="comment">// setTimeout(() =&gt; &#123;</span>
+<span class="comment">//     console.log(&quot;低头鞋两双&quot;)</span>
+<span class="comment">// &#125;, Math.random()*1000);</span>
+
+
+<span class="comment">// 方法一: 四个计时器嵌套, 上一个执行后再执行下一个</span>
+<span class="comment">// setTimeout(() =&gt; &#123;</span>
+<span class="comment">//     console.log(&quot;窗前明月光&quot;);</span>
+<span class="comment">//     setTimeout(() =&gt; &#123;</span>
+<span class="comment">//         console.log(&quot;疑似地上霜&quot;);</span>
+<span class="comment">//         setTimeout(() =&gt; &#123;</span>
+<span class="comment">//             console.log(&quot;举头望明月&quot;);</span>
+<span class="comment">//             setTimeout(() =&gt; &#123;</span>
+<span class="comment">//                 console.log(&quot;低头鞋两双&quot;)</span>
+<span class="comment">//             &#125;, Math.random()*1000);</span>
+<span class="comment">//         &#125;, Math.random()*1000);</span>
+<span class="comment">//     &#125;, Math.random()*1000);</span>
+<span class="comment">// &#125;, Math.random()*1000);</span>
+
+<span class="comment">// 此方法有两个缺点: </span>
+<span class="comment">// 1, 代码多层嵌套造成结构复杂,可读性差</span>
+<span class="comment">// 2, 四句打印的计时时间累加起来了, 降低效率</span>
+
+
+<span class="comment">// 首先, 我们使用promise解决异步任务多层嵌套问题</span>
+<span class="comment">// new Promise(function(resolve)&#123;</span>
+<span class="comment">//     setTimeout(() =&gt; &#123;</span>
+<span class="comment">//         console.log(&quot;窗前明月光&quot;); resolve() // 调用resolve以执行then</span>
+<span class="comment">//     &#125;, Math.random()*1000);</span>
+<span class="comment">// &#125;).then(function()&#123;</span>
+<span class="comment">//     return new Promise(function(resolve)&#123;</span>
+<span class="comment">//         setTimeout(() =&gt; &#123;</span>
+<span class="comment">//             console.log(&quot;疑似地上霜&quot;); resolve() // 调用resolve以执行then</span>
+<span class="comment">//         &#125;, Math.random()*1000);</span>
+<span class="comment">//     &#125;)</span>
+<span class="comment">// &#125;).then(function()&#123;</span>
+<span class="comment">//     return new Promise(function(resolve)&#123;</span>
+<span class="comment">//         setTimeout(() =&gt; &#123;</span>
+<span class="comment">//             console.log(&quot;举头望明月&quot;); resolve() // 调用resolve以执行then</span>
+<span class="comment">//         &#125;, Math.random()*1000);</span>
+<span class="comment">//     &#125;)</span>
+<span class="comment">// &#125;).then(function()&#123;</span>
+<span class="comment">//     return new Promise(function(resolve)&#123;</span>
+<span class="comment">//         setTimeout(() =&gt; &#123;</span>
+<span class="comment">//             console.log(&quot;低头鞋两双&quot;); resolve() // 调用resolve以执行then</span>
+<span class="comment">//         &#125;, Math.random()*1000);</span>
+<span class="comment">//     &#125;)</span>
+<span class="comment">// &#125;)</span>
+
+
+<span class="comment">// 然后, 我们使用promise解决 多异步任务并发 的顺序问题</span>
+<span class="keyword">var</span> p1 = <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="keyword">function</span>(<span class="params">resolve</span>)&#123;
+    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;
+        <span class="title function_">resolve</span>(<span class="string">&quot;窗前明月光&quot;</span>)
+    &#125;, <span class="title class_">Math</span>.<span class="title function_">random</span>()*<span class="number">1000</span>);
+&#125;)
+<span class="keyword">var</span> p2 = <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="keyword">function</span>(<span class="params">resolve</span>)&#123;
+    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;
+        <span class="title function_">resolve</span>(<span class="string">&quot;疑似地上霜&quot;</span>)
+    &#125;, <span class="title class_">Math</span>.<span class="title function_">random</span>()*<span class="number">1000</span>);
+&#125;)
+<span class="keyword">var</span> p3 = <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="keyword">function</span>(<span class="params">resolve</span>)&#123;
+    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;
+        <span class="title function_">resolve</span>(<span class="string">&quot;举头望明月&quot;</span>)
+    &#125;, <span class="title class_">Math</span>.<span class="title function_">random</span>()*<span class="number">1000</span>);
+&#125;)
+<span class="keyword">var</span> p4 = <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="keyword">function</span>(<span class="params">resolve</span>)&#123;
+    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;
+        <span class="title function_">resolve</span>(<span class="string">&quot;低头鞋两双&quot;</span>)
+    &#125;, <span class="title class_">Math</span>.<span class="title function_">random</span>()*<span class="number">1000</span>);
+&#125;)
+<span class="comment">// Promise有一个类函数all, 可以把多个promise对象合并成一个</span>
+<span class="keyword">var</span> p = <span class="title class_">Promise</span>.<span class="title function_">all</span>([p1,p2,p3,p4])
+<span class="comment">// 当合并前的所有promise对象都调用resolve后, 才会调用合并后的then</span>
+p.<span class="title function_">then</span>(<span class="keyword">function</span>(<span class="params">array</span>)&#123;
+    <span class="comment">// all合并后的then回调函数参数是一个数组, 数组中按照合并顺序依次获取每一个promise对象的成功数据</span>
+    <span class="variable language_">console</span>.<span class="title function_">log</span>(array)
+&#125;)
+
+<span class="comment">// 类函数: 就是使用类名调用的函数 如 all()</span>
+<span class="comment">// 实例函数: 就是使用对象调用的函数  如 then()</span>
+
+
+<span class="comment">// 总结: 说一下你对promise的理解?</span>
+<span class="comment">// promise 是es6新增的一个类,主要用于解决项目开发中常见异步回掉地域问题,原理上是对回调函数的封装, 开发中经常用于多异步任务嵌套时和多异步任务并发时</span></code></pre>
+
+<h3 id="async和await"><a href="#async和await" class="headerlink" title="async和await"></a>async和await</h3><pre><code class="highlight js"><span class="comment">// 在es6新增了一个关键字 叫 async 用于放在函数function前,修饰函数</span>
+<span class="keyword">function</span> <span class="title function_">a</span> ()&#123;
+    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;a&#x27;</span>)
+&#125;
+<span class="title function_">a</span>()
+<span class="comment">// 在函数前添加async标记可以使此函数变为异步函数</span>
+<span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">b</span>(<span class="params"></span>)&#123;
+    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;b&#x27;</span>)
+&#125;
+<span class="title function_">b</span>()
+<span class="comment">// 箭头函数也可以定义为异步函数</span>
+<span class="keyword">var</span> <span class="title function_">c</span> = <span class="keyword">async</span> (<span class="params"></span>)=&gt;&#123;
+    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;c&#x27;</span>)
+    <span class="keyword">return</span> <span class="string">&quot;彬哥&quot;</span> <span class="comment">// 即使有返回值, 调用得到的也是promise</span>
+&#125;
+<span class="title function_">c</span>()
+
+<span class="comment">// async异步函数的返回值总是一个promise对象</span>
+<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">a</span>())
+<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">b</span>())
+<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">c</span>())
+
+<span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">d</span>(<span class="params"></span>)&#123;
+    <span class="keyword">var</span> p = <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function"><span class="params">resolve</span>=&gt;</span>&#123;
+        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;
+            <span class="title function_">resolve</span>(<span class="string">&quot;成功&quot;</span>)
+        &#125;, <span class="number">1000</span>);
+    &#125;)
+    <span class="comment">// 调用then函数,在异步回调函数中获取数据</span>
+    p.<span class="title function_">then</span>(<span class="function"><span class="params">data</span>=&gt;</span>&#123;
+        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">1</span>,data)
+    &#125;)
+
+    <span class="comment">// await关键字一般放在promise对象前边, 等待promise对象成功的结果,一旦成功, 无需调用then, 而是通过同步返回值的形式拿到promise中的异步结果</span>
+    <span class="keyword">var</span> res = <span class="keyword">await</span> p
+    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">2</span>,res)
+    <span class="comment">// await 的作用就是让异步回调结构改成同步返回值结构,依然能拿到数据, 好处是简化代码结构, 减少嵌套, 优化语法结构 </span>
+    <span class="comment">// await is only valid in async function  await只能在async函数中使用</span>
+&#125;
+<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">d</span>())</code></pre>
+
+<h2 id="ES6模块化"><a href="#ES6模块化" class="headerlink" title="ES6模块化"></a>ES6模块化</h2><ul>
+<li><p><code>模块化</code>: 把一个整体的js文件或代码块通过功能性分割成多个js文件或代码块, 这样每一个js文件都称之为一个<code>模块</code>, 然后通过固定语法导入&#x2F;导出把多个js文件联系到一起, 这种操作,我们称之为<code>模块化</code></p>
+</li>
+<li><p>html文件中使用script导入js算不算模块化?<br>答: 不算,  因为模块化有一个显著特点,是作用域隔离, 各个模块用于各自独立的作用, 互不干涉,  用script导入js相当于把所有js拼到一起了,共享了同一个作用域,这种不能称之为模块化</p>
+</li>
+<li><p>模块化语法:<br>导出: <code>export default data</code><br>导入: <code>import data from &quot;path&quot;</code></p>
+</li>
+</ul>
+<p><strong>从模块myModule中导入数据</strong><br><code>myModule.js</code></p>
+<pre><code class="highlight js"><span class="keyword">var</span> count = <span class="number">100</span>
+
+<span class="comment">// 使用模块化语法把数据导出</span>
+<span class="keyword">export</span> <span class="keyword">default</span> count</code></pre>
+<p><code>index.js</code></p>
+<pre><code class="highlight js"><span class="keyword">import</span> count <span class="keyword">from</span> <span class="string">&quot;./myModule.js&quot;</span>
+<span class="comment">// Cannot use import statement outside a module </span>
+<span class="comment">// 不识别import这个语法, 因为es6模块化语法是不能直接在node或浏览器执行的 </span>
+<span class="variable language_">console</span>.<span class="title function_">log</span>(count)</code></pre>
+
+<p><strong><code>es6模块化</code>一般用于<code>vue框架</code>或<code>react框架</code>中</strong></p>
+
+        </article>
+
+        
+            
+  <div class="nexmoe-post-copyright">
+    <strong>本文作者：</strong>咔斯Sama<br>
+    
+    <strong>本文链接：</strong><a href="https://www.kassama.top/webNotesES6.html" title="https:&#x2F;&#x2F;www.kassama.top&#x2F;webNotesES6.html" target="_blank" rel="noopener">https:&#x2F;&#x2F;www.kassama.top&#x2F;webNotesES6.html</a><br>
+
+    
+      <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+    
+  </div>
+
+
+        
+
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/web%E7%AC%94%E8%AE%B0/">web笔记</a>
+    
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/HTML/" rel="tag">HTML</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/web/" rel="tag">web</a>
+    
+</div>
+
+    <div class="nexmoe-post-footer">
+        <section class="nexmoe-comment">
+    <div class="valine ks-valine-box"></div>
+<script src='https://unpkg.com/valine@1.5.1/dist/Valine.min.js'></script>
+<script>
+    // 使用方法 https://valine.js.org/quickstart.html
+    new Valine({
+        el: '.valine',
+        appId: '6Om9oV6sycmCPkRcrF9VR7Vd-gzGzoHsz',
+        appKey: 'cas3l5T4L8EkjrOFGsfzD8vM',
+        enableQQ: true,
+        placeholder: '阁下要说点什么嘛！',
+        requiredFields:['nick','mail'],
+
+        emojiCDN: '//cdn.bilicdn.tk/gh/kasisama/ValineCDN@master/',
+        // 表情title和图片映射
+        emojiMaps: {
+            "bilibilitv2": "bilibilitv/[tv_doge].png",
+            "bilibilitv3": "bilibilitv/[tv_亲亲].png",
+            "bilibilitv4": "bilibilitv/[tv_偷笑].png",
+            "bilibilitv5": "bilibilitv/[tv_再见].png",
+            "bilibilitv6": "bilibilitv/[tv_冷漠].png",
+            "bilibilitv7": "bilibilitv/[tv_发怒].png",
+            "bilibilitv8": "bilibilitv/[tv_发财].png",
+            "bilibilitv9": "bilibilitv/[tv_可爱].png",
+            "bilibilitv10": "bilibilitv/[tv_吐血].png",
+            "bilibilitv11": "bilibilitv/[tv_呆].png",
+            "bilibilitv12": "bilibilitv/[tv_呕吐].png",
+            "bilibilitv13": "bilibilitv/[tv_困].png",
+            "bilibilitv14": "bilibilitv/[tv_坏笑].png",
+            "bilibilitv15": "bilibilitv/[tv_大佬].png",
+            "bilibilitv16": "bilibilitv/[tv_大哭].png",
+            "bilibilitv17": "bilibilitv/[tv_委屈].png",
+            "bilibilitv18": "bilibilitv/[tv_害羞].png",
+            "bilibilitv19": "bilibilitv/[tv_尴尬].png",
+            "bilibilitv20": "bilibilitv/[tv_微笑].png",
+            "bilibilitv21": "bilibilitv/[tv_思考].png",
+            "bilibilitv22": "bilibilitv/[tv_惊吓].png",
+            "bilibilitv23": "bilibilitv/[tv_打脸].png",
+            "bilibilitv24": "bilibilitv/[tv_抓狂].png",
+            "bilibilitv25": "bilibilitv/[tv_抠鼻].png",
+            "bilibilitv26": "bilibilitv/[tv_斜眼笑].png",
+            "bilibilitv27": "bilibilitv/[tv_无奈].png",
+            "bilibilitv28": "bilibilitv/[tv_晕].png",
+            "bilibilitv29": "bilibilitv/[tv_流汗].png",
+            "bilibilitv30": "bilibilitv/[tv_流泪].png",
+            "bilibilitv31": "bilibilitv/[tv_流鼻血].png",
+            "bilibilitv32": "bilibilitv/[tv_点赞].png",
+            "bilibilitv33": "bilibilitv/[tv_生气].png",
+            "bilibilitv34": "bilibilitv/[tv_生病].png",
+            "bilibilitv35": "bilibilitv/[tv_疑问].png",
+            "bilibilitv36": "bilibilitv/[tv_白眼].png",
+            "bilibilitv37": "bilibilitv/[tv_皱眉].png",
+            "bilibilitv38": "bilibilitv/[tv_目瞪口呆].png",
+            "bilibilitv39": "bilibilitv/[tv_睡着].png",
+            "bilibilitv40": "bilibilitv/[tv_笑哭].png",
+            "bilibilitv41": "bilibilitv/[tv_腼腆].png",
+            "bilibilitv42": "bilibilitv/[tv_色].png",
+            "bilibilitv43": "bilibilitv/[tv_调侃].png",
+            "bilibilitv44": "bilibilitv/[tv_调皮].png",
+            "bilibilitv45": "bilibilitv/[tv_鄙视].png",
+            "bilibilitv46": "bilibilitv/[tv_闭嘴].png",
+            "bilibilitv47": "bilibilitv/[tv_难过].png",
+            "bilibilitv48": "bilibilitv/[tv_馋].png",
+            "bilibilitv49": "bilibilitv/[tv_鬼脸].png",
+            "bilibilitv50": "bilibilitv/[tv_黑人问号].png",
+            "bilibilitv51": "bilibilitv/[tv_鼓掌].png",
+            "Heybox1": "Heybox/expression_cube.png",
+            "Heybox2": "Heybox/expression_cube_bingbujiandan.png",
+            "Heybox3": "Heybox/expression_cube_bizui.png",
+            "Heybox4": "Heybox/expression_cube_cangsang.png",
+            "Heybox5": "Heybox/expression_cube_dalian.png",
+            "Heybox6": "Heybox/expression_cube_doge.png",
+            "Heybox7": "Heybox/expression_cube_gandong.png",
+            "Heybox8": "Heybox/expression_cube_guai.png",
+            "Heybox9": "Heybox/expression_cube_gugu.png",
+            "Heybox10": "Heybox/expression_cube_han.png",
+            "Heybox11": "Heybox/expression_cube_hbi.png",
+            "Heybox12": "Heybox/expression_cube_heirenwenhao.png",
+            "Heybox13": "Heybox/expression_cube_huaji.png",
+            "Heybox14": "Heybox/expression_cube_jiayou.png",
+            "Heybox15": "Heybox/expression_cube_jingya.png",
+            "Heybox16": "Heybox/expression_cube_kaixin.png",
+            "Heybox17": "Heybox/expression_cube_ku.png",
+            "Heybox18": "Heybox/expression_cube_kun.png",
+            "Heybox19": "Heybox/expression_cube_kuqi.png",
+            "Heybox20": "Heybox/expression_cube_nu.png",
+            "Heybox21": "Heybox/expression_cube_penshui.png",
+            "Heybox22": "Heybox/expression_cube_qiliang.png",
+            "Heybox23": "Heybox/expression_cube_shengqi.png",
+            "Heybox24": "Heybox/expression_cube_shuijiao.png",
+            "Heybox25": "Heybox/expression_cube_tanqi.png",
+            "Heybox26": "Heybox/expression_cube_tanshou.png",
+            "Heybox27": "Heybox/expression_cube_tu.png",
+            "Heybox28": "Heybox/expression_cube_wa.png",
+            "Heybox29": "Heybox/expression_cube_weiqu.png",
+            "Heybox30": "Heybox/expression_cube_weixiao.png",
+            "Heybox31": "Heybox/expression_cube_wulianku.png",
+            "Heybox32": "Heybox/expression_cube_xia.png",
+            "Heybox33": "Heybox/expression_cube_xiaocry.png",
+            "Heybox34": "Heybox/expression_cube_xihuan.png",
+            "Heybox35": "Heybox/expression_cube_xuexi.png",
+            "Heybox36": "Heybox/expression_cube_yun.png",
+            "Heybox37": "Heybox/expression_cube_zan.png"
+        }
+    })
+    
+</script>
+</section>
+    </div>
+</div>
+
+
+        <div class="nexmoe-post-right">
+            <div class="nexmoe-fixed">
+              <div class="nexmoe-tool">
+                
+                
+                    
+                        <button class="mdui-fab catalog" style="overflow:unset;">
+                            <i class="nexmoefont icon-i-catalog"></i>
+                            <div class="nexmoe-toc">
+                              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#ES6"><span class="toc-number">1.</span> <span class="toc-text">ES6</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%AD%E4%B9%89%E5%8C%96"><span class="toc-number">2.</span> <span class="toc-text">语义化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE"><span class="toc-number">2.1.</span> <span class="toc-text">常见的语义化标签</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A6%82%E5%BF%B5"><span class="toc-number">3.</span> <span class="toc-text">语义化概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFSEO-%E5%A6%82%E4%BD%95%E5%81%9ASEO%E4%BC%98%E5%8C%96"><span class="toc-number">3.1.</span> <span class="toc-text">什么是SEO? 如何做SEO优化?</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0SEO%E4%BC%98%E5%8C%96%E7%9A%84%E6%96%B9%E5%BC%8F%E6%9C%89"><span class="toc-number">3.1.1.</span> <span class="toc-text">实现SEO优化的方式有:</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9F%B3%E8%A7%86%E9%A2%91%E6%A0%87%E7%AD%BE"><span class="toc-number">4.</span> <span class="toc-text">音视频标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80"><span class="toc-number">5.</span> <span class="toc-text">弹性布局</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80%E4%B8%AD%E7%9A%84%E5%B1%9E%E6%80%A7%E8%AE%BE%E7%BD%AE%EF%BC%9A"><span class="toc-number">5.1.</span> <span class="toc-text">弹性布局中的属性设置：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%83%E5%B1%80-%E9%80%82%E9%85%8D-%E5%85%BC%E5%AE%B9"><span class="toc-number">6.</span> <span class="toc-text">布局 适配 兼容</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80"><span class="toc-number">6.1.</span> <span class="toc-text">响应式布局</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E9%80%82%E9%85%8D"><span class="toc-number">6.2.</span> <span class="toc-text">浏览器适配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9"><span class="toc-number">6.3.</span> <span class="toc-text">浏览器兼容</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2"><span class="toc-number">7.</span> <span class="toc-text">媒体查询</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D"><span class="toc-number">8.</span> <span class="toc-text">移动端适配</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#requestAnimationFrame"><span class="toc-number">9.</span> <span class="toc-text">requestAnimationFrame</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%B0%E7%90%86%E5%AE%9A%E4%BD%8D"><span class="toc-number">10.</span> <span class="toc-text">地理定位</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE"><span class="toc-number">10.1.</span> <span class="toc-text">百度地图</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#canvas%E7%94%BB%E5%B8%83"><span class="toc-number">11.</span> <span class="toc-text">canvas画布</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#canvas%E7%BB%98%E5%9B%BEApi"><span class="toc-number">11.1.</span> <span class="toc-text">canvas绘图Api</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#canvas%E8%AF%AD%E6%B3%95"><span class="toc-number">11.2.</span> <span class="toc-text">canvas语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B%EF%BC%9A%E5%88%AE%E5%88%AE%E4%B9%90"><span class="toc-number">11.3.</span> <span class="toc-text">实例：刮刮乐</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#WebWoker"><span class="toc-number">12.</span> <span class="toc-text">WebWoker</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-number">13.</span> <span class="toc-text">块级作用域</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#const%E5%B8%B8%E9%87%8F"><span class="toc-number">14.</span> <span class="toc-text">const常量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A8%A1%E6%9D%BF"><span class="toc-number">15.</span> <span class="toc-text">字符串模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0"><span class="toc-number">16.</span> <span class="toc-text">箭头函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1"><span class="toc-number">17.</span> <span class="toc-text">数组对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1%E6%8B%BC%E6%8E%A5"><span class="toc-number">18.</span> <span class="toc-text">数组对象拼接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E6%95%B0%E7%9A%84%E9%BB%98%E8%AE%A4%E5%80%BC"><span class="toc-number">19.</span> <span class="toc-text">参数的默认值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Promise"><span class="toc-number">20.</span> <span class="toc-text">Promise</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Promise%E7%9A%84%E7%94%B1%E6%9D%A5"><span class="toc-number">20.1.</span> <span class="toc-text">Promise的由来</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Promise%E7%9A%84%E8%AF%AD%E6%B3%95"><span class="toc-number">20.2.</span> <span class="toc-text">Promise的语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Promise%E7%A4%BA%E4%BE%8B"><span class="toc-number">20.3.</span> <span class="toc-text">Promise示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#async%E5%92%8Cawait"><span class="toc-number">20.4.</span> <span class="toc-text">async和await</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ES6%E6%A8%A1%E5%9D%97%E5%8C%96"><span class="toc-number">21.</span> <span class="toc-text">ES6模块化</span></a></li></ol>
+                            </div>
+                        </button>
+                        
+                  
+                
+                  <a href="#nexmoe-content" class="toc-link" aria-label="回到顶部" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+                
+              </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div id="nexmoe-pendant">
+    <div class="nexmoe-drawer mdui-drawer nexmoe-pd" id="drawer">
+        
+            <div class="nexmoe-pd-item">
+                <div class="clock">
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="needle" id="hours"></div>
+        <div class="needle" id="minutes"></div>
+        <div class="needle" id="seconds"></div>
+        <div class="clock_logo">
+
+        </div>
+
+    </div>
+<style>
+    .clock {
+        background-color: #ffffff;
+        width: 70vw;
+        height: 70vw;
+        max-width: 70vh;
+        max-height: 70vh;
+        border: solid 2.8vw #242424;
+        position: relative;
+        overflow: hidden;
+        border-radius: 50%;
+        box-sizing: border-box;
+        box-shadow: 0 1.4vw 2.8vw rgba(0, 0, 0, 0.8);
+        zoom:0.2
+    }
+
+    .memory {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform-origin: center;
+    }
+
+    .memory:nth-child(1) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(0deg) translateY(-520%);
+    }
+
+    .memory:nth-child(2) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(6deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(3) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(12deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(4) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(18deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(5) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(24deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(6) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(30deg) translateY(-520%);
+    }
+
+    .memory:nth-child(7) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(36deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(8) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(42deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(9) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(48deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(10) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(54deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(11) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(60deg) translateY(-520%);
+    }
+
+    .memory:nth-child(12) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(66deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(13) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(72deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(14) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(78deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(15) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(84deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(16) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(90deg) translateY(-520%);
+    }
+
+    .memory:nth-child(17) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(96deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(18) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(102deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(19) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(108deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(20) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(114deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(21) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(120deg) translateY(-520%);
+    }
+
+    .memory:nth-child(22) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(126deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(23) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(132deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(24) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(138deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(25) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(144deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(26) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(150deg) translateY(-520%);
+    }
+
+    .memory:nth-child(27) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(156deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(28) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(162deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(29) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(168deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(30) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(174deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(31) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(180deg) translateY(-520%);
+    }
+
+    .memory:nth-child(32) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(186deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(33) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(192deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(34) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(198deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(35) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(204deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(36) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(210deg) translateY(-520%);
+    }
+
+    .memory:nth-child(37) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(216deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(38) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(222deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(39) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(228deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(40) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(234deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(41) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(240deg) translateY(-520%);
+    }
+
+    .memory:nth-child(42) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(246deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(43) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(252deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(44) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(258deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(45) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(264deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(46) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(270deg) translateY(-520%);
+    }
+
+    .memory:nth-child(47) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(276deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(48) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(282deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(49) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(288deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(50) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(294deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(51) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(300deg) translateY(-520%);
+    }
+
+    .memory:nth-child(52) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(306deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(53) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(312deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(54) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(318deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(55) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(324deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(56) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(330deg) translateY(-520%);
+    }
+
+    .memory:nth-child(57) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(336deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(58) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(342deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(59) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(348deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(60) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(354deg) translateY(-1461%);
+    }
+
+    .needle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform-origin: center;
+    }
+
+    .needle#hours {
+        background-color: #1f1f1f;
+        width: 4%;
+        height: 30%;
+        transform-origin: center 75%;
+        transform: translate(-50%, -75%);
+    }
+
+    .needle#hours.moving {
+        transition: transform 150ms ease-out;
+    }
+
+    .needle#hours:after {
+        content: '';
+        background-color: #1f1f1f;
+        width: 4vw;
+        height: 4vw;
+        max-width: 4vh;
+        max-height: 4vh;
+        display: block;
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        box-sizing: border-box;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .needle#minutes {
+        background-color: #1f1f1f;
+        width: 2%;
+        height: 45%;
+        transform-origin: center 75%;
+        transform: translate(-50%, -75%);
+    }
+
+    .needle#minutes.moving {
+        transition: transform 150ms ease-out;
+    }
+
+    .needle#minutes:after {
+        content: '';
+        background-color: #1f1f1f;
+        width: 4vw;
+        height: 4vw;
+        max-width: 4vh;
+        max-height: 4vh;
+        display: block;
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        box-sizing: border-box;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .needle#seconds {
+        background-color: #cb2f2f;
+        width: 1%;
+        height: 50%;
+        transform-origin: center 75%;
+        transform: translate(-50%, -75%);
+    }
+
+    .needle#seconds.moving {
+        transition: transform 150ms ease-out;
+    }
+
+    .needle#seconds:after {
+        content: '';
+        background-color: #cb2f2f;
+        width: 2.5vw;
+        height: 2.5vw;
+        max-width: 2.5vh;
+        max-height: 2.5vh;
+        display: block;
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        box-sizing: border-box;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .clock_logo{
+        width: 10vw;
+        height: 10vw;
+        max-width: 10vh;
+        max-height: 10vh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        box-sizing: border-box;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    @media (min-width: 100vh) {
+        .clock {
+            border: solid 2.8vh #242424;
+            box-shadow: 0 1.4vh 2.8vh rgba(0, 0, 0, 0.8);
+        }
+    }
+
+</style>
+
+
+
+
+
+            </div>
+        
+            <div class="nexmoe-pd-item">
+                <div class="qweather" >
+    <div id="he-plugin-standard"></div>
+    <div class="qweather-logo">
+
+    </div>
+
+</div>
+<style>
+    .qweather{
+        position: relative;
+    }
+    .qweather-logo{
+        position: absolute;
+        right: 0;
+        top: -15px;
+        width: 40px;
+        height: 40px;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+</style>
+<script>
+  WIDGET = {
+    "CONFIG": {
+      "layout": "2",
+      "width": "260",
+      "height": "220",
+      "background": "5",
+      "dataColor": "0099FF",
+      "borderRadius": "15",
+      "key": "06114923535c446ea84c203a5e492a41"
+    }
+  }
+</script>
+<script src="https://widget.qweather.net/standard/static/js/he-standard-common.js?v=2.0"></script>
+
+            </div>
+        
+</div>
+<style>
+    .nexmoe-pd {
+        left: auto;
+        top: 40px;
+        right: 0;
+    }
+    .nexmoe-pd-item{
+       display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+</style>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
+<script>
+	hljs.initHighlightingOnLoad();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+<script src="/js/app.js?v=1661604131537"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
+<script>
+	$(".justified-gallery").justifiedGallery({
+		rowHeight: 160,
+		margins: 10,
+	});
+</script>
+
+  
+
+
+
+
+
+<!-- hexo injector body_end start -->
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<script src="/js/search.js"></script>
+
+<script src="/js/clock.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
+
+<script src="/lib/codeBlock/codeBlockFuction.js"></script>
+
+<script src="/lib/codeBlock/codeLang.js"></script>
+
+<script src="/lib/codeBlock/codeCopy.js"></script>
+
+<script src="/lib/codeBlock/codeShrink.js"></script>
+
+<link rel="stylesheet" href="/lib/codeBlock/matery.css">
+
+<script src="/js/webapp.js"></script>
+<!-- hexo injector body_end end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/rem.model.json"},"display":{"position":"left","width":400,"height":400},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
+</html>
+
+<script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/f90b2d50.js","daovoice")</script>
+<script>
+  daovoice('init', {
+    app_id: "f90b2d50"
+  });
+  daovoice('update');
+</script>
+

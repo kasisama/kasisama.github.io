@@ -24,7 +24,7 @@
 <meta property="og:description" content="Js基础1 自学总结">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-03-28T12:35:00.000Z">
-<meta property="article:modified_time" content="2022-08-05T03:21:17.951Z">
+<meta property="article:modified_time" content="2022-08-05T06:46:06.039Z">
 <meta property="article:author" content="咔斯Sama">
 <meta property="article:tag" content="web">
 <meta property="article:tag" content="HTML">
@@ -34,13 +34,13 @@
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_cksn56jaae6.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1659671787481">
+  <link rel="stylesheet" href="/css/style.css?v=1661604131602">
 <meta name="generator" content="Hexo 6.1.0"></head>
 
 <body class="mdui-drawer-body-left">
   
   <div id="nexmoe-background">
-    <div class="nexmoe-bg" style="background-image: url(https://tva1.sinaimg.cn/large/006RYYI7ly1h4bb6rlw2nj328g1bc79p.jpg)"></div>
+    <div class="nexmoe-bg" style="background-image: url(https://tva1.sinaimg.cn/large/006RYYI7ly1h5llvrl5jgj30rs0h2k1o.jpg)"></div>
     <div class="nexmoe-small" style="background-image: url(https://s2.loli.net/2022/07/19/QDhWb3BqyXLcdF8.png)"></div>
     <div class="mdui-appbar mdui-shadow-0">
       <div class="mdui-toolbar">
@@ -59,7 +59,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div id="ks-articlesBtn" class="nexmoe-count-item"><span>文章</span>20 <div class="item-radius"></div><div class="item-radius item-right"></div> </div>
+        <div id="ks-articlesBtn" class="nexmoe-count-item"><span>文章</span>26 <div class="item-radius"></div><div class="item-radius item-right"></div> </div>
         <div id="ks-tagsBtn" class="nexmoe-count-item"><span>标签</span>11<div class="item-radius"></div><div class="item-radius item-right"></div></div>
         <div id="ks-categoriesBtn" class="nexmoe-count-item"><span>分类</span>4<div class="item-radius"></div><div class="item-radius item-right"></div></div>
     </div>
@@ -147,7 +147,7 @@
 
         <li class="category-list-item">
           <a class="category-list-link" href="/categories/web笔记/">web笔记</a>
-          <span class="category-list-count">13</span>
+          <span class="category-list-count">19</span>
         </li>
 
         
@@ -192,7 +192,7 @@
   <div class="nexmoe-widget-wrap">
     <h3 class="nexmoe-widget-title">文章归档</h3>
     <div class="nexmoe-widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a><span class="archive-list-count">16</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a><span class="archive-list-count">22</span></li></ul>
     </div>
   </div>
 
@@ -232,14 +232,14 @@
     
         <div class="nexmoe-post-cover"
              style="padding-bottom: 24.305555555555554%;">
-            <img data-src="https://tva1.sinaimg.cn/large/006RYYI7ly1h4bb6rlw2nj328g1bc79p.jpg" data-sizes="auto" alt="web学习笔记3 - Js基础1" class="lazyload">
+            <img data-src="https://tva1.sinaimg.cn/large/006RYYI7ly1h5llvrl5jgj30rs0h2k1o.jpg" data-sizes="auto" alt="web学习笔记3 - Js基础1" class="lazyload">
             <h1>web学习笔记3 - Js基础1</h1>
         </div>
     
 
         <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2020年03月28日</a>
-    <a><i class="nexmoefont icon-areachart"></i>1.8k 字</a>
+    <a><i class="nexmoefont icon-areachart"></i>1.9k 字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>大概 9 分钟</a>
 </div>
 
@@ -424,6 +424,26 @@ a = a % <span class="number">3</span>     <span class="comment">// % 求余数 1
     &#125;
 &#125;</code></pre>
 
+<h3 id="do…while"><a href="#do…while" class="headerlink" title="do…while"></a>do…while</h3><pre><code class="highlight js"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i&lt;<span class="number">3</span>;i++)&#123;&#125;
+<span class="comment">// 先判断 再执行</span>
+<span class="comment">// while() 当条件成立了 执行&#123;&#125;</span>
+<span class="keyword">var</span> a = <span class="number">0</span>
+<span class="keyword">while</span>(a&lt;<span class="number">3</span>)&#123;
+    <span class="variable language_">console</span>.<span class="title function_">log</span>(a,<span class="string">&quot;11111&quot;</span>)
+    a++
+&#125;
+
+<span class="keyword">var</span> b = <span class="number">3</span>
+<span class="comment">// 现执行再判断，最起码执行一次</span>
+<span class="keyword">do</span> &#123;
+    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;bbbbbbb&quot;</span>)
+&#125; <span class="keyword">while</span> (b&lt;<span class="number">3</span>);
+
+
+<span class="comment">// true 死循环</span>
+<span class="comment">// while(1)&#123;</span>
+<span class="comment">//     console.log(&quot;111111&quot;)</span>
+<span class="comment">// &#125;</span></code></pre>
 <h3 id="continue和break"><a href="#continue和break" class="headerlink" title="continue和break"></a>continue和break</h3><p><code>contine</code> : 结束本次循环 执行下次循环<br><code>breake</code> : 跳出循环</p>
 <pre><code class="highlight js"><span class="comment">/*</span>
 <span class="comment">for(var i = 0;i&lt;10;i++)&#123;</span>
@@ -644,7 +664,7 @@ a = a % <span class="number">3</span>     <span class="comment">// % 求余数 1
                         <button class="mdui-fab catalog" style="overflow:unset;">
                             <i class="nexmoefont icon-i-catalog"></i>
                             <div class="nexmoe-toc">
-                              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#js%E6%9B%B4%E6%94%B9%E6%A0%B7%E5%BC%8F"><span class="toc-number">1.</span> <span class="toc-text">js更改样式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5"><span class="toc-number">2.</span> <span class="toc-text">流程控制语句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#if%E5%88%A4%E6%96%AD"><span class="toc-number">2.1.</span> <span class="toc-text">if判断</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Switch%E8%AF%AD%E5%8F%A5"><span class="toc-number">2.2.</span> <span class="toc-text">Switch语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6%E5%8F%B7"><span class="toc-number">2.3.</span> <span class="toc-text">运算符号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#for%E5%BE%AA%E7%8E%AF"><span class="toc-number">2.4.</span> <span class="toc-text">for循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#continue%E5%92%8Cbreak"><span class="toc-number">2.5.</span> <span class="toc-text">continue和break</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">3.</span> <span class="toc-text">运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#i%E7%9A%84%E7%BB%93%E6%9E%9C"><span class="toc-number">3.1.</span> <span class="toc-text">++i的结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#i-%E7%9A%84%E7%BB%93%E6%9E%9C"><span class="toc-number">3.2.</span> <span class="toc-text">i++的结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E7%AC%A6%E5%8F%B7"><span class="toc-number">3.3.</span> <span class="toc-text">比较运算符号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6%E5%8F%B7"><span class="toc-number">3.4.</span> <span class="toc-text">逻辑运算符号</span></a></li></ol></li></ol>
+                              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#js%E6%9B%B4%E6%94%B9%E6%A0%B7%E5%BC%8F"><span class="toc-number">1.</span> <span class="toc-text">js更改样式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5"><span class="toc-number">2.</span> <span class="toc-text">流程控制语句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#if%E5%88%A4%E6%96%AD"><span class="toc-number">2.1.</span> <span class="toc-text">if判断</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Switch%E8%AF%AD%E5%8F%A5"><span class="toc-number">2.2.</span> <span class="toc-text">Switch语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6%E5%8F%B7"><span class="toc-number">2.3.</span> <span class="toc-text">运算符号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#for%E5%BE%AA%E7%8E%AF"><span class="toc-number">2.4.</span> <span class="toc-text">for循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#do%E2%80%A6while"><span class="toc-number">2.5.</span> <span class="toc-text">do…while</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#continue%E5%92%8Cbreak"><span class="toc-number">2.6.</span> <span class="toc-text">continue和break</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">3.</span> <span class="toc-text">运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#i%E7%9A%84%E7%BB%93%E6%9E%9C"><span class="toc-number">3.1.</span> <span class="toc-text">++i的结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#i-%E7%9A%84%E7%BB%93%E6%9E%9C"><span class="toc-number">3.2.</span> <span class="toc-text">i++的结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E7%AC%A6%E5%8F%B7"><span class="toc-number">3.3.</span> <span class="toc-text">比较运算符号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6%E5%8F%B7"><span class="toc-number">3.4.</span> <span class="toc-text">逻辑运算符号</span></a></li></ol></li></ol>
                             </div>
                         </button>
                         
@@ -1355,7 +1375,7 @@ a = a % <span class="number">3</span>     <span class="comment">// % 求余数 1
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
 
-<script src="/js/app.js?v=1659671787487"></script>
+<script src="/js/app.js?v=1661604131609"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
 <script>
@@ -1372,6 +1392,10 @@ a = a % <span class="number">3</span>     <span class="comment">// % 求余数 1
 
 
 <!-- hexo injector body_end start -->
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<script src="/js/search.js"></script>
+
 <script src="/js/clock.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
@@ -1385,10 +1409,6 @@ a = a % <span class="number">3</span>     <span class="comment">// % 求余数 1
 <script src="/lib/codeBlock/codeShrink.js"></script>
 
 <link rel="stylesheet" href="/lib/codeBlock/matery.css">
-
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-
-<script src="/js/search.js"></script>
 
 <script src="/js/webapp.js"></script>
 <!-- hexo injector body_end end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/rem.model.json"},"display":{"position":"left","width":400,"height":400},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
