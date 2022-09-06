@@ -1262,11 +1262,15 @@ body {
   overflow: hidden;
   border-radius: 100%;
   box-shadow: 0 0.3rem 2rem rgba(161,177,204,0.6);
+  transition: all 0.7s ease;
 }
 #nexmoe-header .nexmoe-avatar a {
   padding-bottom: 100%;
   display: block;
   height: 0;
+}
+#nexmoe-header .nexmoe-avatar:hover {
+  transform: rotateZ(720deg) scale(1.2);
 }
 #nexmoe-header .nexmoe-count {
   padding: 0 30px;
@@ -1680,7 +1684,7 @@ font.douyin {
 }
 .nexmoe-post-right .nexmoe-fixed {
   position: fixed;
-  z-index: 1000;
+  z-index: 6000;
   height: 100vh;
   display: inline-block;
   top: 0;
@@ -1702,6 +1706,9 @@ font.douyin {
 .nexmoe-post-right .nexmoe-tool .mdui-fab {
   background: #fff;
   color: #444;
+}
+.nexmoe-post-right .nexmoe-tool .mdui-fab:hover {
+  color: #09f;
 }
 @media screen and (max-width: 1024px) {
   .nexmoe-post-right {
@@ -1732,14 +1739,13 @@ font.douyin {
   border-radius: 16px;
   padding: 20px;
   font-size: 16px;
-  display: none;
+  visibility: hidden;
   z-index: 0;
   max-height: calc(100vh - 130px);
-  overflow-y: scroll;
-  transition: all 0.3s ease-in;
+  overflow: hidden;
+  transition: all 0.2s ease-in;
 }
 .nexmoe-tool .catalog:hover .nexmoe-toc {
-  display: block;
   color: #09f;
 }
 .nexmoe-toc a {

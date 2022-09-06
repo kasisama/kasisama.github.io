@@ -49,20 +49,21 @@ $(document).ready(function () {
       easing: "swing"
     });
   });
-  $(".catalog").mouseenter(function(){
+  $(".catalog,.nexmoe-toc").mouseenter(function(){
     $(".nexmoe-toc").css('opacity','1');
     $(".nexmoe-toc").css('z-index','0');
-    $(".toc-item").css('display','block')
+    $(".nexmoe-toc").css('visibility','visible')
   });
   // $('.nexmoe-toc').mouseleave(function(){
   //   $('.nexmoe-toc').css('opacity','0');
   //   $(".nexmoe-toc").css('z-index','-1');
   //   // $(".toc").css('display','none');
   // });
-  // $(".toc").mouseleave(function(){
-  //   var timer=setTimeout(function(){
-  //     $(".toc").css('display','none');
-  //     clearTimeout(timer);
-  //   },350);
-  // });
+  $(".catalog,.nexmoe-toc").mouseleave(function(){
+    var timer=setTimeout(function(){
+      $(".nexmoe-toc").css('opacity','0');
+      $(".nexmoe-toc").css('visibility','hidden');
+      clearTimeout(timer);
+    },100);
+  });
 });

@@ -1,6 +1,6 @@
-'use strict'
+
 $(() => {
-    const getUrl = "./js/homework.json";
+    const getUrl = "../data/RemImg/rem.json";
     const throttle = (fn, delay) => {       // 节流
         let flag = true;
         return () => {
@@ -19,6 +19,7 @@ $(() => {
             setTimeout(() => {
                 loadpage();         // 加载重新加载页面
                 chageHeight();      // 修改整体高度
+                // lazyload();
             },300)
         },
         "resize": () => {   // window 改变窗口事件
@@ -104,7 +105,7 @@ $(() => {
         let maxNum = bottomMaxImg.maxNum
         let oMargin = parseInt($(maxImg).css("margin"));    // 可不能忘了外边距哦!
         let pageHeight = maxNum + maxImg.offsetHeight + oMargin;    // 计算屏幕的总长
-        $("#app,.box").css("height",pageHeight + "px");
+        $("#RemApp,.box").css("height",pageHeight + "px");
         lazyload();        // 修改高度后,懒加载一下图片
     };
     
@@ -158,7 +159,7 @@ $(() => {
                 let oHeight = element.split("?")[1].split("x")[1];
                 img += 
                 `<div class="imgbox">
-                    <div class="content"><img src="./img/loading.gif" data-src="${element}" alt="" class="ksImg" width="${oWidth}px" height="${oHeight}px"></div>
+                    <div class="content"><img src="./img/loading.gif" data-src="${element.split("?")[0]}" alt="" class="ksImg" width="${oWidth}px" height="${oHeight}px"></div>
                 </div>`;
             });
             $(".box").append(img);
