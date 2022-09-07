@@ -7,7 +7,7 @@ var windowWidth =
     document.documentElement.clientWidth ||
     document.body.clientWidth;
 if (windowWidth < 768) {
-    var imageWidth = 132; //图片显示宽度(手机端)
+    var imageWidth = 130; //图片显示宽度(手机端)
 } else {
     var imageWidth = 250; //图片显示宽度
 }
