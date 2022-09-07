@@ -7,7 +7,7 @@ var windowWidth =
     document.documentElement.clientWidth ||
     document.body.clientWidth;
 if (windowWidth < 768) {
-    var imageWidth = 145; //图片显示宽度(手机端)
+    var imageWidth = 132; //图片显示宽度(手机端)
 } else {
     var imageWidth = 250; //图片显示宽度
 }
@@ -18,7 +18,6 @@ const photo = {
     init: function () {
         var that = this;
         $.getJSON(imgDataPath, function (data) {
-            console.log(imgDataPath,data);
             that.render(that.page, data);
             //that.scroll(data);
             that.eventListen(data);
@@ -40,7 +39,7 @@ const photo = {
                     <a data-fancybox="gallery" href="${imgPath}${name}/${imgNameWithPattern}"
                           data-caption="${imgName}" title="${imgName}">
                             <img  class="lazyload" data-src="${imgPath}${name}/${imgNameWithPattern}"
-                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                            src="img/loading.gif"
                             onload="lzld(this)"
                             lazyload="auto">
                         </a>
