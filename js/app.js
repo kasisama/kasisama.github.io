@@ -49,16 +49,12 @@ $(document).ready(function () {
       easing: "swing"
     });
   });
+
   $(".catalog,.nexmoe-toc").mouseenter(function(){
     $(".nexmoe-toc").css('opacity','1');
     $(".nexmoe-toc").css('z-index','0');
     $(".nexmoe-toc").css('visibility','visible')
   });
-  // $('.nexmoe-toc').mouseleave(function(){
-  //   $('.nexmoe-toc').css('opacity','0');
-  //   $(".nexmoe-toc").css('z-index','-1');
-  //   // $(".toc").css('display','none');
-  // });
   $(".catalog,.nexmoe-toc").mouseleave(function(){
     var timer=setTimeout(function(){
       $(".nexmoe-toc").css('opacity','0');

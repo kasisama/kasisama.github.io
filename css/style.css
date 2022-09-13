@@ -1742,7 +1742,7 @@ font.douyin {
   visibility: hidden;
   z-index: 0;
   max-height: calc(100vh - 130px);
-  overflow: hidden;
+  overflow-y: scroll;
   transition: all 0.2s ease-in;
 }
 .nexmoe-tool .catalog:hover .nexmoe-toc {
