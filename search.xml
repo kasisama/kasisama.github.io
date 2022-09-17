@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>Vue知识点整理2</title>
+      <link href="//webNotes-vue3.html"/>
+      <url>//webNotes-vue3.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Vue知识点整理2</p><span id="more"></span><h2 id="vue过度与动画"><a href="#vue过度与动画" class="headerlink" title="vue过度与动画"></a>vue过度与动画</h2><ol><li><ul><li>元素进入的样式：<br> <code>v-enter</code>: 进入的起点<br> <code>v-enter-active</code>: 进入过程中<br> <code>v-enter-to</code>: 进入的终点</li><li>元素离开的样式：<br> <code>v-leave</code>: 离开的起点<br> <code>v-leave-active</code>: 离开的过程中<br> <code>v-leave-to</code>: 离开的终点</li></ul></li><li><p>使用<code>&lt;transition&gt;</code>包裹要过度的元素，并配置name属性</p><pre><code class="highlight js">&lt;transition name=<span class="string">&quot;binge&quot;</span>&gt;    <span class="language-xml"><span class="tag">&lt;<span class="name">h3</span> <span class="attr">v-if</span>=<span class="string">&quot;bool&quot;</span>&gt;</span>你好！<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span>&lt;/transition&gt;</code></pre></li><li><p>若有多个元素需要过度，则需要使用<code>&lt;transition-group&gt;</code>，且每个元素都要指定key值</p></li></ol><h2 id="路由"><a href="#路由" class="headerlink" title="路由"></a>路由</h2><ol><li><p>vue路由的实现原理?<br> a标签href值如果以#开头, 访问时#开头的路径会被拼接到url路径上,且页面不刷新<br> 以#开头的路径地址, 叫做<code>哈希(hash)值</code><br> 哈希值特点:<br> 哈希值改变时, 页面不会刷新<br> 哈希值不会由ajax请求发给服务器<br> 哈希值变化时,会触发hashChange事件</p></li><li><p>vue路由的配置步骤<br> (1)导入vue路由插件 <code>&lt;script src=&quot;vue-router.js&quot;&gt;&lt;/script&gt;</code><br> (2)在vue模板中添加路由跳转标签 <code>&lt;router-link to=&quot;/home&quot;&gt;主页&lt;/router-link&gt;</code><br> (3)创建路由分发跳转的组件 <code>Vue.component(&quot;homeCom&quot;, &#123;template: &quot;&lt;h1&gt;这是首页&lt;/h1&gt;&quot;&#125;)</code><br> (4)创建路由对象,并配置路由信息 <code>new VueRouter(&#123; routes：&#123;path: &quot;/home&quot;, component: Home&#125; &#125;)</code><br> (5)在vue根组件中注册路由 <code>router</code><br> (6)根组件模板中,设置路由出口 <code>&lt;router-view&gt;&lt;/router-view&gt;</code></p></li><li><p>路由有哪两种跳转方式?<br> 编程式导航跳转 <code>router.push(&#39;/home&#39;)</code><br> <code>router.push(&#123;path: &quot;/home&quot;&#125;)</code><br> <code>router.push(&#123;path: &quot;main&quot;&#125;)</code></p><p> <code>router.forward()</code> 前进<br> <code>router.back()</code> 后退<br> <code>router.go()</code> 可前进可后退</p></li><li><p><code>this.$router</code> 和  <code>this.$route</code> 的区别?<br> <code>this.$router</code> 是全局唯一的路由配置对象, 固定不变<br> <code>this.$route</code> 是当前路由页面对应的路由信息对象, 路由跳转时会更新</p></li><li><p>vue路由有哪四种传值方式?<br> (1)url拼接键值对传值<br> <code>router.push(&quot;/home?name=&#39;zs&#39;&quot;)</code> 使用<code>$route.query</code>接收<br> (2)动态url&#x2F;友好型url传值<br> <code>router.push(&quot;/home/&quot;)</code>  使用<code>$route.params</code>接收<br> (3)路径跳转+query对象传值<br> <code>router.push(&#123;path: &quot;/home&quot;,query: &#123;name: this.name&#125;&#125;)</code> 使用<code>$route.query</code>接收<br> (4)命名路由+params对象传值<br> <code>router.push(&#123;name: &quot;main&quot;,params:&#123;name: this.name&#125;&#125;)</code> 使用<code>$route.params</code>接收<br><br> 注: <code>path</code>路径跳转只可以携带<code>query</code>参数, <code>name</code>路由名跳转可以携带<code>params</code>参数和<code>query</code>参数</p></li><li><p>vue路由四种传值方式的优缺点对比<br> 四种方式中, 1,2,3方式都是把参数拼到了url路径上, 而第4种方式的<code>params</code>参数没有在路径上拼接(第4种方式的<code>query</code>参数也是在url上拼接的)<br> 在url路径上拼接参数, 好处是: <code>页面刷新时数据不丢失</code> , 弊端是: <code>安全性低</code>,且<code>数据大小限制</code><br> 第4种方式的<code>params</code>参数 好处: <code>安全性高</code>,且<code>数据大小无限制</code>, 弊端是: <code>页面刷新</code>, <code>数据会丢</code></p></li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> HTML </tag>
+            
+            <tag> Vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Vue知识点整理</title>
       <link href="//webNotes-vue2.html"/>
       <url>//webNotes-vue2.html</url>
