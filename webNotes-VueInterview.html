@@ -5,7 +5,7 @@
 <head>
   
   <meta name="baidu-site-verification" content="code-J1Qg17G6wT" />
-  <title>web学习笔记3 - Js基础1 - 咔斯の小窝</title>
+  <title>Vuem面试题整理 - 咔斯の小窝</title>
   <meta charset="UTF-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
@@ -16,25 +16,25 @@
     <meta name="baidu-site-verification" content="code-7bF3wXCwO5" />
 
   <link rel="shortcut icon" href="https://s2.loli.net/2022/07/19/xKNvsPHqcyCL37d.png" type="image/png" />
-  <meta name="description" content="Js基础1 自学总结封面画师：唏嘘的星辰  p站ID：13312138">
+  <meta name="description" content="Vue面试题，转载的qwq">
 <meta property="og:type" content="article">
-<meta property="og:title" content="web学习笔记3 - Js基础1">
-<meta property="og:url" content="https://www.kassama.top/webNotes3.html">
+<meta property="og:title" content="Vuem面试题整理">
+<meta property="og:url" content="https://www.kassama.top/webNotes-VueInterview.html">
 <meta property="og:site_name" content="咔斯の小窝">
-<meta property="og:description" content="Js基础1 自学总结封面画师：唏嘘的星辰  p站ID：13312138">
+<meta property="og:description" content="Vue面试题，转载的qwq">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-03-28T12:35:00.000Z">
-<meta property="article:modified_time" content="2022-09-19T12:55:37.706Z">
+<meta property="article:published_time" content="2021-02-15T10:47:53.000Z">
+<meta property="article:modified_time" content="2022-09-19T15:27:46.443Z">
 <meta property="article:author" content="咔斯Sama">
-<meta property="article:tag" content="web">
 <meta property="article:tag" content="HTML">
+<meta property="article:tag" content="Vue">
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css?v=233" crossorigin>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css">
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_cksn56jaae6.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1663601307994">
+  <link rel="stylesheet" href="/css/style.css?v=1663601307829">
 <meta name="generator" content="Hexo 6.1.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -237,290 +237,114 @@
     <div class="nexmoe-primary">
         <div class="nexmoe-post">
     
-        <div class="nexmoe-post-cover" style="padding-bottom: 47.41666666666667%;">
-            <img data-src="https://tva1.sinaimg.cn/large/006RYYI7ly1h69yyzkgj0j31a40lv4qp.jpg" data-sizes="auto" alt="web学习笔记3 - Js基础1" class="lazyload">
-            <h1>web学习笔记3 - Js基础1</h1>
+        <div class="nexmoe-post-cover" style="padding-bottom: 35.25%;">
+            <img data-src="https://tva1.sinaimg.cn/large/006RYYI7ly1h69zd0oacnj31jk0jlabd.jpg" data-sizes="auto" alt="Vuem面试题整理" class="lazyload">
+            <h1>Vuem面试题整理</h1>
         </div>
     
 
         <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
-    <a><i class="nexmoefont icon-calendar-fill"></i>2020年03月28日</a>
-    <a><i class="nexmoefont icon-areachart"></i>1.9k 字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 9 分钟</a>
+    <a><i class="nexmoefont icon-calendar-fill"></i>2021年02月15日</a>
+    <a><i class="nexmoefont icon-areachart"></i>3.3k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 14 分钟</a>
 </div>
 
 
         <article>
-            <p>Js基础1 自学总结<br>封面画师：唏嘘的星辰  p站ID：13312138</p>
+            <p>Vue面试题，转载的qwq</p>
 <span id="more"></span>
-<h2 id="js更改样式"><a href="#js更改样式" class="headerlink" title="js更改样式"></a>js更改样式</h2><pre><code class="highlight html"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;d1&quot;</span>&gt;</span>更改样式<span class="tag">&lt;/<span class="name">div</span>&gt;</span>
-<span class="comment">&lt;!-- onclick 当点击的时候， changeStyle() 点击执行changeStyle功能--&gt;</span>
-<span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">&quot;changeStyle()&quot;</span>&gt;</span>点击更改样式<span class="tag">&lt;/<span class="name">button</span>&gt;</span>
-<span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span>
-<span class="language-javascript">    </span>
-<span class="language-javascript"><span class="comment">//  定义函数</span></span>
-<span class="language-javascript"><span class="keyword">function</span> <span class="title function_">changeStyle</span>(<span class="params"></span>)&#123;</span>
-<span class="language-javascript">    <span class="comment">// 1查找div元素 通过函数进行查找的 document 文档，getElementById() 通过id获取元素</span></span>
-<span class="language-javascript">    <span class="comment">// .style 添加行内样式 ; .color 字体颜色；</span></span>
-<span class="language-javascript">    <span class="comment">// document.getElementById(&quot;d1&quot;).style.color=&quot;red&quot;</span></span>
-<span class="language-javascript"></span>
-<span class="language-javascript">    <span class="comment">// 2 如果标签设置了id，js可以简单通过id直接获取标签, document.getElementById (&quot;d1&quot;) 类似于 d1</span></span>
-<span class="language-javascript">    d1.<span class="property">style</span>.<span class="property">color</span>=<span class="string">&quot;red&quot;</span></span>
-<span class="language-javascript">&#125;</span>
-<span class="language-javascript"></span>
-<span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></code></pre>
-
-<h2 id="流程控制语句"><a href="#流程控制语句" class="headerlink" title="流程控制语句"></a>流程控制语句</h2><p><code>if</code> : 条件控制语句<br><code>switch...case</code> : 条件控制语句<br><code>for</code> : 循环控制语句<br><code>do...while</code> : 循环语句<br><code>while</code> : 循环语句<br><code>try...catch...finally</code> : 语句用于处理代码中可能出现的错误信息</p>
-<h3 id="if判断"><a href="#if判断" class="headerlink" title="if判断"></a>if判断</h3><ol>
-<li><p><code>单独if条件</code> 如果条件成了 执行{代码块}</p>
- <pre><code class="highlight js"><span class="keyword">var</span> age = <span class="number">33</span>
-<span class="keyword">if</span> (age&gt;<span class="number">40</span>) &#123;
-<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;大叔一枚&quot;</span>)
-&#125;</code></pre></li>
-<li><p><code>多条件判断</code><br> <code>=</code> 赋值 ，name&#x3D;”刘能” 证明name是”刘能, 非空字符串作为if条件 这个时候成立的<br> <code>==</code> 比较相等的<br> <code>===</code> 恒等的 值和类型必须都一样<br> 建议多条件判断不要使用<code>if...if</code> 弊端在于，每个<code>if</code>都会去判断，导致执行时间过长</p>
- <pre><code class="highlight js"><span class="keyword">var</span> name = <span class="string">&quot;刘德华&quot;</span>
-<span class="keyword">if</span>(name==<span class="string">&quot;刘德华&quot;</span>)&#123;
-    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;能执行到不?&quot;</span>)
-    name = <span class="string">&quot;李嘉诚&quot;</span>
-&#125;
-<span class="keyword">if</span>(name==<span class="string">&quot;李嘉诚&quot;</span>)&#123;
-    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;帅哥一枚&quot;</span>)
-&#125;</code></pre></li>
-<li><p><code>if...else</code>  如果…其他的…<br> <code>if...else...</code> 只会判断一次</p>
- <pre><code class="highlight js"><span class="keyword">var</span> score = <span class="number">80</span>
-<span class="keyword">if</span>(score&gt;<span class="number">60</span>)&#123;
-    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;我及格了&quot;</span>)
-    score = <span class="number">59</span>
-&#125;<span class="keyword">else</span>&#123; <span class="comment">// 相当小于等于60</span>
-    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;来年再战&quot;</span>)
-&#125;</code></pre></li>
-<li><p><code>数字作为if条件</code>，非0数字都是true都是成立，0未fasle 不成立的。</p>
- <pre><code class="highlight js"><span class="keyword">var</span> a = <span class="number">0</span>
-<span class="keyword">if</span>(a)&#123;
-    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;33333333333333333333333&#x27;</span>)
-&#125;</code></pre></li>
-<li><p><code>if...else if...else</code></p>
- <pre><code class="highlight js">score=<span class="number">80</span>
-<span class="keyword">if</span>(score&gt;<span class="number">90</span>)&#123;
-    <span class="title function_">alert</span>(<span class="string">&quot;优秀&quot;</span>)
-&#125;<span class="keyword">else</span> <span class="keyword">if</span>(score&gt;=<span class="number">80</span>&amp;&amp;score&lt;=<span class="number">90</span>)&#123;
-    <span class="title function_">alert</span>(<span class="string">&quot;良好&quot;</span>)
-&#125;<span class="keyword">else</span>&#123;
-    <span class="title function_">alert</span>(<span class="string">&quot;还凑合&quot;</span>)
-&#125;</code></pre></li>
+<h4 id="一-说几个vue中的指令和它的用法？"><a href="#一-说几个vue中的指令和它的用法？" class="headerlink" title="一. 说几个vue中的指令和它的用法？"></a>一. 说几个vue中的指令和它的用法？</h4><p><code>v-model</code> 双向数据绑定；<br><code>v-for</code> 循环；<br><code>v-if</code>, <code>v-show</code> 显示与隐藏；<br><code>v-bind</code> 动态绑定属性<br><code>v-on</code> 事件绑定；<br><code>v-once</code> 只绑定一次。</p>
+<h4 id="二-v-on指令可以同时监听多个函数吗"><a href="#二-v-on指令可以同时监听多个函数吗" class="headerlink" title="二. v-on指令可以同时监听多个函数吗?"></a>二. v-on指令可以同时监听多个函数吗?</h4><p>可以, <code>v-on</code>的事件监听类似于DOM原生api添加事件监听者<code>addEventListener</code><br><code>v-on</code> 可以给一个事件同时绑定多个函数，也可以一次绑定多个事件<br><code>v-bind</code> 可以一次绑定多个属性，使用<code>v-bind=&#123;&#125;</code>结构来实现</p>
+<h4 id="三-vue中v-if和v-show有什么区别"><a href="#三-vue中v-if和v-show有什么区别" class="headerlink" title="三. vue中v-if和v-show有什么区别"></a>三. vue中v-if和v-show有什么区别</h4><p><code>v-if</code> 的原理是根据判断条件来动态的进行增删DOM元素, 比较耗费性能和内存, <code>频繁显示隐藏不建议使用</code><br><code>v-show</code> 是根据判断条件来动态的进行显示和隐藏元素, 通过设置样式<code>display</code>为<code>block</code>和<code>none</code>来实现, <code>适用于频繁显示隐藏</code>的情况</p>
+<h4 id="四-vue循环中为什么使用key"><a href="#四-vue循环中为什么使用key" class="headerlink" title="四. vue循环中为什么使用key?"></a>四. vue循环中为什么使用key?</h4><p>需要使用<code>key</code>来给循环中每个节点做一个<code>唯一标识</code>，要保证一个循环中<code>key</code>的值各不相同, 以避免vue中的<code>重用机制</code>造成可能的<code>渲染异常</code>.  从底层来看, <code>key</code>属性主要为了<code>Diff算法</code>就可以正确的识别此节点。并<code>高效的更新虚拟DOM</code>。</p>
+<h4 id="五-vue中数据绑定是怎么实现的？双向绑定指令v-model的本质是什么？"><a href="#五-vue中数据绑定是怎么实现的？双向绑定指令v-model的本质是什么？" class="headerlink" title="五. vue中数据绑定是怎么实现的？双向绑定指令v-model的本质是什么？"></a>五. vue中数据绑定是怎么实现的？双向绑定指令<code>v-model</code>的本质是什么？</h4><p>Vue组件<code>data</code>中的数据在组件创建时，都会被<code>Object.defineProperty</code>改造为<code>set</code>,<code>get</code>类型的属性，当数据发生变化时<code>set</code>方法就会调用，<code>set</code>方法中添加了重新渲染的代码。<br><code>v-model</code>相当于 <code>v-bind:value</code>  加 <code>v-on:input</code></p>
+<h4 id="六-分别简述computed和watch的使用场景"><a href="#六-分别简述computed和watch的使用场景" class="headerlink" title="六. 分别简述computed和watch的使用场景"></a>六. 分别简述computed和watch的使用场景</h4><ul>
+<li><code>computed</code>:<br>　　　　当一个属性受多个属性影响的时候就需要用到computed<br>　　　　例子： 购物车商品结算的时候</li>
+<li><code>watch</code>:<br>　　　　当一条数据影响多条数据的时候就需要用watch<br>　　　　例子：搜索数据</li>
+</ul>
+<h4 id="七-列举一下Vue组件生命周期函数，什么时候需要在destroyed中写代码？"><a href="#七-列举一下Vue组件生命周期函数，什么时候需要在destroyed中写代码？" class="headerlink" title="七. 列举一下Vue组件生命周期函数，什么时候需要在destroyed中写代码？"></a>七. 列举一下Vue组件生命周期函数，什么时候需要在destroyed中写代码？</h4><p><code>beforeCreate</code>    <code>created</code><br><code>beforeMount</code>     <code>mounted</code><br><code>beforeUpdate</code>    <code>updated</code><br><code>beforeDestroy</code>   <code>destroyed</code><br>当前页面有事件监听器或者计时器时,需要在<code>destroyed</code>中取消或销毁</p>
+<h4 id="八-vue的组件配置对象中都有哪些常用字段？分别是什么作用？"><a href="#八-vue的组件配置对象中都有哪些常用字段？分别是什么作用？" class="headerlink" title="八. vue的组件配置对象中都有哪些常用字段？分别是什么作用？"></a>八. vue的组件配置对象中都有哪些常用字段？分别是什么作用？</h4><p><code>Data</code>          组件中的数据<br><code>props</code>         组建的属性数据,接收父组件的传值<br><code>computed</code>      计算属性<br><code>components</code>    定义或引用子组件<br><code>methods</code>       自定义函数<br><code>watch</code>         属性监听<br><code>filters</code>       数据过滤器<br><code>mounted</code>       等生命周期函数</p>
+<h4 id="九-lt-keep-alive-gt-lt-x2F-keep-alive-gt-的作用是什么"><a href="#九-lt-keep-alive-gt-lt-x2F-keep-alive-gt-的作用是什么" class="headerlink" title="九. &lt;keep-alive&gt;&lt;&#x2F;keep-alive&gt;的作用是什么?"></a>九. &lt;keep-alive&gt;&lt;&#x2F;keep-alive&gt;的作用是什么?</h4><p><code>keep-alive</code> 是 Vue 内置的一个组件，可以使被包含的组件<code>保留状态</code>，或<code>避免重新渲染</code>。</p>
+<h4 id="十-vue组件中如何获取dom元素"><a href="#十-vue组件中如何获取dom元素" class="headerlink" title="十. vue组件中如何获取dom元素?"></a>十. vue组件中如何获取dom元素?</h4><p>使用<code>ref</code>属性获取, 在组件模板元素中添加<code>ref</code>属性, 在js中用<code>this.$refs</code>获取</p>
+<h4 id="十一-Vue-nextTick-方法有什么作用？"><a href="#十一-Vue-nextTick-方法有什么作用？" class="headerlink" title="十一. Vue.nextTick()方法有什么作用？"></a>十一. Vue.nextTick()方法有什么作用？</h4><p>当vue中动态数据修改时,会导致界面的更新,而界面的更新属于<code>异步更新</code>, 当打印界面数据时, 异步更新尚未完成, 所以打印结果是更新之前的数据<br><code>Vue.nextTick</code>表示<code>异步更新函数</code>, 其参数是<code>更新完成的回调函数</code></p>
+<h4 id="十二-如何让CSS只在当前组件中起作用-vue中如何实现样式隔离-？"><a href="#十二-如何让CSS只在当前组件中起作用-vue中如何实现样式隔离-？" class="headerlink" title="十二. 如何让CSS只在当前组件中起作用(vue中如何实现样式隔离)？"></a>十二. 如何让CSS只在当前组件中起作用(vue中如何实现样式隔离)？</h4><p>在组件中的style前面加上<code>scoped</code>, 如果父子组件都有样式隔离, 则父组件中无法修改子组件样式, 此时可用样式穿透修改<br>vue2: 父组件选择器<code>&gt;&gt;&gt;</code>子组件选择器{子组件样式}<br>vue3:  <code>:deep</code>(子组件选择器)</p>
+<h4 id="十三-vue中如何处理跨域请求"><a href="#十三-vue中如何处理跨域请求" class="headerlink" title="十三.  vue中如何处理跨域请求"></a>十三.  vue中如何处理跨域请求</h4><p>vue中处理跨域请求一般要设置代理服务器实现跨域,<br>在vue项目的根目录中的<code>vue.config.js</code>配置文件,在<code>devServer</code>字段中配置服务器代理<br>在使用<code>axios</code>请求数据时直接使用代理地址    </p>
+<h4 id="十四-axios和ajax的区别："><a href="#十四-axios和ajax的区别：" class="headerlink" title="十四. axios和ajax的区别："></a>十四. axios和ajax的区别：</h4><p><code>axios</code>是通过<code>promise</code>实现对<code>ajax</code>技术的一种封装，就像<code>jQuery</code>实现<code>ajax</code>封装一样。<br>简单来说： <code>ajax</code>技术实现了网页的局部数据刷新，<code>axios</code>实现了对<code>ajax</code>的封装。 </p>
+<h4 id="十五-vue中有哪些数据传递方式"><a href="#十五-vue中有哪些数据传递方式" class="headerlink" title="十五. vue中有哪些数据传递方式?"></a>十五. vue中有哪些数据传递方式?</h4><ol>
+<li><code>组件传值</code>: 父传子,通过<code>props</code>属性或<code>slot</code>插槽传递,  子传父,通过<code>$emit</code>发射自定义事件传递, 非父子,通过<code>bus</code>总线传递</li>
+<li><code>路由传值</code>: 可通过<code>url路径传值</code>和<code>编程式导航对象传值</code></li>
+<li><code>vuex状态管理传值</code></li>
 </ol>
-<h3 id="Switch语句"><a href="#Switch语句" class="headerlink" title="Switch语句"></a>Switch语句</h3><pre><code class="highlight js"><span class="comment">// switch 开关 ()写判断的变量 </span>
-<span class="comment">// case season 的各种情况</span>
-<span class="keyword">var</span> season = <span class="string">&quot;夏&quot;</span>
-<span class="keyword">switch</span> (season) &#123;
-    <span class="keyword">case</span> <span class="string">&quot;春&quot;</span>: <span class="comment">//如果season==&quot;春&quot;</span>
-        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;春天万物复苏&quot;</span>)
-        <span class="keyword">break</span>;  <span class="comment">// 跳出当前判断</span>
-
-    <span class="keyword">case</span> <span class="string">&quot;夏&quot;</span>:
-        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;夏天烈日炎炎&quot;</span>)
-        <span class="keyword">break</span>
-
-    <span class="keyword">case</span> <span class="string">&quot;秋&quot;</span>:
-        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;秋天硕果累累&quot;</span>)
-        <span class="keyword">break</span>
-
-    <span class="keyword">case</span> <span class="string">&quot;冬&quot;</span>:
-        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;冬天白雪皑皑&quot;</span>)
-        <span class="keyword">break</span>
-
-    <span class="attr">default</span>:  <span class="comment">// 如果以上都不成立 执行default 默认</span>
-        <span class="keyword">break</span>;</code></pre>
-
-<h3 id="运算符号"><a href="#运算符号" class="headerlink" title="运算符号"></a>运算符号</h3><pre><code class="highlight js"><span class="comment">// 符号</span>
-    <span class="keyword">var</span> a = <span class="number">10</span>
-    a = a + <span class="number">10</span>    <span class="comment">// a=20</span>
-    a =  a - <span class="number">10</span>   <span class="comment">// a = 10</span>
-    a = a * <span class="number">10</span>   <span class="comment">// a = 100</span>
-    a = a / <span class="number">10</span>   <span class="comment">// a = 10</span>
-<span class="comment">//   a = a / 3    // a 带小数</span>
-a = a % <span class="number">3</span>     <span class="comment">// % 求余数 1 </span>
-<span class="variable language_">console</span>.<span class="title function_">log</span>(a)
-
-<span class="keyword">var</span> b = <span class="number">3</span>
-    b+=<span class="number">3</span>   <span class="comment">// b = b+3  6</span>
-    b*=<span class="number">8</span>   <span class="comment">//48  b*=8    b = b * 8</span>
-    b/=<span class="number">3</span>   <span class="comment">//16</span>
-    b%=<span class="number">3</span>    <span class="comment">// 1</span>
-<span class="variable language_">console</span>.<span class="title function_">log</span>(b)
-
-<span class="comment">// ++  每次加1  ，c++ 等同于 c=c+1 等同于 c+=1</span>
-<span class="comment">// -- 每次减1</span>
-<span class="comment">// ++ 在前 本身先加1 ，再赋值</span>
-<span class="comment">// ++在后 先赋值  本身再加1</span>
-<span class="keyword">var</span> c = <span class="number">30</span> 
-<span class="keyword">var</span> d = c++   <span class="comment">// d =30 ,c=31</span>
-    <span class="keyword">var</span> e = ++c <span class="comment">//  c = 32 ,e=32</span>
-<span class="variable language_">console</span>.<span class="title function_">log</span>(c,d,e)
-
-
-<span class="comment">// 比较运算符号</span>
-<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">3</span>&gt;<span class="number">4</span>) <span class="comment">//false</span>
-<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">3</span>&lt;=<span class="number">4</span>) <span class="comment">// true</span>
-<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">3</span>==<span class="number">4</span>) <span class="comment">//false</span>
-<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;4&quot;</span>==<span class="number">4</span>)  <span class="comment">// true 把字符串4转成数字4 再进行比较</span>
-<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;4&quot;</span>===<span class="number">4</span>)  <span class="comment">//false 恒等 数字和类型都得相等</span>
-<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">3</span>!=<span class="number">4</span>)  <span class="comment">// true</span>
-
-<span class="comment">//逻辑运算符号</span>
-<span class="comment">//  &amp;&amp; 并且  多个条件必须同时成立 才为true</span>
-<span class="comment">// || 或者  只要有一个为true，整个条件都为true</span>
-<span class="comment">// ! 非     取反</span>
-<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="literal">true</span>&amp;&amp;<span class="literal">true</span>) <span class="comment">// true</span>
-<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="literal">true</span>&amp;&amp;<span class="literal">false</span>)  <span class="comment">//fasle</span>
-<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">3</span>&gt;<span class="number">4</span>&amp;&amp;<span class="literal">true</span>)  <span class="comment">//false</span>
-    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="literal">true</span> || <span class="literal">false</span>)  <span class="comment">//true</span>
-    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">1</span> &amp;&amp; <span class="number">3</span>&gt;<span class="number">4</span> )  <span class="comment">//false</span>
-    <span class="variable language_">console</span>.<span class="title function_">log</span>(!<span class="literal">false</span>) <span class="comment">// true</span>
-    <span class="variable language_">console</span>.<span class="title function_">log</span>(!<span class="number">1</span>)  <span class="comment">//fasle</span>
-    <span class="variable language_">console</span>.<span class="title function_">log</span>(!<span class="string">&quot;&quot;</span>) <span class="comment">//true</span></code></pre>
-
-<h3 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h3><pre><code class="highlight js"><span class="comment">// var i = 0 循环初始值</span>
-<span class="comment">//  i&lt;10 循环条件</span>
-<span class="comment">//  i++ 每次i加1</span>
-<span class="comment">// 先执行初始条件，再判断是否小于10，如果小于10，执行循环体，最后i的值再加1</span>
-<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i&lt;<span class="number">10</span>;i++)&#123;
-    <span class="variable language_">console</span>.<span class="title function_">log</span>(i)<span class="comment">//0-9</span>
-&#125;
-
-<span class="comment">// 如果改变循环次数的时候</span>
-<span class="comment">// 1 改循环条件</span>
-<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i&lt;<span class="number">5</span>;i++)&#123;
-    <span class="variable language_">console</span>.<span class="title function_">log</span>(i)  <span class="comment">// 0-4</span>
-&#125;
-
-<span class="comment">// 2 改循环初始值</span>
-<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">5</span>;i&lt;<span class="number">10</span>;i++)&#123;
-    <span class="variable language_">console</span>.<span class="title function_">log</span>(i)  <span class="comment">// 5-9</span>
-&#125;
-
-<span class="comment">// 3 改递增值</span>
-<span class="comment">// i+2  表达式  没有赋值</span>
-<span class="comment">// i+=2 i=i+2  把加的结果赋值给i</span>
-<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i&lt;<span class="number">10</span>;i+=<span class="number">2</span>)&#123;
-    <span class="variable language_">console</span>.<span class="title function_">log</span>(i)  <span class="comment">// 0 2 4 6 8</span>
-&#125;
-
-<span class="comment">// for非常规的操作1 for循环是同步执行的，执行完for之后才会往下执行，阻塞代码的执行</span>
-<span class="comment">// for(var i = 0;i&lt;999999999;i++)&#123;</span>
-<span class="comment">//     console.log(i)</span>
-<span class="comment">// &#125;</span>
-<span class="comment">// alert(10000)</span>
-
-
-<span class="comment">// 非常规的操作2 写成一个死循环</span>
-<span class="keyword">for</span>(<span class="keyword">var</span> i =<span class="number">0</span>;i&lt;<span class="number">10</span>;i--)&#123;
-    <span class="variable language_">console</span>.<span class="title function_">log</span>(i+<span class="string">&quot;-----------&quot;</span>)  <span class="comment">// 0  -1 -2 -3 -4</span>
-    <span class="keyword">if</span>(i==-<span class="number">4</span>)&#123;  <span class="comment">//当i==-4时候 执行break</span>
-        <span class="keyword">break</span> <span class="comment">// 跳出循环体 循环不在执行了</span>
-    &#125;     
-&#125;
-
-<span class="comment">// 练习 </span>
-<span class="comment">//   3人 余2人; 5人 余4人；7人 余6人；9人 余8人;11人正好 问最少多少人？</span>
-<span class="comment">//  0 1 2 3</span>
-<span class="keyword">for</span>(<span class="keyword">var</span> i =<span class="number">0</span>;i&lt;<span class="number">9999</span>;i++)&#123;
-    <span class="keyword">if</span>(i%<span class="number">3</span>==<span class="number">2</span> &amp;&amp; i%<span class="number">5</span>==<span class="number">4</span> &amp;&amp; i%<span class="number">7</span>==<span class="number">6</span> &amp;&amp; i%<span class="number">9</span>==<span class="number">8</span> &amp;&amp; i%<span class="number">11</span>==<span class="number">0</span>)&#123;
-        <span class="variable language_">console</span>.<span class="title function_">log</span>(i) <span class="comment">//最少2519 </span>
-    &#125;
-&#125;</code></pre>
-
-<h3 id="do…while"><a href="#do…while" class="headerlink" title="do…while"></a>do…while</h3><pre><code class="highlight js"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i&lt;<span class="number">3</span>;i++)&#123;&#125;
-<span class="comment">// 先判断 再执行</span>
-<span class="comment">// while() 当条件成立了 执行&#123;&#125;</span>
-<span class="keyword">var</span> a = <span class="number">0</span>
-<span class="keyword">while</span>(a&lt;<span class="number">3</span>)&#123;
-    <span class="variable language_">console</span>.<span class="title function_">log</span>(a,<span class="string">&quot;11111&quot;</span>)
-    a++
-&#125;
-
-<span class="keyword">var</span> b = <span class="number">3</span>
-<span class="comment">// 现执行再判断，最起码执行一次</span>
-<span class="keyword">do</span> &#123;
-    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;bbbbbbb&quot;</span>)
-&#125; <span class="keyword">while</span> (b&lt;<span class="number">3</span>);
-
-
-<span class="comment">// true 死循环</span>
-<span class="comment">// while(1)&#123;</span>
-<span class="comment">//     console.log(&quot;111111&quot;)</span>
-<span class="comment">// &#125;</span></code></pre>
-<h3 id="continue和break"><a href="#continue和break" class="headerlink" title="continue和break"></a>continue和break</h3><p><code>contine</code> : 结束本次循环 执行下次循环<br><code>breake</code> : 跳出循环</p>
-<pre><code class="highlight js"><span class="comment">/*</span>
-<span class="comment">for(var i = 0;i&lt;10;i++)&#123;</span>
-<span class="comment">    console.log(i)  //0-9</span>
-<span class="comment">    if(i&gt;5)&#123;</span>
-<span class="comment">        continue // 结束本次循环，执行下次循环</span>
-<span class="comment">    &#125;</span>
-<span class="comment">&#125;</span>
-<span class="comment"></span>
-<span class="comment">for(var i = 0;i&lt;10;i++)&#123;</span>
-<span class="comment">    </span>
-<span class="comment">    if(i&gt;5)&#123;</span>
-<span class="comment">        continue // 继续循环， 结束本次循环，执行下次循环</span>
-<span class="comment">        console.log(i,&quot;---------------&quot;)  //没打印</span>
-<span class="comment">    &#125;</span>
-<span class="comment">&#125;</span>
-<span class="comment"></span>
-<span class="comment"></span>
-<span class="comment">for(var i = 0;i&lt;10;i++)&#123;</span>
-<span class="comment">    if(i&gt;5)&#123;</span>
-<span class="comment">        console.log(i,&quot;++++++++++&quot;) // 6 7 8 9 </span>
-<span class="comment">        continue // 继续循环， 结束本次循环，执行下次循环     </span>
-<span class="comment">    &#125;</span>
-<span class="comment">&#125;</span>
-<span class="comment"></span>
-<span class="comment">for(var i = 0;i&lt;10;i++)&#123;</span>
-<span class="comment">    console.log(i,&quot;=======&quot;) // 0 1 2 3 4 5 6  7 8 9</span>
-<span class="comment">    if(i&lt;5)&#123;</span>
-<span class="comment">        console.log(i,&quot;dddddddddddddddddddd&quot;) // 0 1 2 3 4</span>
-<span class="comment">        continue // 继续循环， 结束本次循环，执行下次循环    </span>
-<span class="comment"></span>
-<span class="comment">    &#125;</span>
-<span class="comment">&#125;</span>
-<span class="comment"></span>
-<span class="comment">for(var i = 0;i&lt;10;i++)&#123;</span>
-<span class="comment">    if(i&lt;5)&#123;</span>
-<span class="comment">        continue // 继续循环， 结束本次循环，执行下次循环    </span>
-<span class="comment">    &#125;</span>
-<span class="comment">    console.log(i,&quot;????????????????????????????????????&quot;)//56789</span>
-<span class="comment">&#125;</span>
-<span class="comment">*/</span>
-<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i&lt;<span class="number">10</span>;i++)&#123;
-    <span class="variable language_">console</span>.<span class="title function_">log</span>(i,<span class="string">&quot;jjjjjjjjjjjjjjjjj&quot;</span>); <span class="comment">// 0</span>
-    <span class="keyword">break</span>
-        <span class="comment">// 跳出循环 后面代码不执行</span>
-    <span class="variable language_">console</span>.<span class="title function_">log</span>(i,<span class="string">&quot;hhhhhhhhhhhhhhh&quot;</span>)
-&#125;
-
-
-
-<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i&lt;<span class="number">10</span>;i++)&#123;
-<span class="keyword">if</span>(i&lt;<span class="number">5</span>)&#123;
-    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;a&#x27;</span>,i)  <span class="comment">// 0 1 2 3 4</span>
-    <span class="keyword">continue</span>
-&#125;
-<span class="keyword">if</span>(i&gt;<span class="number">5</span>)&#123;
-    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;b&quot;</span>,i) <span class="comment">// 6</span>
-    <span class="keyword">break</span>
-&#125;
-<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;c&#x27;</span>,i) <span class="comment">//5</span>
-&#125;</code></pre>
-
-<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><p><code>+</code> : 相加<br><code>-</code> :相减<br><code>/</code> : 除以 带小数<br><code>%</code> : 求余数<br><code>+=</code> : i +&#x3D; 1  等同于  i &#x3D; i + 1<br><code>-=</code> : i -&#x3D; 1  等同于  i &#x3D; i - 1<br><code>*=</code> : i *&#x3D; 1  等同于  i &#x3D; i * 1<br><code>/=</code> : i &#x2F;&#x3D; 1  等同于  i &#x3D; i &#x2F; 1<br><code>%=</code> : i %&#x3D; 1  等同于  i &#x3D; i % 1</p>
-<p><code>++ </code> 在前 先加后赋值 ； <code>++</code>在后 先赋值在加1 </p>
-<h3 id="i的结果"><a href="#i的结果" class="headerlink" title="++i的结果"></a>++i的结果</h3><p><code>var  i = 10 var a = ++i</code></p>
-<p>a &#x3D; 11<br>i &#x3D; 11</p>
-<h3 id="i-的结果"><a href="#i-的结果" class="headerlink" title="i++的结果"></a>i++的结果</h3><p><code>var a = i++</code></p>
-<p>a &#x3D; 10 i&#x3D;11</p>
-<p><em><code>- -i</code> 和 <code>i- -</code>也是一样</em></p>
-<h3 id="比较运算符号"><a href="#比较运算符号" class="headerlink" title="比较运算符号"></a>比较运算符号</h3><p><code>==</code> 相等 （不比较数据类型，只比较值是否相等）<br><code>===</code> 恒等 （比较数据类型和值是否相等）</p>
-<h3 id="逻辑运算符号"><a href="#逻辑运算符号" class="headerlink" title="逻辑运算符号"></a>逻辑运算符号</h3><p><code>&amp;&amp;</code>  多个条件必须同时成立，才为true，否则为false<br><code>||</code>  一个成立结果就是为true，否则为false<br><code>!</code>   取反</p>
+<h4 id="十六-vue中路由如何传值"><a href="#十六-vue中路由如何传值" class="headerlink" title="十六. vue中路由如何传值?"></a>十六. vue中路由如何传值?</h4><ol>
+<li>使用url拼接字符串的形式传值      使用<code>$route.query</code>接收</li>
+<li>使用友好URL传值                   使用<code>$route.params</code>接收</li>
+<li>使用命名路由<code>params</code>字段传值     使用<code>$route.params</code>接收</li>
+<li>使用<code>query</code>对象传值                使用<code>$route.query</code>接收</li>
+</ol>
+<h4 id="十七-vue组件中如何监听路由"><a href="#十七-vue组件中如何监听路由" class="headerlink" title="十七. vue组件中如何监听路由?"></a>十七. vue组件中如何监听路由?</h4><p>在组件的watch监听器中对<code>$route</code>这个字段进行监听<br>全局监听路由在<code>app.vue</code>组件中,<code>watch</code>监听<code>$route</code>可以监听全局路由<br>也可以在全局路由守卫<code>beforeEach</code>函数中操作全局路由</p>
+<h4 id="十八-vue路由的钩子函数有哪些"><a href="#十八-vue路由的钩子函数有哪些" class="headerlink" title="十八. vue路由的钩子函数有哪些?"></a>十八. vue路由的钩子函数有哪些?</h4><p>全局的路由钩子函数：<code>beforeEach</code>、<code>afterEach</code><br>单个的路由钩子函数：<code>beforeEnter</code><br>组件内的路由钩子函数：<code>beforeRouteEnter</code>、<code>beforeRouteLeave</code>、<code>beforeRouteUpdate</code></p>
+<h4 id="十九-介绍以下vue组件内的路由守卫-即路由的生命周期-x2F-钩子函数-，有哪些参数（to，from，next）"><a href="#十九-介绍以下vue组件内的路由守卫-即路由的生命周期-x2F-钩子函数-，有哪些参数（to，from，next）" class="headerlink" title="十九. 介绍以下vue组件内的路由守卫(即路由的生命周期&#x2F;钩子函数)，有哪些参数（to，from，next）"></a>十九. 介绍以下vue组件内的路由守卫(即路由的生命周期&#x2F;钩子函数)，有哪些参数（to，from，next）</h4><p>vue组件中的路由钩子方法有<br><code>beforeRouteEnter</code>    进入路由前调用。这里组件还未创建, 不能使用this<br><code>beforeRouteUpdate</code>  路由更新之前被调用, 组件不会重新初始化, 可以使用this<br><code>beforeRouteLeave</code>  离开路由之前被调用，可以访问里面的this属性<br>方法中都有三个参数:<br><code>to</code> :即将要进入的目标路由对象；<br><code>from</code> :当前导航即将要离开的路由对象；<br><code>next</code> ：调用该方法后，才能进入下一个路由钩子函数</p>
+<h4 id="二十-vue中怎么实现非父子组件之间的传值？"><a href="#二十-vue中怎么实现非父子组件之间的传值？" class="headerlink" title="二十. vue中怎么实现非父子组件之间的传值？"></a>二十. vue中怎么实现非父子组件之间的传值？</h4><p>在项目规模不是特别大时，可以创建一个空组件作为<code>总线</code>，项目中其他组件都可以通过<code>总线</code>进行传值。<br>大大型项目中，可以使用<code>vuex</code>进行数据管理，将数据统一放在<code>store</code>中进行管理。<br>也可以在路由跳转时,通过<code>路由传值</code></p>
+<h4 id="二十一-vue中如何实现父子组件间的双向数据绑定"><a href="#二十一-vue中如何实现父子组件间的双向数据绑定" class="headerlink" title="二十一. vue中如何实现父子组件间的双向数据绑定?"></a>二十一. vue中如何实现父子组件间的双向数据绑定?</h4><p>Vue中父子组件双向绑定利用父子组件传值原理,<br>父组件向子组件传值, 通过给子组件定义<code>value</code>属性来接收传值<br>子组件向父组件传值, 通过子组件<code>$emit</code>发射名为<code>input</code>的自定义事件<br>在父组件中使用子组件标签时, 在子组件标签上通过<code>v-model</code>绑定父组件数据,实现父子组件的双向绑定</p>
+<h4 id="二十二-vuex如何使用"><a href="#二十二-vuex如何使用" class="headerlink" title="二十二. vuex如何使用?"></a>二十二. vuex如何使用?</h4><p>首先在项目中 <code>npm install vuex</code> 安装<br>新建<code>vuex</code>状态管理文件,导入<code>vuex</code>并添加状态数据<br>在组件中使用<code>mapState()</code>函数映射状态数据并使用<br>在组件中使用<code>commit()</code>函数提交申请修改状态数据</p>
+<h4 id="二十三-Vuex的核心概念有哪些？组件如何使用store中的数据如何改变store中的数据？"><a href="#二十三-Vuex的核心概念有哪些？组件如何使用store中的数据如何改变store中的数据？" class="headerlink" title="二十三. Vuex的核心概念有哪些？组件如何使用store中的数据如何改变store中的数据？"></a>二十三. Vuex的核心概念有哪些？组件如何使用store中的数据如何改变store中的数据？</h4><p><code>state</code> &#x3D;&gt; 基本数据      在组件中使用<code>mapState()</code>函数把状态数据映射入组件即可使用<br><code>getters</code> &#x3D;&gt; 从基本数据派生的数据   我们在组件中使用 <code>$store.getters</code>获取数据<br><code>mutations</code> &#x3D;&gt; 提交更改数据的方法，同步！    我们在组件中使用 <code>$store.commit(&#39;&#39;,params)</code>修改数据<br><code>actions</code> &#x3D;&gt; 像一个装饰器，包裹<code>mutations</code>，使之可以异步。  使用<code>mapAction()</code>映射入组件使用<br><code>modules</code> &#x3D;&gt; 模块化<code>Vuex</code></p>
+<h4 id="二十四-vue有哪些常用的UI组件库"><a href="#二十四-vue有哪些常用的UI组件库" class="headerlink" title="二十四. vue有哪些常用的UI组件库"></a>二十四. vue有哪些常用的UI组件库</h4><p><code>element</code> (PC端)，<br><code>VUX</code> (移动端),<br><code>Mint UI</code>(移动端)<br><code>Vant</code> (移动端)</p>
+<h4 id="二十五-vue有哪些优缺点"><a href="#二十五-vue有哪些优缺点" class="headerlink" title="二十五. vue有哪些优缺点:"></a>二十五. vue有哪些优缺点:</h4><p>优点: </p>
+<ol>
+<li><code>简单好用</code>： <code>Vue.js</code>包含基于<code>HTML</code>的标准模板，可以更轻松地使用和修改现有应用程序。</li>
+<li>单页面应用, 使用单文件组件结构, 用户体验好, </li>
+<li><code>性能比较好</code>：相比其他框架, 它占用更少的空间，并提供更好的性能。</li>
+<li><code>基于MVVM模式</code>, 数据驱动视图, 更高效</li>
+<li><code>适应性强</code>：组件化设计可以提高开发效率,方便代码复用, 提升整个项目的可维护性<br>缺点: </li>
+<li>vue生态环境不如<code>react</code>和<code>angular</code>, 但有追赶和超越的趋势</li>
+<li>vue2不支持IE8   vue3 不支持IE10</li>
+<li>vue封装的<code>比较深</code>入,<code>不利于seo优化</code>, <code>报错不明显</code></li>
+</ol>
+<h4 id="二十六-什么是MVVM"><a href="#二十六-什么是MVVM" class="headerlink" title="二十六. 什么是MVVM?"></a>二十六. 什么是MVVM?</h4><p><code>MVVM</code>是<code>model-view-viewModel</code>的简写, 它是一种<code>开发模式</code>, 它实现了<code>视图</code>和<code>数据逻辑</code>之间的<code>分离</code>,  <code>model</code>模型指的是后端传递的数据, <code>view</code>视图指的是所看到的页面, <code>viewModel</code>是连接视图<code>view</code>和模型<code>model</code>的桥梁, 从而实现模型<code>model</code>到视图<code>view</code>的转化 和 视图<code>view</code>到模型<code>model</code>的转化, 也就是我们所说的<code>双向数据绑定</code>, 使用<code>MVVM</code>模式实现的前端框架有 <code>vue</code> 和 <code>react</code></p>
+<h4 id="二十七-vue项目怎么打包app"><a href="#二十七-vue项目怎么打包app" class="headerlink" title="二十七. vue项目怎么打包app  ?"></a>二十七. vue项目怎么打包app  ?</h4><ol>
+<li>首先使用 <code>webpack</code> 打发布包, <code>npm run build</code></li>
+<li>然后通过 <code>Hbuilder</code> 新建<code>H5+App项目</code></li>
+<li>把第一步打包出的dist文件夹导入项目</li>
+<li>在项目中的<code>manifest.json</code>文件中进行打包配置</li>
+<li>点击<code>Hbuilder</code>工具菜单栏发行中的 <code>原生App-云打包</code></li>
+</ol>
+<h4 id="二十八-vue中虚拟DOM的实现原理"><a href="#二十八-vue中虚拟DOM的实现原理" class="headerlink" title="二十八. vue中虚拟DOM的实现原理"></a>二十八. vue中虚拟DOM的实现原理</h4><p><code>虚拟DOM</code>是通过js对象的结构来记录html标签节点, 当组件数据更新需要渲染视图时,先用<code>diff算法</code>计算变化前后js对象(也就是<code>虚拟DOM树</code>)结构的不同, 得到最小差异, 然后针对性的更新部分真实DOM节点, 这样可以极大<code>提高视图渲染效率</code>, <code>节省内存消耗</code></p>
+<h4 id="二十九-请说下封装-vue-组件的过程？"><a href="#二十九-请说下封装-vue-组件的过程？" class="headerlink" title="二十九. 请说下封装 vue 组件的过程？"></a>二十九. 请说下封装 vue 组件的过程？</h4><ol>
+<li>建立组件的模板，先把架子搭起来，写写样式，考虑好组件的基本逻辑。(思考1小时，码码10分钟，程序猿的准则。)</li>
+<li>准备好组件的数据输入。即分析好逻辑，定好 <code>props</code> 里面的数据、类型。</li>
+<li>准备好组件的数据输出。即根据组件逻辑，做好要暴露出来的方法。</li>
+<li>封装完毕了，直接调用即可</li>
+</ol>
+<h4 id="三十-在vue项目中使用组件库-如何修改组件库中组件的样式"><a href="#三十-在vue项目中使用组件库-如何修改组件库中组件的样式" class="headerlink" title="三十. 在vue项目中使用组件库, 如何修改组件库中组件的样式?"></a>三十. 在vue项目中使用组件库, 如何修改组件库中组件的样式?</h4><p>一般vue组件<code>style</code>会添加<code>scoped</code>属性,产生组件样式隔离, 无法直接修改子组件样式<br>此时可以使用vue提供的样式穿透语法修改子组件样式 (父组件选择器 <code>&gt;&gt;&gt;</code> 子组件选择器  vue3是 <code>:deep()</code>)</p>
+<h4 id="三十一-vue项目中如何使用sass"><a href="#三十一-vue项目中如何使用sass" class="headerlink" title="三十一. vue项目中如何使用sass?"></a>三十一. vue项目中如何使用sass?</h4><ol>
+<li>下载安装<code>sass</code>模块   <code>npm install sass --save</code></li>
+<li>在组件的<code>style</code>标签上添加<code>lang=”scss”</code></li>
+</ol>
+<h4 id="32-SCSS-x2F-less相比于CSS有哪些优势？"><a href="#32-SCSS-x2F-less相比于CSS有哪些优势？" class="headerlink" title="32. SCSS&#x2F;less相比于CSS有哪些优势？"></a>32. SCSS&#x2F;less相比于CSS有哪些优势？</h4><p>在css语法基础上添加了编程能力，使之具有定义变量，嵌套，计算，使用函数,混合等功能</p>
+<h4 id="33-scss和less有哪些不同？"><a href="#33-scss和less有哪些不同？" class="headerlink" title="33. scss和less有哪些不同？"></a>33. scss和less有哪些不同？</h4><ol>
+<li>编译环境不同 <code>sass-loader</code>   <code>less-loader</code></li>
+<li><code>scss</code>变量使用$定义 ,<code>less</code>变量使用@定义</li>
+<li><code>sass</code>支持条件语句,可以使用<code>if()</code> <code>else()</code> <code>for()</code>, <code>less</code>不支持</li>
+</ol>
+<h4 id="34-vue单文件组件如何实现SEO优化-了解-？"><a href="#34-vue单文件组件如何实现SEO优化-了解-？" class="headerlink" title="34. vue单文件组件如何实现SEO优化(了解)？"></a>34. vue单文件组件如何实现SEO优化(了解)？</h4><ol>
+<li>使用预渲染插件<code>prerender-spa-plugin</code>,来执行打包,可以把项目中的每一个页面打包成一个网页，之后可单独实现SEO优化</li>
+<li>使用后端模板化渲染页面,也叫<code>SSR</code>服务器渲染</li>
+<li>使用<code>Nuxt.js</code>插件执行静态化打包</li>
+<li>使用<code>Phantomjs</code>无头浏览器(只有浏览器内核,没有界面)</li>
+</ol>
+<h4 id="35-vue3相比于vue2有哪些区别？"><a href="#35-vue3相比于vue2有哪些区别？" class="headerlink" title="35. vue3相比于vue2有哪些区别？"></a>35. vue3相比于vue2有哪些区别？</h4><ol>
+<li>vue2使用时直接导入vue构造函数,vue3使用时通过对象解构方式按需导入</li>
+<li>vue3中新增了<code>setup</code>函数，数据的定义，更新计算，监听等都在<code>setup</code>函数中执行</li>
+<li><code>setup</code>函数中的数据都需要<code>return</code>导出才能在组件模板中调用</li>
+<li><code>Setup</code>中<code>this</code>为空,可以有效避免<code>this</code>指向修改带来的问题</li>
+<li>Vue中的生命周期也在<code>setup</code>中实现，其中取消了<code>beforeCreata</code>和<code>created</code>,其他的生命周期函数名有更新,如<code>destoryed</code>改成了<code>onUnmounted</code></li>
+<li>Vue3中使用<code>ref</code>函数定义值类型数据,使用<code>reactive</code>函数定义引用类型数据</li>
+<li>Vue3中的<code>ref</code>, <code>reactive</code>,<code>computed</code>等功能函数都需要从vue中解构导出才能使用</li>
+<li>Vue3废弃了<code>filters</code>过滤器,建议使用<code>计算属性</code></li>
+<li>vue3中的样式隔离由 <code>&gt;&gt;&gt;</code> 或 <code>/deep/</code>  改成了 <code>:deep()</code></li>
+<li>vue3可以动态绑定样式, 在<code>style</code>中使用<code>v-bind()</code> 绑定响应数据</li>
+</ol>
+<h4 id="36-vue3语法糖-x2F-setup中如何使用状态管理vuex和-路由"><a href="#36-vue3语法糖-x2F-setup中如何使用状态管理vuex和-路由" class="headerlink" title="36. vue3语法糖&#x2F;setup中如何使用状态管理vuex和 路由 ?"></a>36. vue3语法糖&#x2F;setup中如何使用状态管理vuex和 路由 ?</h4><p>从<code>vuex</code>模块中引入 <code>useStore</code> 函数, 调用后得到 状态仓库对象<code>store</code><br>从<code>vue-router</code>模块中引入 <code>useRoute</code>和<code>useRouter</code>函数,<br>调用<code>useRoute()</code>后得到路由信息对象<code>route</code>, 可用于<code>路由传值</code>和<code>路由监听</code><br>调用<code>useRouter()</code>后得到路由配置对象<code>router</code>, 可用于<code>路由跳转</code></p>
 
         </article>
 
@@ -529,7 +353,7 @@ a = a % <span class="number">3</span>     <span class="comment">// % 求余数 1
   <div class="nexmoe-post-copyright">
     <strong>本文作者：</strong>咔斯Sama<br>
     
-    <strong>本文链接：</strong><a href="https://www.kassama.top/webNotes3.html" title="https:&#x2F;&#x2F;www.kassama.top&#x2F;webNotes3.html" target="_blank" rel="noopener">https:&#x2F;&#x2F;www.kassama.top&#x2F;webNotes3.html</a><br>
+    <strong>本文链接：</strong><a href="https://www.kassama.top/webNotes-VueInterview.html" title="https:&#x2F;&#x2F;www.kassama.top&#x2F;webNotes-VueInterview.html" target="_blank" rel="noopener">https:&#x2F;&#x2F;www.kassama.top&#x2F;webNotes-VueInterview.html</a><br>
 
     
       <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
@@ -544,7 +368,7 @@ a = a % <span class="number">3</span>     <span class="comment">// % 求余数 1
         <a class="nexmoefont icon-appstore-fill -link" href="/categories/web%E7%AC%94%E8%AE%B0/">web笔记</a>
     
     
-        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/HTML/" rel="tag">HTML</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/web/" rel="tag">web</a>
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/HTML/" rel="tag">HTML</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/Vue/" rel="tag">Vue</a>
     
 </div>
 
@@ -670,7 +494,7 @@ a = a % <span class="number">3</span>     <span class="comment">// % 求余数 1
                         <button class="mdui-fab catalog" style="overflow:unset;">
                             <i class="nexmoefont icon-i-catalog"></i>
                             <div class="nexmoe-toc">
-                              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#js%E6%9B%B4%E6%94%B9%E6%A0%B7%E5%BC%8F"><span class="toc-number">1.</span> <span class="toc-text">js更改样式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5"><span class="toc-number">2.</span> <span class="toc-text">流程控制语句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#if%E5%88%A4%E6%96%AD"><span class="toc-number">2.1.</span> <span class="toc-text">if判断</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Switch%E8%AF%AD%E5%8F%A5"><span class="toc-number">2.2.</span> <span class="toc-text">Switch语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6%E5%8F%B7"><span class="toc-number">2.3.</span> <span class="toc-text">运算符号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#for%E5%BE%AA%E7%8E%AF"><span class="toc-number">2.4.</span> <span class="toc-text">for循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#do%E2%80%A6while"><span class="toc-number">2.5.</span> <span class="toc-text">do…while</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#continue%E5%92%8Cbreak"><span class="toc-number">2.6.</span> <span class="toc-text">continue和break</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">3.</span> <span class="toc-text">运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#i%E7%9A%84%E7%BB%93%E6%9E%9C"><span class="toc-number">3.1.</span> <span class="toc-text">++i的结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#i-%E7%9A%84%E7%BB%93%E6%9E%9C"><span class="toc-number">3.2.</span> <span class="toc-text">i++的结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E7%AC%A6%E5%8F%B7"><span class="toc-number">3.3.</span> <span class="toc-text">比较运算符号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6%E5%8F%B7"><span class="toc-number">3.4.</span> <span class="toc-text">逻辑运算符号</span></a></li></ol></li></ol>
+                              <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80-%E8%AF%B4%E5%87%A0%E4%B8%AAvue%E4%B8%AD%E7%9A%84%E6%8C%87%E4%BB%A4%E5%92%8C%E5%AE%83%E7%9A%84%E7%94%A8%E6%B3%95%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">一. 说几个vue中的指令和它的用法？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C-v-on%E6%8C%87%E4%BB%A4%E5%8F%AF%E4%BB%A5%E5%90%8C%E6%97%B6%E7%9B%91%E5%90%AC%E5%A4%9A%E4%B8%AA%E5%87%BD%E6%95%B0%E5%90%97"><span class="toc-number">2.</span> <span class="toc-text">二. v-on指令可以同时监听多个函数吗?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89-vue%E4%B8%ADv-if%E5%92%8Cv-show%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB"><span class="toc-number">3.</span> <span class="toc-text">三. vue中v-if和v-show有什么区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%9B-vue%E5%BE%AA%E7%8E%AF%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8key"><span class="toc-number">4.</span> <span class="toc-text">四. vue循环中为什么使用key?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%94-vue%E4%B8%AD%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A%E6%98%AF%E6%80%8E%E4%B9%88%E5%AE%9E%E7%8E%B0%E7%9A%84%EF%BC%9F%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A%E6%8C%87%E4%BB%A4v-model%E7%9A%84%E6%9C%AC%E8%B4%A8%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">5.</span> <span class="toc-text">五. vue中数据绑定是怎么实现的？双向绑定指令v-model的本质是什么？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%AD-%E5%88%86%E5%88%AB%E7%AE%80%E8%BF%B0computed%E5%92%8Cwatch%E7%9A%84%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">6.</span> <span class="toc-text">六. 分别简述computed和watch的使用场景</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%83-%E5%88%97%E4%B8%BE%E4%B8%80%E4%B8%8BVue%E7%BB%84%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%87%BD%E6%95%B0%EF%BC%8C%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E9%9C%80%E8%A6%81%E5%9C%A8destroyed%E4%B8%AD%E5%86%99%E4%BB%A3%E7%A0%81%EF%BC%9F"><span class="toc-number">7.</span> <span class="toc-text">七. 列举一下Vue组件生命周期函数，什么时候需要在destroyed中写代码？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%AB-vue%E7%9A%84%E7%BB%84%E4%BB%B6%E9%85%8D%E7%BD%AE%E5%AF%B9%E8%B1%A1%E4%B8%AD%E9%83%BD%E6%9C%89%E5%93%AA%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%AD%97%E6%AE%B5%EF%BC%9F%E5%88%86%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8%EF%BC%9F"><span class="toc-number">8.</span> <span class="toc-text">八. vue的组件配置对象中都有哪些常用字段？分别是什么作用？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B9%9D-lt-keep-alive-gt-lt-x2F-keep-alive-gt-%E7%9A%84%E4%BD%9C%E7%94%A8%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-number">9.</span> <span class="toc-text">九. &lt;keep-alive&gt;&lt;&#x2F;keep-alive&gt;的作用是什么?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%81-vue%E7%BB%84%E4%BB%B6%E4%B8%AD%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96dom%E5%85%83%E7%B4%A0"><span class="toc-number">10.</span> <span class="toc-text">十. vue组件中如何获取dom元素?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%81%E4%B8%80-Vue-nextTick-%E6%96%B9%E6%B3%95%E6%9C%89%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8%EF%BC%9F"><span class="toc-number">11.</span> <span class="toc-text">十一. Vue.nextTick()方法有什么作用？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%81%E4%BA%8C-%E5%A6%82%E4%BD%95%E8%AE%A9CSS%E5%8F%AA%E5%9C%A8%E5%BD%93%E5%89%8D%E7%BB%84%E4%BB%B6%E4%B8%AD%E8%B5%B7%E4%BD%9C%E7%94%A8-vue%E4%B8%AD%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%A0%B7%E5%BC%8F%E9%9A%94%E7%A6%BB-%EF%BC%9F"><span class="toc-number">12.</span> <span class="toc-text">十二. 如何让CSS只在当前组件中起作用(vue中如何实现样式隔离)？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%81%E4%B8%89-vue%E4%B8%AD%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82"><span class="toc-number">13.</span> <span class="toc-text">十三.  vue中如何处理跨域请求</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%81%E5%9B%9B-axios%E5%92%8Cajax%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9A"><span class="toc-number">14.</span> <span class="toc-text">十四. axios和ajax的区别：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%81%E4%BA%94-vue%E4%B8%AD%E6%9C%89%E5%93%AA%E4%BA%9B%E6%95%B0%E6%8D%AE%E4%BC%A0%E9%80%92%E6%96%B9%E5%BC%8F"><span class="toc-number">15.</span> <span class="toc-text">十五. vue中有哪些数据传递方式?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%81%E5%85%AD-vue%E4%B8%AD%E8%B7%AF%E7%94%B1%E5%A6%82%E4%BD%95%E4%BC%A0%E5%80%BC"><span class="toc-number">16.</span> <span class="toc-text">十六. vue中路由如何传值?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%81%E4%B8%83-vue%E7%BB%84%E4%BB%B6%E4%B8%AD%E5%A6%82%E4%BD%95%E7%9B%91%E5%90%AC%E8%B7%AF%E7%94%B1"><span class="toc-number">17.</span> <span class="toc-text">十七. vue组件中如何监听路由?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%81%E5%85%AB-vue%E8%B7%AF%E7%94%B1%E7%9A%84%E9%92%A9%E5%AD%90%E5%87%BD%E6%95%B0%E6%9C%89%E5%93%AA%E4%BA%9B"><span class="toc-number">18.</span> <span class="toc-text">十八. vue路由的钩子函数有哪些?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%81%E4%B9%9D-%E4%BB%8B%E7%BB%8D%E4%BB%A5%E4%B8%8Bvue%E7%BB%84%E4%BB%B6%E5%86%85%E7%9A%84%E8%B7%AF%E7%94%B1%E5%AE%88%E5%8D%AB-%E5%8D%B3%E8%B7%AF%E7%94%B1%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F-x2F-%E9%92%A9%E5%AD%90%E5%87%BD%E6%95%B0-%EF%BC%8C%E6%9C%89%E5%93%AA%E4%BA%9B%E5%8F%82%E6%95%B0%EF%BC%88to%EF%BC%8Cfrom%EF%BC%8Cnext%EF%BC%89"><span class="toc-number">19.</span> <span class="toc-text">十九. 介绍以下vue组件内的路由守卫(即路由的生命周期&#x2F;钩子函数)，有哪些参数（to，from，next）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E5%8D%81-vue%E4%B8%AD%E6%80%8E%E4%B9%88%E5%AE%9E%E7%8E%B0%E9%9D%9E%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E4%BC%A0%E5%80%BC%EF%BC%9F"><span class="toc-number">20.</span> <span class="toc-text">二十. vue中怎么实现非父子组件之间的传值？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E5%8D%81%E4%B8%80-vue%E4%B8%AD%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E9%97%B4%E7%9A%84%E5%8F%8C%E5%90%91%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A"><span class="toc-number">21.</span> <span class="toc-text">二十一. vue中如何实现父子组件间的双向数据绑定?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E5%8D%81%E4%BA%8C-vuex%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8"><span class="toc-number">22.</span> <span class="toc-text">二十二. vuex如何使用?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E5%8D%81%E4%B8%89-Vuex%E7%9A%84%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F%E7%BB%84%E4%BB%B6%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8store%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E5%A6%82%E4%BD%95%E6%94%B9%E5%8F%98store%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%EF%BC%9F"><span class="toc-number">23.</span> <span class="toc-text">二十三. Vuex的核心概念有哪些？组件如何使用store中的数据如何改变store中的数据？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E5%8D%81%E5%9B%9B-vue%E6%9C%89%E5%93%AA%E4%BA%9B%E5%B8%B8%E7%94%A8%E7%9A%84UI%E7%BB%84%E4%BB%B6%E5%BA%93"><span class="toc-number">24.</span> <span class="toc-text">二十四. vue有哪些常用的UI组件库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E5%8D%81%E4%BA%94-vue%E6%9C%89%E5%93%AA%E4%BA%9B%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="toc-number">25.</span> <span class="toc-text">二十五. vue有哪些优缺点:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E5%8D%81%E5%85%AD-%E4%BB%80%E4%B9%88%E6%98%AFMVVM"><span class="toc-number">26.</span> <span class="toc-text">二十六. 什么是MVVM?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E5%8D%81%E4%B8%83-vue%E9%A1%B9%E7%9B%AE%E6%80%8E%E4%B9%88%E6%89%93%E5%8C%85app"><span class="toc-number">27.</span> <span class="toc-text">二十七. vue项目怎么打包app  ?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E5%8D%81%E5%85%AB-vue%E4%B8%AD%E8%99%9A%E6%8B%9FDOM%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="toc-number">28.</span> <span class="toc-text">二十八. vue中虚拟DOM的实现原理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E5%8D%81%E4%B9%9D-%E8%AF%B7%E8%AF%B4%E4%B8%8B%E5%B0%81%E8%A3%85-vue-%E7%BB%84%E4%BB%B6%E7%9A%84%E8%BF%87%E7%A8%8B%EF%BC%9F"><span class="toc-number">29.</span> <span class="toc-text">二十九. 请说下封装 vue 组件的过程？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%E5%8D%81-%E5%9C%A8vue%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8%E7%BB%84%E4%BB%B6%E5%BA%93-%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9%E7%BB%84%E4%BB%B6%E5%BA%93%E4%B8%AD%E7%BB%84%E4%BB%B6%E7%9A%84%E6%A0%B7%E5%BC%8F"><span class="toc-number">30.</span> <span class="toc-text">三十. 在vue项目中使用组件库, 如何修改组件库中组件的样式?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%E5%8D%81%E4%B8%80-vue%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8sass"><span class="toc-number">31.</span> <span class="toc-text">三十一. vue项目中如何使用sass?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#32-SCSS-x2F-less%E7%9B%B8%E6%AF%94%E4%BA%8ECSS%E6%9C%89%E5%93%AA%E4%BA%9B%E4%BC%98%E5%8A%BF%EF%BC%9F"><span class="toc-number">32.</span> <span class="toc-text">32. SCSS&#x2F;less相比于CSS有哪些优势？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#33-scss%E5%92%8Cless%E6%9C%89%E5%93%AA%E4%BA%9B%E4%B8%8D%E5%90%8C%EF%BC%9F"><span class="toc-number">33.</span> <span class="toc-text">33. scss和less有哪些不同？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#34-vue%E5%8D%95%E6%96%87%E4%BB%B6%E7%BB%84%E4%BB%B6%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0SEO%E4%BC%98%E5%8C%96-%E4%BA%86%E8%A7%A3-%EF%BC%9F"><span class="toc-number">34.</span> <span class="toc-text">34. vue单文件组件如何实现SEO优化(了解)？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#35-vue3%E7%9B%B8%E6%AF%94%E4%BA%8Evue2%E6%9C%89%E5%93%AA%E4%BA%9B%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-number">35.</span> <span class="toc-text">35. vue3相比于vue2有哪些区别？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#36-vue3%E8%AF%AD%E6%B3%95%E7%B3%96-x2F-setup%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86vuex%E5%92%8C-%E8%B7%AF%E7%94%B1"><span class="toc-number">36.</span> <span class="toc-text">36. vue3语法糖&#x2F;setup中如何使用状态管理vuex和 路由 ?</span></a></li></ol>
                             </div>
                         </button>
                         
@@ -1381,7 +1205,7 @@ a = a % <span class="number">3</span>     <span class="comment">// % 求余数 1
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
 
-<script src="/js/app.js?v=1663601308000"></script>
+<script src="/js/app.js?v=1663601307842"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
 <script>
