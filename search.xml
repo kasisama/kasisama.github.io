@@ -4,6 +4,66 @@
   
     
     <entry>
+      <title>NodeJs - PM2</title>
+      <link href="//nodejspm2.html"/>
+      <url>//nodejspm2.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>NodeJs - PM2</p><span id="more"></span><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>刚刚说ubuntu启动node服务遇到问题时，提到了pm2，那就顺便记录一下pm2的介绍及他的用法吧。</p><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><h3 id="PM2"><a href="#PM2" class="headerlink" title="PM2"></a>PM2</h3><p><code>pm2</code>是一个内置负载均衡的<code>node.js</code>应用进程管理器（也支持<code>Windows</code>）,其它的类似功能也有不少，但是感觉<code>pm2</code>功能更强，更值的推荐<br>GitHub地址：<a href="https://github.com/Unitech/pm2">https://github.com/Unitech/pm2</a><br>API Docs：<a href="http://pm2.keymetrics.io/docs/usage/cluster-mode/">http://pm2.keymetrics.io/docs/usage/cluster-mode/</a><br>NPM地址：<a href="https://www.npmjs.com/package/pm2">https://www.npmjs.com/package/pm2</a></p><h3 id="使用体会："><a href="#使用体会：" class="headerlink" title="使用体会："></a>使用体会：</h3><ol><li>简单易用、后台运行、快速部署，常用到的命令就几个</li><li>可轻松集群模式启动</li><li>可以无宕机重暂应用程序，保持不断连接的情况下轻松重载代码</li><li>完善的日志</li><li>自动停止不稳定的进程</li><li>保活应用程序<h2 id="pm2安装"><a href="#pm2安装" class="headerlink" title="pm2安装"></a>pm2安装</h2>官方安装说明： <a href="http://pm2.keymetrics.io/docs/usage/quick-start/">http://pm2.keymetrics.io/docs/usage/quick-start/</a></li></ol><p>安装指令：<code>npm install pm2 -g</code><br>安装成功如下：</p><pre><code class="highlight linux">root@VM-16-5-ubuntu:/home/ubuntu# npm install pm2 -gnpm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.added 184 packages, and audited 185 packages in 16s12 packages are looking for funding  run `npm fund` for detailsfound 0 vulnerabilitiesroot@VM-16-5-ubuntu:/home/ubuntu# root@VM-16-5-ubuntu:/home/ubuntu# echo $PATH/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/binroot@VM-16-5-ubuntu:/home/ubuntu# ln -s /usr/sbin/nodejs/bin/pm2 /usr/local/bin/root@VM-16-5-ubuntu:/home/ubuntu# pm2 list                        -------------__/\\\\\\\\\\\\\____/\\\\____________/\\\\____/\\\\\\\\\_____ _\/\\\/////////\\\_\/\\\\\\________/\\\\\\__/\\\///////\\\___  _\/\\\_______\/\\\_\/\\\//\\\____/\\\//\\\_\///______\//\\\__   _\/\\\\\\\\\\\\\/__\/\\\\///\\\/\\\/_\/\\\___________/\\\/___    _\/\\\/////////____\/\\\__\///\\\/___\/\\\________/\\\//_____     _\/\\\_____________\/\\\____\///_____\/\\\_____/\\\//________      _\/\\\_____________\/\\\_____________\/\\\___/\\\/___________       _\/\\\_____________\/\\\_____________\/\\\__/\\\\\\\\\\\\\\\_        _\///______________\///______________\///__\///////////////__                          Runtime Edition        PM2 is a Production Process Manager for Node.js applications                     with a built-in Load Balancer.                Start and Daemonize any application:                $ pm2 start app.js                Load Balance 4 instances of api.js:                $ pm2 start api.js -i 4                Monitor in production:                $ pm2 monitor                Make pm2 auto-boot at server restart:                $ pm2 startup                To go further checkout:                http://pm2.io/                        -------------[PM2] Spawning PM2 daemon with pm2_home=/root/.pm2[PM2] PM2 Successfully daemonized┌─────┬───────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐│ id  │ name      │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │└─────┴───────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘</code></pre><p>查看版本：<code>pm2 -v</code></p><p>各平台安装方法一致</p><h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><p>我这里有个express的web项目：NeteaseCloudMusicApi，端口是5188</p><h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><p><code>pm2 start app.js</code><br><img src="https://tva1.sinaimg.cn/large/006RYYI7ly1h7k1o3hvfjj30q903tjvn.jpg" alt="image.png"></p><h3 id="关闭"><a href="#关闭" class="headerlink" title="关闭"></a>关闭</h3><p><code>pm2 stop 0</code><br><img src="https://tva1.sinaimg.cn/large/006RYYI7ly1h7k1q8pexwj30q603q0wp.jpg" alt="image.png"><br>为什么stop后是0？ 从上图可以看出进程ID为0，所以通过进程ID可以关闭，然后这种方式不易记，下面我看看其它方式启动和关闭</p><h3 id="其它方式启动-x2F-关闭"><a href="#其它方式启动-x2F-关闭" class="headerlink" title="其它方式启动&#x2F;关闭"></a>其它方式启动&#x2F;关闭</h3><h4 id="启动项目，并命名一个应用程序名"><a href="#启动项目，并命名一个应用程序名" class="headerlink" title="启动项目，并命名一个应用程序名"></a>启动项目，并命名一个应用程序名</h4><p><code>pm2 start app.js --name=&quot;NeteaseCloudMusic&quot;</code><br>启动后结果如下图，你可以看到App name<br><img src="https://tva1.sinaimg.cn/large/006RYYI7ly1h7k1rj4rojj30ss03mtd4.jpg" alt="image.png"></p><h4 id="根据App-name关闭项目"><a href="#根据App-name关闭项目" class="headerlink" title="根据App name关闭项目"></a>根据App name关闭项目</h4><p><code>pm2 stop NeteaseCloudMusic</code><br>可以自行试一下效果，关闭成功！</p><h3 id="从PM2中删除"><a href="#从PM2中删除" class="headerlink" title="从PM2中删除"></a>从PM2中删除</h3><p><code>pm2 delete NeteaseCloudMusic</code><br>当然也可以 <code>pm2 delete 进程ID</code> </p><h3 id="重载和重启"><a href="#重载和重启" class="headerlink" title="重载和重启"></a>重载和重启</h3><p>当应用程序代码有更新，可以用重载来加载新代码，也可以用重启来完成<br><code>pm2 reload NeteaseCloudMusic</code><br>reload可以做到0秒宕机加载新的代码</p><p><code>pm2 restart NeteaseCloudMusic</code><br>restart则是重新启动，生产环境中多用reload来完成代码更新！</p><h3 id="查看详情"><a href="#查看详情" class="headerlink" title="查看详情"></a>查看详情</h3><p><code>pm2 show NeteaseCloudMusic</code><br>输出如下图：<br><img src="https://tva1.sinaimg.cn/large/006RYYI7ly1h7k1x3pizrj30ex0d9ahf.jpg" alt="image.png"><br>通过查看详情就可以看到很多有用信息，包含日志和错误输出的文件路径（感觉日志是用的比较多的）　　</p><h3 id="多项目操作"><a href="#多项目操作" class="headerlink" title="多项目操作"></a>多项目操作</h3><p>上面是单项目操作，多项目操作是如何呢？</p><p>启动其它项目也如上面命令，我新启一个项目：pm2sample2（端口为5199）</p><ol><li><code>cd 项目目录</code></li><li><code>pm2 start app.js --name test2</code></li></ol><h3 id="批量操作"><a href="#批量操作" class="headerlink" title="批量操作"></a>批量操作</h3><p>批量操作（多个也一样），如下(重加载全部&#x2F;停止全部&#x2F;重启全部&#x2F;删除全部)<br><code>pm2 reload all</code><br><code>pm2 stop all</code><br><code>pm2 restart all</code><br><code>pm2 delete all</code></p><h3 id="集群"><a href="#集群" class="headerlink" title="集群"></a>集群</h3><p>从前面的图中可以看出mode是“fork”<br>开发环境中多以fork的方式启动，生产环境中多用cluster方式启动</p><h4 id="启动方式"><a href="#启动方式" class="headerlink" title="启动方式"></a>启动方式</h4><p><code>pm2 start app.js -i 2 --name test</code><br>这表示启动2个并命名为test，在后台以cluster方式运行<br>操作完成后可以看出mode为“<code>cluster</code>”方式，其它操作就可以通过上面用过的方式去启动、关闭、重载、重启、删除</p><h3 id="其它操作"><a href="#其它操作" class="headerlink" title="其它操作"></a>其它操作</h3><h4 id="watching"><a href="#watching" class="headerlink" title="watching"></a>watching</h4><p>从前面的图中可以看一“<code>watching</code>”一项，这个项默认是<code>disabled</code>，可以通过如下命令开启<br><code>pm2 start app.js --name test --watch</code><br>上面的命令中启去吧了test项目并开启了<code>watching</code>，这个用处主要更新代码后，不用重载或重启项目即可以立即让更新的代码起作用<br><strong>建议：这个适合在开发时用，可以省不少时间，生产环境下最好不要用</strong></p><h4 id="list"><a href="#list" class="headerlink" title="list"></a>list</h4><p><code>pm2 list</code><br>可以列出pm2中所有项目</p><h4 id="monit"><a href="#monit" class="headerlink" title="monit"></a>monit</h4><p><code>pm2 monit</code><br><img src="https://tva1.sinaimg.cn/large/006RYYI7ly1h7k24rxvxxj30ss09qdlo.jpg" alt="image.png"><br>用monit可以打开实时监视器去查看资源占用情况</p><h4 id="logs"><a href="#logs" class="headerlink" title="logs"></a>logs</h4><p><code>pm2 logs</code><br>通过上面命令可以实时查看日志输出情况</p><h2 id="写在之后…"><a href="#写在之后…" class="headerlink" title="写在之后…"></a>写在之后…</h2><p>本篇主要对PM2常用命令进行说明</p><p>PM2还有其它很多其它功能，可以通过上面提供的api链接去查看</p><p>但是基本用上面这些命令就够了，现在项目中就用的PM2，感觉还是不错，用于生产环境完全没问题！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 备忘 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Ubuntu </tag>
+            
+            <tag> Linux </tag>
+            
+            <tag> NodeJs </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Ubuntu 20.4正常启动Nodejs服务后无法访问的解决办法</title>
+      <link href="//ubuntuBug1.html"/>
+      <url>//ubuntuBug1.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>关于ubuntu 20.4正常启动Nodejs服务后无法访问的解决办法。</p><span id="more"></span><h2 id="情景回顾"><a href="#情景回顾" class="headerlink" title="情景回顾"></a>情景回顾</h2><p>今天在Ubuntu服务器上搭建网易云服务器，项目克隆下来，用pm2启动了以后，发现无法访问，然后就关了pm2，手动用<code>node app.js</code>启动服务，发现也不行，查了端口也没被占用，也去腾讯云控制面板去放行了端口，结果还是不行..<br>于是我陷入了深深的思考…<br>经过我久久的思考（查攻略）终于在<a href="https://www.cnblogs.com/phoebeyue/p/13659394.html">菲比月</a>这位老哥这里找到了解决办法<br>于是乎，为了备忘，这篇文章诞生了_(:з」∠)_</p><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p><strong>原因</strong>：后端运行端口未放行</p><ol><li><p>检查<code>服务商</code>或者<code>服务器</code>的安全组规则，node项目端口是否放行<br>就比如我的网易云服务器端口是<code>5188</code>，首先就在腾讯云控制面板那里放行了Tcp <code>5188</code> 端口<br> <img src="https://tva1.sinaimg.cn/large/006RYYI7ly1h7k0hucyd2j31ar06vwgp.jpg" alt="image.png"></p></li><li><p>确认node正常运行<br>　　输入命令：<code>ps -aux | grep node</code></p></li><li><p>检查端口情况<br>　　输入命令查看端口情况：<code>netstat -anp | grep 5188</code></p></li><li><p>检查服务器是否开启了防护墙<br>　　查看规则链：<code>iptables -L -n</code></p></li><li><p>放行3000、8888端口，之后便可正常访问<br>　　命令：<code>iptables -I INPUT -p tcp --dport 5188 -j ACCEPT</code></p><h3 id="其他情况："><a href="#其他情况：" class="headerlink" title="其他情况："></a>其他情况：</h3><p>还有别的情况就是node项目启动后连接终端挂了，所以访问不了，进程也占了，端口也占了。</p></li><li><p>查看哪个进程占用了<code>7002</code>端口：<code>netstat -tunlp | grep 7002</code><br> <img src="https://tva1.sinaimg.cn/large/006RYYI7ly1h7k10miohqj30ww022767.jpg" alt="image.png"></p></li><li><p>首先把占用 <code>7002</code> 端口的进程终止。<br> 输入命令：<code>kill -s 9 14258</code><br> （其中-s 9 制定了传递给进程的信号是９，即强制、尽快终止进程。各个终止信号及其作用见附录。）<br> 把node项目用 <code>7002</code> 端口启动即可。</p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 备忘 </category>
+          
+          <category> 遇坑记录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Ubuntu </tag>
+            
+            <tag> Linux </tag>
+            
+            <tag> NodeJs </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>蕾姆酱美图瀑布流</title>
       <link href="//pbl.html"/>
       <url>//pbl.html</url>
