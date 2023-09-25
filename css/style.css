@@ -783,7 +783,7 @@ article.nexmoe-py ul li img.lazyloaded {
 #nexmoe-content .nexmoe-posts .nexmoe-post .nexmoe-post-top .nexmoe-post-top-img {
   width: 15px;
   height: 15px;
-  background-image: url("https://cdn.jsdelivr.net/gh/kasisama/Blog_images/background/Rem_head_100px.png");
+  background-image: url("http://kscdn-file.kassama.top/blog/background/kassIco64.png");
   background-size: 100% 100%;
   margin-right: 5px;
 }
@@ -798,7 +798,7 @@ article.nexmoe-py ul li img.lazyloaded {
   background-color: #a50e00 !important;
 }
 #nexmoe-pendant .nexmoe-pd .clock .clock_logo {
-  background-image: url("https://cdn.jsdelivr.net/gh/kasisama/Blog_images/background/Rem_head_100px.png");
+  background-image: url("http://kscdn-file.kassama.top/blog/background/Rem_head_100px.png");
 }
 #nexmoe-pendant .nexmoe-pd .qweather #he-plugin-standard {
   border: 2px solid #09f;
@@ -811,7 +811,7 @@ article.nexmoe-py ul li img.lazyloaded {
   padding: 1em 0.5em 1em;
 }
 #nexmoe-pendant .nexmoe-pd .qweather .qweather-logo {
-  background-image: url("https://cdn.jsdelivr.net/gh/kasisama/Blog_images/background/Rem_head_100px.png");
+  background-image: url("http://kscdn-file.kassama.top/blog/background/Rem_head_100px.png");
 }
 article a {
   color: #09f;
@@ -841,7 +841,7 @@ article pre .txt {
   color: #09f;
 }
 #nexmoe-content .nexmoe-post .nexmoe-py .aplayer {
-  background-image: url("https://cdn.jsdelivr.net/gh/kasisama/Blog_images/background/music.webp");
+  background-image: url("http://kscdn-file.kassama.top/blog/background/music.webp");
   background-position: center;
   background-size: auto 100%;
   background-repeat: no-repeat;
@@ -872,7 +872,7 @@ article pre .txt {
   background: #09f;
 }
 #nexmoe-content .nexmoe-post .nexmoe-comment .v .veditor {
-  background-image: url("https://cdn.jsdelivr.net/gh/kasisama/Blog_images/background/chat_img.png");
+  background-image: url("http://kscdn-file.kassama.top/blog/background/chat_img.png");
   background-position: right;
   background-size: auto 8.75em;
   background-repeat: no-repeat;
@@ -961,7 +961,7 @@ article pre .txt {
   background-color: #09f !important;
 }
 #daodream-container .daodream-comment-card .daodream-comment-avatar {
-  content: url("https://cdn.jsdelivr.net/gh/kasisama/Blog_images/background/kasi.webp") !important;
+  content: url("http://kscdn-file.kassama.top/blog/background/kasi.webp") !important;
 }
 #daodream-container .daodream-comment-by-user .daodream-comment-body-container {
   background-color: #09f !important;
@@ -972,13 +972,13 @@ article pre .txt {
 #daodream-container .daodream-sheet-spinner {
   border-radius: 50% !important;
   overflow: hidden;
-  background-image: url("https://cdn.jsdelivr.net/gh/kasisama/Blog_images/background/Lamu.webp") !important;
+  background-image: url("http://kscdn-file.kassama.top/blog/background/Lamu.webp") !important;
 }
 #daodream-container .daodream-launcher-button {
   width: 80px !important;
   height: 80px !important;
   background-color: #09f !important;
-  background-image: url("https://cdn.jsdelivr.net/gh/kasisama/Blog_images/background/Lamu.webp") !important;
+  background-image: url("http://kscdn-file.kassama.top/blog/background/Lamu.webp") !important;
   background-size: 100% 100% !important;
   border-radius: 50% !important;
   animation: mybutton 8s;
