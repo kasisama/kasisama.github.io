@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+  
+  <meta name="baidu-site-verification" content="code-J1Qg17G6wT" />
+  <title>微信小程序学习笔记1 - 咔斯の小窝</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  
+  
+
+    <!-- Site Verification -->
+    <meta name="baidu-site-verification" content="code-7bF3wXCwO5" />
+
+  <link rel="shortcut icon" href="https://kscdn-file.kassama.top/blog/background/kassIco64.png" type="image/png" />
+  <meta name="description" content="微信小程序学习笔记1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="微信小程序学习笔记1">
+<meta property="og:url" content="https://blog.kassama.top/wechatNotes1.html">
+<meta property="og:site_name" content="咔斯の小窝">
+<meta property="og:description" content="微信小程序学习笔记1">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-06-04T11:58:30.000Z">
+<meta property="article:modified_time" content="2023-09-25T06:35:39.019Z">
+<meta property="article:author" content="咔斯Sama">
+<meta property="article:tag" content="HTML">
+<meta property="article:tag" content="web">
+<meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,gh/theme-nexmoe/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css?v=233" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css">
+  
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_cksn56jaae6.css">
+  
+  <link rel="stylesheet" href="/css/style.css?v=1695629234315">
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+<body class="mdui-drawer-body-left">
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(https://kscdn-file.kassama.top/blog/background/bk1.webp)"></div>
+    <div class="nexmoe-small" style="background-image: url(https://kscdn-file.kassama.top/blog/background/Rem.png)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="/" title="咔斯Sama" class="mdui-btn mdui-btn-icon"><img src="https://kscdn-file.kassama.top/blog/background/kasi.webp" alt="咔斯Sama"></a>
+       </div>
+    </div>
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="咔斯Sama">
+            <img src="https://kscdn-file.kassama.top/blog/background/kasi.webp" alt="咔斯Sama" alt="咔斯Sama">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div id="ks-articlesBtn" class="nexmoe-count-item"><span>文章</span>32 <div class="item-radius"></div><div class="item-radius item-right"></div> </div>
+        <div id="ks-tagsBtn" class="nexmoe-count-item"><span>标签</span>14<div class="item-radius"></div><div class="item-radius item-right"></div></div>
+        <div id="ks-categoriesBtn" class="nexmoe-count-item"><span>分类</span>6<div class="item-radius"></div><div class="item-radius item-right"></div></div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-meishi"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/archives.html" title="文章归档">
+            <i class="mdui-list-item-icon nexmoefont icon-hanbao1"></i>
+            <div class="mdui-list-item-content">
+                文章归档
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/friend.html" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-cola"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/photos.html" title="咔斯相册">
+            <i class="mdui-list-item-icon nexmoefont icon-tuchong"></i>
+            <div class="mdui-list-item-content">
+                咔斯相册
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/about.html" title="关于咔斯">
+            <i class="mdui-list-item-icon nexmoefont icon-jiubei1"></i>
+            <div class="mdui-list-item-content">
+                关于咔斯
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+  
+  
+<!-- 站内搜索 -->
+
+<div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search" >
+        <form id="search-form">
+            <label><input type="text" id="local-search-input" name="q" results="0" placeholder="站内搜索" class="input form-control" autocomplete="off" autocorrect="off"/></label>
+            <!-- 清空/重置搜索框 -->
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+        </form>
+    </div>
+    <div id="local-search-result"></div> <!-- 搜索结果区 -->
+    <!-- <p class='no-result'></p> 无匹配时显示，注意在 CSS 中设置默认隐藏 -->
+</div>
+
+
+  
+  <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://wpa.qq.com/msgrd?v=3&uin=1347993953&site=qq&menu=yes" target="_blank" mdui-tooltip="{content: 'QQ'}" style="color: rgb(64, 196, 255);background-color: rgba(64, 196, 255, .1);">
+            <i class="nexmoefont icon-QQ"></i>
+        </a><a class="mdui-ripple" href="https://steamcommunity.com/id/kasiwuhui/" target="_blank" mdui-tooltip="{content: 'steam'}" style="color: rgb(14, 71, 161);background-color: rgba(14, 71, 161, .15);">
+            <i class="nexmoefont icon-steam"></i>
+        </a><a class="mdui-ripple" href="mailto:kasiwuhui@vip.qq.com" target="_blank" mdui-tooltip="{content: 'mail'}" style="color: rgb(249,8,8);background-color: rgba(249,8,8,.1);">
+            <i class="nexmoefont icon-mail-fill"></i>
+        </a><a class="mdui-ripple" href="https://space.bilibili.com/93548600" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/kasisama/" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a><a class="mdui-ripple" href="https://gitee.com/kassama" target="_blank" mdui-tooltip="{content: 'gitee'}" style="color: rgb(199, 29, 35);background-color: rgba(199, 29, 35, .15);">
+            <i class="nexmoefont icon-mayun"></i>
+        </a>
+    </div>
+</div>
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/CDN/" style="font-size: 10px;">CDN</a> <a href="/tags/HTML/" style="font-size: 20px;">HTML</a> <a href="/tags/Linux/" style="font-size: 12.5px;">Linux</a> <a href="/tags/NodeJs/" style="font-size: 12.5px;">NodeJs</a> <a href="/tags/QWQ/" style="font-size: 10px;">QWQ</a> <a href="/tags/Ubuntu/" style="font-size: 12.5px;">Ubuntu</a> <a href="/tags/Vue/" style="font-size: 15px;">Vue</a> <a href="/tags/web/" style="font-size: 17.5px;">web</a> <a href="/tags/wiki/" style="font-size: 12.5px;">wiki</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 10px;">博客</a> <a href="/tags/%E5%92%94%E6%96%AF/" style="font-size: 10px;">咔斯</a> <a href="/tags/%E5%92%94%E6%96%AF%E5%A8%B1%E4%B9%90/" style="font-size: 10px;">咔斯娱乐</a> <a href="/tags/%E5%AE%A0%E7%89%A9%E5%85%BB%E6%88%90/" style="font-size: 12.5px;">宠物养成</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E6%9D%A1%E6%AC%BE/" style="font-size: 10px;">服务条款</a>
+    </div>
+    
+  </div>
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/web笔记/">web笔记</a>
+          <span class="category-list-count">23</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/wiki/">wiki</a>
+          <span class="category-list-count">2</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/公告/">公告</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/备忘/">备忘</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/日志/">日志</a>
+          <span class="category-list-count">4</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/遇坑记录/">遇坑记录</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章归档</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a><span class="archive-list-count">20</span></li></ul>
+    </div>
+  </div>
+
+
+<style>
+.nexmoe-widget .archive-list-count{
+	position : absolute;
+	right: 15px;
+	top:9px;
+	color: #DDD;
+}
+</style>
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2023 咔斯Sama
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a><br/>
+        <a href="http://beian.miit.gov.cn" target="_blank"></a><br/>
+        
+        <div style="font-size: 12px">
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            本站总访问量  <a id="busuanzi_value_site_pv"></a> 次<br />
+            本站访客数<a id="busuanzi_value_site_uv"></a>人次
+        </div>
+        
+        
+    </div>
+
+</div><!-- .nexmoe-drawer -->
+
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+    
+        <div class="nexmoe-post-cover" style="padding-bottom: 47.41666666666667%;">
+            <img data-src="https://kscdn-file.kassama.top/blog/Otherimgage/webLearn.webp" data-sizes="auto" alt="微信小程序学习笔记1" class="lazyload">
+            <h1>微信小程序学习笔记1</h1>
+        </div>
+    
+
+        <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2020年06月04日</a>
+    <a><i class="nexmoefont icon-areachart"></i>1.6k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 7 分钟</a>
+</div>
+
+
+        <article>
+            <p>微信小程序学习笔记1</p>
+<span id="more"></span>
+<h2 id="数据、事件绑定"><a href="#数据、事件绑定" class="headerlink" title="数据、事件绑定"></a>数据、事件绑定</h2><ol>
+<li><code>data</code>中的数据再页面中使用<code>&#123;&#123;&#125;&#125;</code>绑定，属性绑定也要用<code>&#123;&#123;&#125;&#125;</code></li>
+<li>绑定事件使用<code>bind</code>绑定，<code>tap</code>表示点击事件<code>bingtap</code></li>
+<li>事件函数绑定不加<code>&#123;&#123;&#125;&#125;</code>，事件函数也不加<code>（）</code></li>
+<li><code>data</code>数据不能直接更新，需要使用<code>this.setdata</code>更新</li>
+</ol>
+<p>例：</p>
+<pre><code class="highlight js"><span class="variable language_">this</span>.<span class="title function_">setData</span>(&#123;
+	<span class="attr">count</span>: <span class="variable language_">this</span>.<span class="property">data</span>.<span class="property">count</span> + <span class="number">1</span>
+
+&#125;)</code></pre>
+<ol start="6">
+<li><p>表单事件绑定，事件函数中使用<code>e.detail.value</code>拿表单数据</p>
+</li>
+<li><p>事件绑定时，通过data-自定义属性向事件函数传参，拿事件传参要用<code>e.currentTarget</code> 不要用 <code>target</code> ，因为<code>target</code>事件触发的目标，可能是子标签</p>
+<p> 例：<code>data-name =&#123;&#123;需要传递的动态值&#125;&#125;</code></p>
+</li>
+<li><p>事件的两种绑定方式 <code>bind</code>会冒泡 <code>carch</code> 不会冒泡</p>
+</li>
+<li><p>常用事件：<br><code>touchstart</code>：手指触摸动作开始</p>
+</li>
+</ol>
+<p><code>touchmove</code>：手指触摸后移动</p>
+<p><code>touchcancel</code>：手指触摸被打断 如来电提醒 ，弹窗</p>
+<p><code>touchend</code>： 手指触摸动作结束</p>
+<p><code>tap</code>：手指触摸后马上离开（单击）</p>
+<p><code>longpress</code>：手指触摸后，超过350ms再离开，如果指定了事件回调函数并触发了这个事件，tap事件将不被触发</p>
+<p><code>submit</code>：提交事件</p>
+<p><code>input</code>： 输入框事件</p>
+<p><code>scroll</code>：滚动事件</p>
+<h2 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h2><ol>
+<li>循环<code>wx:for</code> 循环数组，会自动生成变量<code>item</code>和<code>index</code> </li>
+<li><code>wx:for</code> 循环要添加 <code>wx:key</code>属性 <code>wx:key</code>值是字符串形式</li>
+<li><code>wx:for-item</code> 和 <code>wx:for-index</code>可重置<code>index</code>和<code>item</code>变量名（相当于<code>wx:for</code> 下的 <code>item = “自定义值”</code>）</li>
+<li>判断<code>wx:if</code> 相当于vue中的条件渲染 值 要加<code>&#123;&#123;&#125;&#125;</code></li>
+</ol>
+<h2 id="tabBar跳转"><a href="#tabBar跳转" class="headerlink" title="tabBar跳转"></a>tabBar跳转</h2><p>tabBar跳转在 小程序 框架 全局配置中根据可选项 进行配置(是全局的 在<code>app.json</code>中配置) ，配置项的键和值都是字符串形式<br>跳转路径必须在pages中先定义（存在此页面）。<br>配置的跳转页面至少两个最多五个</p>
+<p>例：【示例为必选项】</p>
+<pre><code class="highlight json"><span class="attr">&quot;tabBar&quot;</span><span class="punctuation">:</span><span class="punctuation">&#123;</span>
+    <span class="attr">&quot;color&quot;</span><span class="punctuation">:</span><span class="string">&quot;#8A8A8A&quot;</span><span class="punctuation">,</span>
+    <span class="attr">&quot;selectedColor&quot;</span><span class="punctuation">:</span><span class="string">&quot;#D4327A&quot;</span><span class="punctuation">,</span>
+    <span class="attr">&quot;backgroundColor&quot;</span><span class="punctuation">:</span><span class="string">&quot;#fff&quot;</span><span class="punctuation">,</span>
+    <span class="attr">&quot;position&quot;</span><span class="punctuation">:</span> <span class="string">&quot;top&quot;</span><span class="punctuation">,</span>
+    <span class="attr">&quot;list&quot;</span><span class="punctuation">:</span><span class="punctuation">[</span>
+      <span class="punctuation">&#123;</span>
+        <span class="attr">&quot;pagePath&quot;</span><span class="punctuation">:</span><span class="string">&quot;pages/index/index&quot;</span><span class="punctuation">,</span>
+        <span class="attr">&quot;text&quot;</span><span class="punctuation">:</span> <span class="string">&quot;首页&quot;</span>
+      <span class="punctuation">&#125;</span><span class="punctuation">,</span>
+      <span class="punctuation">&#123;</span>
+        <span class="attr">&quot;pagePath&quot;</span><span class="punctuation">:</span><span class="string">&quot;pages/shouye/shouye&quot;</span><span class="punctuation">,</span>
+        <span class="attr">&quot;text&quot;</span><span class="punctuation">:</span> <span class="string">&quot;斗鱼&quot;</span><span class="punctuation">,</span>
+      <span class="punctuation">&#125;</span>
+    <span class="punctuation">]</span>
+  <span class="punctuation">&#125;</span><span class="punctuation">,</span></code></pre>
+
+<h2 id="路由跳转、传值"><a href="#路由跳转、传值" class="headerlink" title="路由跳转、传值"></a>路由跳转、传值</h2><p>声明式跳转：</p>
+<p>路由跳转在wxml页面 添加 <code>navigator</code> 标签 url属性为跳转路径<br>还需添加<code>open-type</code>属性<br><code>opeb-type</code>值：<br>    <code>navigateTo</code>【只能跳转非tab页】<br>    <code>switchtab</code>【只能跳转到tab页】<br>    <code>redirect</code>【关闭当前页面，跳转非tab页面】<br>    <code>reLaunch</code>【关闭所有页，跳转任意页面】 </p>
+<p>不写url属性 <code>open-type</code>值为 <code>navigateBack</code> 【返回上一页】</p>
+<p>不写url属性设置<code>target=&quot;miniProgram&quot; open-type=&quot;exit&quot;</code>【退出小程序】</p>
+<p>编程式导航跳转：</p>
+<p>点击之后调用一个函数 route ，在 route 函数中调用 <code>wx.navigateTo</code> 等声明式导航的open-type的值进行跳转。</p>
+<p>可跳转值：<br>    <code>navigateTo</code>【只能跳转非tab页】 (可以传参)<br>    <code>switchtab</code>【只能跳转到tab页】(不可传参)<br>    <code>redirect</code>【关闭当前页面，跳转非tab页面】 (可以传参)<br>    <code>reLaunch</code>【关闭所有页，跳转任意页面】  (可以传参)</p>
+<p>例：<code>wx.nacigateTo(&#123;url:&#39;跳转路径&#39;&#125;)</code></p>
+<p>传参方式：</p>
+<ol>
+<li><p>键值对拼接传值：在url路径后 ? 分割 <code>name=张三&amp;age=18。</code><br> 在【<code>onLod</code>】生命周期 函数中使用<code>options</code>参数接收</p>
+</li>
+<li><p>对象传值：添加一个跳转成功的回调【<code>success</code>】中有一个回调函数 res&#x3D;&gt;<br>中有一个 <code>res.eventChannel</code> 字段 调一个emit自定义事件。</p>
+<p>例:</p>
+</li>
+</ol>
+<pre><code class="highlight js"><span class="attr">success</span>:<span class="function"><span class="params">res</span>=&gt;</span>&#123;
+   res.<span class="property">eventChannel</span>.<span class="title function_">emit</span>(<span class="string">&quot;自定义事件&quot;</span>，&#123;参数&#125;)
+&#125;</code></pre>
+<p>接收：在【<code>onLod</code>】生命周期 函数中找到<code>eventChannel</code>对象<br>   <code>const eventChannel=this.getOpenerEventChannel()</code><br>拿：通过on监听 <code>eventChannel.on(&quot;自定义事件名&quot;，data=&gt;&#123; log (data)&#125;)</code></p>
+<h2 id="录音"><a href="#录音" class="headerlink" title="录音"></a>录音</h2><p> 在【<code>onLoad</code>】中获取全局唯一的录音管理器 （全局的 使用this打点调）<br>    例：<code>this.manager = wx.getRecorderManager() </code></p>
+<p>在对应的方法中 使用全局录音管理器 【this.manager】调用需要的API</p>
+<p>在【<code>onload</code>】中监听录音结束 拿到 录音结束的文件<br>    例：<code>this.manager.onStop(res=&gt;&#123;  log( res )  &#125; ) </code> 【打印后找到对应的录音文件路径】</p>
+<p>把res  push到数组中 并在<code>setData</code>中更新  赋值</p>
+<p>循环展示 录音数据 </p>
+<p>使用自定义属性data-传值把拿到的录音路径传递过来<br>在播放函数中 使用【<code>e.currentTarget</code>】接收</p>
+<p>播放：创建全局的音频播放对象【<code>this.aiduo = wx.createInnerAudioContext()</code>】</p>
+<p>设置【<code>this.audio.src=  接收路径</code>  ，<code>this.audio.play  (自动播放)</code>】 即可完成播放</p>
+<h2 id="触底加载"><a href="#触底加载" class="headerlink" title="触底加载"></a>触底加载</h2><p>触底加载实现，只需要在触底事件的处理函数中 重新请求一遍数据，并push到旧数据之后<br>在this.setData中更新数据，并给页码+1即可</p>
+<h2 id="分享"><a href="#分享" class="headerlink" title="分享"></a>分享</h2><ol>
+<li><p>添加 <code>onShareAppMessage:function()&#123;&#125;</code> 函数即可开启 【分享给朋友】<br> 添加<code>onShareTimeline:funtion()&#123;&#125;</code> 函数，开启分享到朋友圈</p>
+</li>
+<li><p>在 onReady 初始化函数中调用 <code>wx.showShareMenu(&#123; menus:[&quot;shareAppMessage&quot;,&quot;shareTimeline&quot;]&#125;)</code> 参数分别为分享给朋友 和分享到朋友圈</p>
+</li>
+<li><p>添加按钮 属性为 <code>open-type=&quot;share&quot;</code> 即可开启分享</p>
+</li>
+</ol>
+<h2 id="请求"><a href="#请求" class="headerlink" title="请求"></a>请求</h2><p>发送请求： 调用【<code>wx.request</code>】 API，问号后的参数放在data字段中<br>    使用<code>success</code>接收 回调要用箭头函数 。</p>
+<p>例：</p>
+<pre><code class="highlight js">wx.<span class="title function_">request</span>(&#123;
+		<span class="attr">url</span>: <span class="string">&quot;请求地址&quot;</span>
+		<span class="attr">data</span>: &#123; 携带参数 &#125;
+		success：（res）=&gt;&#123;
+		   <span class="variable language_">console</span>.<span class="title function_">log</span>( 读数据 )
+            <span class="variable language_">this</span>.<span class="title function_">setData</span>(&#123;
+               <span class="attr">list</span>: res.<span class="property">data</span>.<span class="property">list</span> 
+            &#125;);
+	&#125;
+&#125;);</code></pre>
+
+<h2 id="下拉刷新"><a href="#下拉刷新" class="headerlink" title="下拉刷新"></a>下拉刷新</h2><p>首先在json文件中添加 <code>enablePullDownRefresh:true</code> 字段，打开可下拉功能</p>
+<p>然后在<code>onpullDownRefresh</code>函数中请求数据并使用<code>unshift</code>添加到数据前面，</p>
+<p>请求完成后立即结束下拉：<code>wx.stopPullDownRefresh()</code></p>
+<h2 id="本地储存"><a href="#本地储存" class="headerlink" title="本地储存"></a>本地储存</h2><p>在<code>success</code>中调用 【<code>wx.setStorage</code>】APi 根据文档进行配置。<br>参数 key、data</p>
+<p>data中数组的值要改成 同步的【<code>Array：wx.getstorageSync(&#39;键&#39;)</code>】</p>
+<p>例：</p>
+<pre><code class="highlight js">data（）&#123;
+	
+	<span class="title class_">Array</span>：wx.<span class="title function_">getstorageSync</span>(<span class="string">&#x27;键&#x27;</span>)  ||  []
+&#125;
+
+wx.<span class="title function_">setStorage</span>(&#123;
+   <span class="attr">key</span>:<span class="string">&quot;键&quot;</span>
+   data：<span class="string">&quot;z值&quot;</span>
+&#125;)</code></pre>
+
+<h2 id="数据上传、展示"><a href="#数据上传、展示" class="headerlink" title="数据上传、展示"></a>数据上传、展示</h2><p>数据上传，点击后调用一个函数 函数内调用【<code>wx.chooseMedia</code>】API根据文档进行配置</p>
+<p>通过 <code>success：res=&gt;&#123;&#125;</code>   拿到结果  在<code>setdata</code>中 通过【<code>res.tenpFiles</code>】给定义好的数组赋值</p>
+<p>展示：判断数据类型 【<code>item.fileType==image</code>】通过【<code>item.tempFilPath</code>】 字段展示图片<br>    例： <code>&lt;image wx:if=&quot;&#123;&#123;item.fileType=='image'&#125;&#125;&quot; src=&#123;&#123;item.tempFilPath&#125;&#125;&gt;</code></p>
+
+        </article>
+
+        
+            
+  <div class="nexmoe-post-copyright">
+    <strong>本文作者：</strong>咔斯Sama<br>
+    
+    <strong>本文链接：</strong><a href="https://blog.kassama.top/wechatNotes1.html" title="https:&#x2F;&#x2F;blog.kassama.top&#x2F;wechatNotes1.html" target="_blank" rel="noopener">https:&#x2F;&#x2F;blog.kassama.top&#x2F;wechatNotes1.html</a><br>
+
+    
+      <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+    
+  </div>
+
+
+        
+
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/web%E7%AC%94%E8%AE%B0/">web笔记</a>
+    
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/HTML/" rel="tag">HTML</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/web/" rel="tag">web</a>
+    
+</div>
+
+    <div class="nexmoe-post-footer">
+        <section class="nexmoe-comment">
+    <!-- <div class="valine ks-valine-box"></div> -->
+<script src='https://cdn.bootcdn.net/ajax/libs/valine/1.5.1/Valine.min.js'></script>
+<script>
+    // 使用方法 https://valine.js.org/quickstart.html
+    new Valine({
+        el: '.valine',
+        appId: '6Om9oV6sycmCPkRcrF9VR7Vd-gzGzoHsz',
+        appKey: 'cas3l5T4L8EkjrOFGsfzD8vM',
+        enableQQ: true,
+        placeholder: '阁下要说点什么嘛！',
+        requiredFields:['nick','mail'],
+
+        emojiCDN: '//cdn.bilicdn.tk/gh/kasisama/ValineCDN@master/',
+        // 表情title和图片映射
+        emojiMaps: {
+            "bilibilitv2": "bilibilitv/[tv_doge].png",
+            "bilibilitv3": "bilibilitv/[tv_亲亲].png",
+            "bilibilitv4": "bilibilitv/[tv_偷笑].png",
+            "bilibilitv5": "bilibilitv/[tv_再见].png",
+            "bilibilitv6": "bilibilitv/[tv_冷漠].png",
+            "bilibilitv7": "bilibilitv/[tv_发怒].png",
+            "bilibilitv8": "bilibilitv/[tv_发财].png",
+            "bilibilitv9": "bilibilitv/[tv_可爱].png",
+            "bilibilitv10": "bilibilitv/[tv_吐血].png",
+            "bilibilitv11": "bilibilitv/[tv_呆].png",
+            "bilibilitv12": "bilibilitv/[tv_呕吐].png",
+            "bilibilitv13": "bilibilitv/[tv_困].png",
+            "bilibilitv14": "bilibilitv/[tv_坏笑].png",
+            "bilibilitv15": "bilibilitv/[tv_大佬].png",
+            "bilibilitv16": "bilibilitv/[tv_大哭].png",
+            "bilibilitv17": "bilibilitv/[tv_委屈].png",
+            "bilibilitv18": "bilibilitv/[tv_害羞].png",
+            "bilibilitv19": "bilibilitv/[tv_尴尬].png",
+            "bilibilitv20": "bilibilitv/[tv_微笑].png",
+            "bilibilitv21": "bilibilitv/[tv_思考].png",
+            "bilibilitv22": "bilibilitv/[tv_惊吓].png",
+            "bilibilitv23": "bilibilitv/[tv_打脸].png",
+            "bilibilitv24": "bilibilitv/[tv_抓狂].png",
+            "bilibilitv25": "bilibilitv/[tv_抠鼻].png",
+            "bilibilitv26": "bilibilitv/[tv_斜眼笑].png",
+            "bilibilitv27": "bilibilitv/[tv_无奈].png",
+            "bilibilitv28": "bilibilitv/[tv_晕].png",
+            "bilibilitv29": "bilibilitv/[tv_流汗].png",
+            "bilibilitv30": "bilibilitv/[tv_流泪].png",
+            "bilibilitv31": "bilibilitv/[tv_流鼻血].png",
+            "bilibilitv32": "bilibilitv/[tv_点赞].png",
+            "bilibilitv33": "bilibilitv/[tv_生气].png",
+            "bilibilitv34": "bilibilitv/[tv_生病].png",
+            "bilibilitv35": "bilibilitv/[tv_疑问].png",
+            "bilibilitv36": "bilibilitv/[tv_白眼].png",
+            "bilibilitv37": "bilibilitv/[tv_皱眉].png",
+            "bilibilitv38": "bilibilitv/[tv_目瞪口呆].png",
+            "bilibilitv39": "bilibilitv/[tv_睡着].png",
+            "bilibilitv40": "bilibilitv/[tv_笑哭].png",
+            "bilibilitv41": "bilibilitv/[tv_腼腆].png",
+            "bilibilitv42": "bilibilitv/[tv_色].png",
+            "bilibilitv43": "bilibilitv/[tv_调侃].png",
+            "bilibilitv44": "bilibilitv/[tv_调皮].png",
+            "bilibilitv45": "bilibilitv/[tv_鄙视].png",
+            "bilibilitv46": "bilibilitv/[tv_闭嘴].png",
+            "bilibilitv47": "bilibilitv/[tv_难过].png",
+            "bilibilitv48": "bilibilitv/[tv_馋].png",
+            "bilibilitv49": "bilibilitv/[tv_鬼脸].png",
+            "bilibilitv50": "bilibilitv/[tv_黑人问号].png",
+            "bilibilitv51": "bilibilitv/[tv_鼓掌].png",
+            "Heybox1": "Heybox/expression_cube.png",
+            "Heybox2": "Heybox/expression_cube_bingbujiandan.png",
+            "Heybox3": "Heybox/expression_cube_bizui.png",
+            "Heybox4": "Heybox/expression_cube_cangsang.png",
+            "Heybox5": "Heybox/expression_cube_dalian.png",
+            "Heybox6": "Heybox/expression_cube_doge.png",
+            "Heybox7": "Heybox/expression_cube_gandong.png",
+            "Heybox8": "Heybox/expression_cube_guai.png",
+            "Heybox9": "Heybox/expression_cube_gugu.png",
+            "Heybox10": "Heybox/expression_cube_han.png",
+            "Heybox11": "Heybox/expression_cube_hbi.png",
+            "Heybox12": "Heybox/expression_cube_heirenwenhao.png",
+            "Heybox13": "Heybox/expression_cube_huaji.png",
+            "Heybox14": "Heybox/expression_cube_jiayou.png",
+            "Heybox15": "Heybox/expression_cube_jingya.png",
+            "Heybox16": "Heybox/expression_cube_kaixin.png",
+            "Heybox17": "Heybox/expression_cube_ku.png",
+            "Heybox18": "Heybox/expression_cube_kun.png",
+            "Heybox19": "Heybox/expression_cube_kuqi.png",
+            "Heybox20": "Heybox/expression_cube_nu.png",
+            "Heybox21": "Heybox/expression_cube_penshui.png",
+            "Heybox22": "Heybox/expression_cube_qiliang.png",
+            "Heybox23": "Heybox/expression_cube_shengqi.png",
+            "Heybox24": "Heybox/expression_cube_shuijiao.png",
+            "Heybox25": "Heybox/expression_cube_tanqi.png",
+            "Heybox26": "Heybox/expression_cube_tanshou.png",
+            "Heybox27": "Heybox/expression_cube_tu.png",
+            "Heybox28": "Heybox/expression_cube_wa.png",
+            "Heybox29": "Heybox/expression_cube_weiqu.png",
+            "Heybox30": "Heybox/expression_cube_weixiao.png",
+            "Heybox31": "Heybox/expression_cube_wulianku.png",
+            "Heybox32": "Heybox/expression_cube_xia.png",
+            "Heybox33": "Heybox/expression_cube_xiaocry.png",
+            "Heybox34": "Heybox/expression_cube_xihuan.png",
+            "Heybox35": "Heybox/expression_cube_xuexi.png",
+            "Heybox36": "Heybox/expression_cube_yun.png",
+            "Heybox37": "Heybox/expression_cube_zan.png"
+        }
+    })
+    
+</script>
+</section>
+    </div>
+</div>
+
+
+        <div class="nexmoe-post-right">
+            <div class="nexmoe-fixed">
+              <div class="nexmoe-tool">
+                
+                
+                    
+                        <button class="mdui-fab catalog" style="overflow:unset;">
+                            <i class="nexmoefont icon-i-catalog"></i>
+                            <div class="nexmoe-toc">
+                              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E3%80%81%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A"><span class="toc-number">1.</span> <span class="toc-text">数据、事件绑定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF"><span class="toc-number">2.</span> <span class="toc-text">循环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#tabBar%E8%B7%B3%E8%BD%AC"><span class="toc-number">3.</span> <span class="toc-text">tabBar跳转</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B7%AF%E7%94%B1%E8%B7%B3%E8%BD%AC%E3%80%81%E4%BC%A0%E5%80%BC"><span class="toc-number">4.</span> <span class="toc-text">路由跳转、传值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BD%95%E9%9F%B3"><span class="toc-number">5.</span> <span class="toc-text">录音</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A6%E5%BA%95%E5%8A%A0%E8%BD%BD"><span class="toc-number">6.</span> <span class="toc-text">触底加载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E4%BA%AB"><span class="toc-number">7.</span> <span class="toc-text">分享</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%B7%E6%B1%82"><span class="toc-number">8.</span> <span class="toc-text">请求</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E6%8B%89%E5%88%B7%E6%96%B0"><span class="toc-number">9.</span> <span class="toc-text">下拉刷新</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E5%82%A8%E5%AD%98"><span class="toc-number">10.</span> <span class="toc-text">本地储存</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E4%B8%8A%E4%BC%A0%E3%80%81%E5%B1%95%E7%A4%BA"><span class="toc-number">11.</span> <span class="toc-text">数据上传、展示</span></a></li></ol>
+                            </div>
+                        </button>
+                        
+                  
+                
+                  <a href="#nexmoe-content" class="toc-link" aria-label="回到顶部" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+                
+              </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div id="nexmoe-pendant">
+    <div class="nexmoe-drawer mdui-drawer nexmoe-pd" id="drawer">
+        
+            <div class="nexmoe-pd-item">
+                <div class="clock">
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="needle" id="hours"></div>
+        <div class="needle" id="minutes"></div>
+        <div class="needle" id="seconds"></div>
+        <div class="clock_logo">
+
+        </div>
+
+    </div>
+<style>
+    .clock {
+        background-color: #ffffff;
+        width: 70vw;
+        height: 70vw;
+        max-width: 70vh;
+        max-height: 70vh;
+        border: solid 2.8vw #242424;
+        position: relative;
+        overflow: hidden;
+        border-radius: 50%;
+        box-sizing: border-box;
+        box-shadow: 0 1.4vw 2.8vw rgba(0, 0, 0, 0.8);
+        zoom:0.2
+    }
+
+    .memory {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform-origin: center;
+    }
+
+    .memory:nth-child(1) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(0deg) translateY(-520%);
+    }
+
+    .memory:nth-child(2) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(6deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(3) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(12deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(4) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(18deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(5) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(24deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(6) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(30deg) translateY(-520%);
+    }
+
+    .memory:nth-child(7) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(36deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(8) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(42deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(9) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(48deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(10) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(54deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(11) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(60deg) translateY(-520%);
+    }
+
+    .memory:nth-child(12) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(66deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(13) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(72deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(14) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(78deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(15) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(84deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(16) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(90deg) translateY(-520%);
+    }
+
+    .memory:nth-child(17) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(96deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(18) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(102deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(19) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(108deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(20) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(114deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(21) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(120deg) translateY(-520%);
+    }
+
+    .memory:nth-child(22) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(126deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(23) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(132deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(24) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(138deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(25) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(144deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(26) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(150deg) translateY(-520%);
+    }
+
+    .memory:nth-child(27) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(156deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(28) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(162deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(29) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(168deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(30) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(174deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(31) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(180deg) translateY(-520%);
+    }
+
+    .memory:nth-child(32) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(186deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(33) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(192deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(34) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(198deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(35) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(204deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(36) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(210deg) translateY(-520%);
+    }
+
+    .memory:nth-child(37) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(216deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(38) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(222deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(39) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(228deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(40) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(234deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(41) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(240deg) translateY(-520%);
+    }
+
+    .memory:nth-child(42) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(246deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(43) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(252deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(44) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(258deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(45) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(264deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(46) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(270deg) translateY(-520%);
+    }
+
+    .memory:nth-child(47) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(276deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(48) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(282deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(49) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(288deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(50) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(294deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(51) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(300deg) translateY(-520%);
+    }
+
+    .memory:nth-child(52) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(306deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(53) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(312deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(54) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(318deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(55) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(324deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(56) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(330deg) translateY(-520%);
+    }
+
+    .memory:nth-child(57) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(336deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(58) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(342deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(59) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(348deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(60) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(354deg) translateY(-1461%);
+    }
+
+    .needle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform-origin: center;
+    }
+
+    .needle#hours {
+        background-color: #1f1f1f;
+        width: 4%;
+        height: 30%;
+        transform-origin: center 75%;
+        transform: translate(-50%, -75%);
+    }
+
+    .needle#hours.moving {
+        transition: transform 150ms ease-out;
+    }
+
+    .needle#hours:after {
+        content: '';
+        background-color: #1f1f1f;
+        width: 4vw;
+        height: 4vw;
+        max-width: 4vh;
+        max-height: 4vh;
+        display: block;
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        box-sizing: border-box;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .needle#minutes {
+        background-color: #1f1f1f;
+        width: 2%;
+        height: 45%;
+        transform-origin: center 75%;
+        transform: translate(-50%, -75%);
+    }
+
+    .needle#minutes.moving {
+        transition: transform 150ms ease-out;
+    }
+
+    .needle#minutes:after {
+        content: '';
+        background-color: #1f1f1f;
+        width: 4vw;
+        height: 4vw;
+        max-width: 4vh;
+        max-height: 4vh;
+        display: block;
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        box-sizing: border-box;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .needle#seconds {
+        background-color: #cb2f2f;
+        width: 1%;
+        height: 50%;
+        transform-origin: center 75%;
+        transform: translate(-50%, -75%);
+    }
+
+    .needle#seconds.moving {
+        transition: transform 150ms ease-out;
+    }
+
+    .needle#seconds:after {
+        content: '';
+        background-color: #cb2f2f;
+        width: 2.5vw;
+        height: 2.5vw;
+        max-width: 2.5vh;
+        max-height: 2.5vh;
+        display: block;
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        box-sizing: border-box;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .clock_logo{
+        width: 10vw;
+        height: 10vw;
+        max-width: 10vh;
+        max-height: 10vh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        box-sizing: border-box;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    @media (min-width: 100vh) {
+        .clock {
+            border: solid 2.8vh #242424;
+            box-shadow: 0 1.4vh 2.8vh rgba(0, 0, 0, 0.8);
+        }
+    }
+
+</style>
+
+
+
+
+
+            </div>
+        
+            <div class="nexmoe-pd-item">
+                <div class="qweather" >
+    <div id="he-plugin-standard"></div>
+    <div class="qweather-logo">
+
+    </div>
+
+</div>
+<style>
+    .qweather{
+        position: relative;
+    }
+    .qweather-logo{
+        position: absolute;
+        right: 0;
+        top: -15px;
+        width: 40px;
+        height: 40px;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+</style>
+<script>
+  WIDGET = {
+    "CONFIG": {
+      "layout": "2",
+      "width": "260",
+      "height": "220",
+      "background": "5",
+      "dataColor": "0099FF",
+      "borderRadius": "15",
+      "key": "06114923535c446ea84c203a5e492a41"
+    }
+  }
+</script>
+<script src="https://widget.qweather.net/standard/static/js/he-standard-common.js?v=2.0"></script>
+
+            </div>
+        
+</div>
+<style>
+    .nexmoe-pd {
+        left: auto;
+        top: 40px;
+        right: 0;
+    }
+    .nexmoe-pd-item{
+       display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+</style>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
+<script>
+	hljs.initHighlightingOnLoad();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+<script src="/js/app.js?v=1695629234320"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
+<script>
+	$(".justified-gallery").justifiedGallery({
+		rowHeight: 160,
+		margins: 10,
+	});
+</script>
+
+  
+
+
+
+
+
+<!-- hexo injector body_end start -->
+<script src="/js/clock.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<script src="/js/search.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
+
+<script src="/lib/codeBlock/codeBlockFuction.js"></script>
+
+<script src="/lib/codeBlock/codeLang.js"></script>
+
+<script src="/lib/codeBlock/codeCopy.js"></script>
+
+<script src="/lib/codeBlock/codeShrink.js"></script>
+
+<link rel="stylesheet" href="/lib/codeBlock/matery.css">
+
+<script src="/js/webapp.js"></script>
+<!-- hexo injector body_end end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/rem.model.json"},"display":{"position":"left","width":400,"height":400},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
+</html>
+
+<script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/f90b2d50.js","daovoice")</script>
+<script>
+  daovoice('init', {
+    app_id: "f90b2d50"
+  });
+  daovoice('update');
+</script>
+
