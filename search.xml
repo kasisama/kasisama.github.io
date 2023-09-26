@@ -78,9 +78,9 @@
       
         <tags>
             
-            <tag> HTML </tag>
-            
             <tag> web </tag>
+            
+            <tag> HTML </tag>
             
         </tags>
       
@@ -199,9 +199,9 @@
       
         <tags>
             
-            <tag> Vue </tag>
-            
             <tag> HTML </tag>
+            
+            <tag> Vue </tag>
             
         </tags>
       
@@ -226,9 +226,9 @@
       
         <tags>
             
-            <tag> Vue </tag>
-            
             <tag> HTML </tag>
+            
+            <tag> Vue </tag>
             
         </tags>
       
@@ -253,9 +253,9 @@
       
         <tags>
             
-            <tag> Vue </tag>
-            
             <tag> HTML </tag>
+            
+            <tag> Vue </tag>
             
         </tags>
       
@@ -280,11 +280,11 @@
       
         <tags>
             
-            <tag> Vue </tag>
+            <tag> web </tag>
             
             <tag> HTML </tag>
             
-            <tag> web </tag>
+            <tag> Vue </tag>
             
         </tags>
       
@@ -309,9 +309,9 @@
       
         <tags>
             
-            <tag> HTML </tag>
-            
             <tag> web </tag>
+            
+            <tag> HTML </tag>
             
         </tags>
       
@@ -336,9 +336,9 @@
       
         <tags>
             
-            <tag> HTML </tag>
-            
             <tag> web </tag>
+            
+            <tag> HTML </tag>
             
         </tags>
       
@@ -363,9 +363,9 @@
       
         <tags>
             
-            <tag> HTML </tag>
-            
             <tag> web </tag>
+            
+            <tag> HTML </tag>
             
         </tags>
       
@@ -390,9 +390,9 @@
       
         <tags>
             
-            <tag> HTML </tag>
-            
             <tag> web </tag>
+            
+            <tag> HTML </tag>
             
         </tags>
       
@@ -444,9 +444,9 @@
       
         <tags>
             
-            <tag> HTML </tag>
-            
             <tag> web </tag>
+            
+            <tag> HTML </tag>
             
         </tags>
       
@@ -471,9 +471,9 @@
       
         <tags>
             
-            <tag> HTML </tag>
-            
             <tag> web </tag>
+            
+            <tag> HTML </tag>
             
         </tags>
       
@@ -498,9 +498,9 @@
       
         <tags>
             
-            <tag> HTML </tag>
-            
             <tag> web </tag>
+            
+            <tag> HTML </tag>
             
         </tags>
       
@@ -525,36 +525,9 @@
       
         <tags>
             
-            <tag> HTML </tag>
-            
             <tag> web </tag>
             
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>web学习笔记8 - 函数与作用域</title>
-      <link href="//webNotes8.html"/>
-      <url>//webNotes8.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>函数与作用域 学习总结<br>封面画师：唏嘘的星辰  p站ID：13312138</p><span id="more"></span><h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p><code>面向对象三大特点</code>: <code>继承</code> <code>多态</code> <code>封装</code>，<br><code>函数</code>: 代码集合体，把相同功能代码封装到一个函数体里面，以后这个函数重复使用了，</p><h3 id="不带参数的函数封装"><a href="#不带参数的函数封装" class="headerlink" title="不带参数的函数封装"></a>不带参数的函数封装</h3><pre><code class="highlight js"><span class="comment">//  关键字 函数名 (形参)&#123;函数体&#125;</span><span class="keyword">function</span> <span class="title function_">add</span>(<span class="params"></span>)&#123;  <span class="keyword">var</span> a = <span class="number">10</span>  <span class="keyword">var</span> b = <span class="string">&quot;10&quot;</span>    <span class="keyword">var</span> c = a+b  <span class="comment">//+ 加法运算，必须保证都是数字； </span>  <span class="comment">// var c = a / b   // 可以把字符串转成数字，然后再去计算</span>  <span class="comment">// var c = a * b    //  把字符串转成数字一种方式，这种方式称为隐式转换</span>    <span class="keyword">if</span>(b)&#123;    <span class="comment">// 如果a数字，   非0都为true</span>    <span class="comment">// 如果字符串    非&quot;&quot;都为true</span>    <span class="comment">// 如果布尔值     true就是true，</span>    <span class="comment">// 如果是空数组    为true</span>    <span class="comment">// 如果是空对象    为true</span>    <span class="comment">// 如果undefined  为false</span>    <span class="comment">// null 不存在     为false</span>    <span class="variable language_">console</span>.<span class="title function_">log</span>(c)   &#125;     &#125;<span class="comment">// 必须调用:函数名()</span><span class="title function_">add</span>()</code></pre><h3 id="递归引入"><a href="#递归引入" class="headerlink" title="递归引入"></a>递归引入</h3><pre><code class="highlight js"><span class="comment">// 1 1 2 3 5 8 13 21</span><span class="keyword">function</span> <span class="title function_">f1</span>(<span class="params"></span>)&#123;  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;f1&quot;</span>)  <span class="comment">//  too much recursion 函数体里面调用自己 造成死循环，需要合适的地方跳出，就是递归思想</span>  <span class="comment">// f1()</span>&#125;<span class="title function_">f1</span>()</code></pre><h3 id="带参数的函数封装"><a href="#带参数的函数封装" class="headerlink" title="带参数的函数封装"></a>带参数的函数封装</h3><pre><code class="highlight js"><span class="comment">//  a,b,c 多个参数用逗号隔开，形参：在定义的时候没值</span><span class="keyword">function</span> <span class="title function_">f2</span>(<span class="params">a,b,c</span>)&#123;  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;我的名字是&quot;</span>+a+<span class="string">&quot;年龄是&quot;</span>+b+<span class="string">&quot;性别是&quot;</span>+c)&#125;<span class="title function_">f2</span>(<span class="string">&quot;张三&quot;</span>,<span class="number">10</span>,<span class="string">&quot;男&quot;</span>) <span class="comment">// &quot;张三&quot; 实参， 函数调用的时候，把实参的赋值给形参</span></code></pre><h3 id="带默认参数的函数的封装"><a href="#带默认参数的函数的封装" class="headerlink" title="带默认参数的函数的封装"></a>带默认参数的函数的封装</h3><p>带默认参数的函数的封装，把默认参数写在最后一位</p><pre><code class="highlight js"><span class="keyword">function</span> <span class="title function_">f3</span>(<span class="params">name,stuid,sex=<span class="string">&quot;男&quot;</span></span>)&#123;  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;我的名字是&quot;</span>+name+<span class="string">&quot;性别是&quot;</span>+sex+<span class="string">&quot;学号是&quot;</span>+stuid)&#125;<span class="title function_">f3</span>(<span class="string">&quot;李四&quot;</span>,<span class="string">&quot;001&quot;</span>) <span class="comment">//如果给默认参数传值了，默认参数就是传递的数据，如果不传值，默认参数就是默认值</span>  <span class="title function_">f3</span>(<span class="string">&quot;张三&quot;</span>,<span class="string">&quot;002&quot;</span>,<span class="string">&quot;女&quot;</span>)  <span class="title function_">f3</span>(<span class="string">&quot;张三&quot;</span>,<span class="string">&quot;男&quot;</span>,<span class="string">&quot;003&quot;</span>)</code></pre><h3 id="有返回值的函数"><a href="#有返回值的函数" class="headerlink" title="有返回值的函数"></a>有返回值的函数</h3><p>有返回值的函数，必须带关键字return</p><pre><code class="highlight js"><span class="keyword">function</span> <span class="title function_">f4</span>(<span class="params">a,b,c</span>)&#123;  <span class="keyword">return</span> a * b *c&#125;<span class="keyword">var</span> aa = <span class="title function_">f4</span>(<span class="number">10</span>,<span class="number">10</span>,<span class="number">10</span>)<span class="variable language_">console</span>.<span class="title function_">log</span>(aa)</code></pre><h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><ul><li><code>全局作用域</code>: 在script标签定义的变量。就是一个全局变量，可以在任何地方去使用。</li><li><code>局部作用域</code>: 在函数体定义的变量，就是一个局部变量，只能用在当前的函数体中</li><li><code>块级作用域</code>: 在代码块{}定义的变量，采用let进行定义，只能用在当前代码块里面<pre><code class="highlight js"><span class="keyword">var</span> a = <span class="number">10</span> <span class="comment">//全局的变量</span><span class="keyword">function</span> <span class="title function_">f1</span>(<span class="params"></span>)&#123;  <span class="variable language_">console</span>.<span class="title function_">log</span>(a)&#125;<span class="title function_">f1</span>()<span class="comment">//var 变量提升只会把变量声明提升到当前作用域最前面</span><span class="keyword">function</span> <span class="title function_">f2</span>(<span class="params"></span>)&#123; <span class="variable language_">console</span>.<span class="title function_">log</span>(b,<span class="string">&quot;--------&quot;</span>)  <span class="keyword">var</span> b = <span class="number">10</span> <span class="comment">//局部变量</span>  <span class="variable language_">console</span>.<span class="title function_">log</span>(b,<span class="string">&quot;--------&quot;</span>)&#125;<span class="title function_">f2</span>()<span class="comment">// console.log(b) // 局部变量只能用在定义函数体里面</span><span class="comment">//  当全局变量和局部的变量如果冲突了，在局部作用域使用的是局部的变量，</span><span class="comment">//  在全局里面使用的全局变量 </span><span class="keyword">function</span> <span class="title function_">f3</span>(<span class="params"></span>)&#123;<span class="keyword">var</span> a = <span class="number">20</span><span class="variable language_">console</span>.<span class="title function_">log</span>(a,<span class="string">&quot;++++++++&quot;</span>)&#125;<span class="title function_">f3</span>()<span class="variable language_">console</span>.<span class="title function_">log</span>(a,<span class="string">&quot;--------------&quot;</span>)<span class="comment">/*</span><span class="comment">1 全局的用起来比较方便 只需要定义一次,全局变量不会被释放,一直占用内存空间</span><span class="comment">2 局部的变量不能在函数体使用,当函数体执行完了,局部的变量就会直接被释放,</span><span class="comment">*/</span><span class="comment">//在局部定义变量如何间接使用在全局里面</span><span class="keyword">function</span> <span class="title function_">f4</span>(<span class="params">e,f</span>)&#123;<span class="keyword">var</span> d = <span class="number">100</span> <span class="comment">// 局部</span><span class="keyword">return</span> d&#125;<span class="keyword">var</span> f = <span class="title function_">f4</span>()<span class="variable language_">console</span>.<span class="title function_">log</span>(f)</code></pre></li></ul><h2 id="作用域链"><a href="#作用域链" class="headerlink" title="作用域链"></a>作用域链</h2><p>访问一个变量,按照作用域链进行访问,当访问一个变量,先当前作用域去找,如果找到了,就直接使用,如果没找到,去父级作用域去找,如果父级作用域没有,去他父级的父级作用域去找,直到找到全局作用域为止,这样就形成一个作用域链</p><pre><code class="highlight js"><span class="keyword">var</span> a = <span class="number">100</span><span class="keyword">function</span> <span class="title function_">f2</span>(<span class="params"></span>) &#123;  <span class="keyword">var</span> a = <span class="number">30</span>  <span class="keyword">function</span> <span class="title function_">f3</span>(<span class="params"></span>) &#123;      <span class="keyword">var</span> a = <span class="number">20</span>      <span class="keyword">function</span> <span class="title function_">f4</span>(<span class="params"></span>) &#123;          <span class="keyword">var</span> a = <span class="number">10</span>          <span class="variable language_">console</span>.<span class="title function_">log</span>(a, <span class="string">&quot;++++++&quot;</span>) <span class="comment">//10</span>      &#125;      <span class="title function_">f4</span>()      <span class="variable language_">console</span>.<span class="title function_">log</span>(a, <span class="string">&quot;-------&quot;</span>) <span class="comment">//20</span>  &#125;  <span class="title function_">f3</span>()  <span class="variable language_">console</span>.<span class="title function_">log</span>(a, <span class="string">&quot;????????&quot;</span>) <span class="comment">// 30</span>&#125;<span class="title function_">f2</span>()<span class="variable language_">console</span>.<span class="title function_">log</span>(a)      <span class="comment">//100</span></code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> web笔记 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
             <tag> HTML </tag>
-            
-            <tag> web </tag>
             
         </tags>
       
@@ -579,9 +552,36 @@
       
         <tags>
             
+            <tag> web </tag>
+            
             <tag> HTML </tag>
             
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>web学习笔记8 - 函数与作用域</title>
+      <link href="//webNotes8.html"/>
+      <url>//webNotes8.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>函数与作用域 学习总结<br>封面画师：唏嘘的星辰  p站ID：13312138</p><span id="more"></span><h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p><code>面向对象三大特点</code>: <code>继承</code> <code>多态</code> <code>封装</code>，<br><code>函数</code>: 代码集合体，把相同功能代码封装到一个函数体里面，以后这个函数重复使用了，</p><h3 id="不带参数的函数封装"><a href="#不带参数的函数封装" class="headerlink" title="不带参数的函数封装"></a>不带参数的函数封装</h3><pre><code class="highlight js"><span class="comment">//  关键字 函数名 (形参)&#123;函数体&#125;</span><span class="keyword">function</span> <span class="title function_">add</span>(<span class="params"></span>)&#123;  <span class="keyword">var</span> a = <span class="number">10</span>  <span class="keyword">var</span> b = <span class="string">&quot;10&quot;</span>    <span class="keyword">var</span> c = a+b  <span class="comment">//+ 加法运算，必须保证都是数字； </span>  <span class="comment">// var c = a / b   // 可以把字符串转成数字，然后再去计算</span>  <span class="comment">// var c = a * b    //  把字符串转成数字一种方式，这种方式称为隐式转换</span>    <span class="keyword">if</span>(b)&#123;    <span class="comment">// 如果a数字，   非0都为true</span>    <span class="comment">// 如果字符串    非&quot;&quot;都为true</span>    <span class="comment">// 如果布尔值     true就是true，</span>    <span class="comment">// 如果是空数组    为true</span>    <span class="comment">// 如果是空对象    为true</span>    <span class="comment">// 如果undefined  为false</span>    <span class="comment">// null 不存在     为false</span>    <span class="variable language_">console</span>.<span class="title function_">log</span>(c)   &#125;     &#125;<span class="comment">// 必须调用:函数名()</span><span class="title function_">add</span>()</code></pre><h3 id="递归引入"><a href="#递归引入" class="headerlink" title="递归引入"></a>递归引入</h3><pre><code class="highlight js"><span class="comment">// 1 1 2 3 5 8 13 21</span><span class="keyword">function</span> <span class="title function_">f1</span>(<span class="params"></span>)&#123;  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;f1&quot;</span>)  <span class="comment">//  too much recursion 函数体里面调用自己 造成死循环，需要合适的地方跳出，就是递归思想</span>  <span class="comment">// f1()</span>&#125;<span class="title function_">f1</span>()</code></pre><h3 id="带参数的函数封装"><a href="#带参数的函数封装" class="headerlink" title="带参数的函数封装"></a>带参数的函数封装</h3><pre><code class="highlight js"><span class="comment">//  a,b,c 多个参数用逗号隔开，形参：在定义的时候没值</span><span class="keyword">function</span> <span class="title function_">f2</span>(<span class="params">a,b,c</span>)&#123;  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;我的名字是&quot;</span>+a+<span class="string">&quot;年龄是&quot;</span>+b+<span class="string">&quot;性别是&quot;</span>+c)&#125;<span class="title function_">f2</span>(<span class="string">&quot;张三&quot;</span>,<span class="number">10</span>,<span class="string">&quot;男&quot;</span>) <span class="comment">// &quot;张三&quot; 实参， 函数调用的时候，把实参的赋值给形参</span></code></pre><h3 id="带默认参数的函数的封装"><a href="#带默认参数的函数的封装" class="headerlink" title="带默认参数的函数的封装"></a>带默认参数的函数的封装</h3><p>带默认参数的函数的封装，把默认参数写在最后一位</p><pre><code class="highlight js"><span class="keyword">function</span> <span class="title function_">f3</span>(<span class="params">name,stuid,sex=<span class="string">&quot;男&quot;</span></span>)&#123;  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;我的名字是&quot;</span>+name+<span class="string">&quot;性别是&quot;</span>+sex+<span class="string">&quot;学号是&quot;</span>+stuid)&#125;<span class="title function_">f3</span>(<span class="string">&quot;李四&quot;</span>,<span class="string">&quot;001&quot;</span>) <span class="comment">//如果给默认参数传值了，默认参数就是传递的数据，如果不传值，默认参数就是默认值</span>  <span class="title function_">f3</span>(<span class="string">&quot;张三&quot;</span>,<span class="string">&quot;002&quot;</span>,<span class="string">&quot;女&quot;</span>)  <span class="title function_">f3</span>(<span class="string">&quot;张三&quot;</span>,<span class="string">&quot;男&quot;</span>,<span class="string">&quot;003&quot;</span>)</code></pre><h3 id="有返回值的函数"><a href="#有返回值的函数" class="headerlink" title="有返回值的函数"></a>有返回值的函数</h3><p>有返回值的函数，必须带关键字return</p><pre><code class="highlight js"><span class="keyword">function</span> <span class="title function_">f4</span>(<span class="params">a,b,c</span>)&#123;  <span class="keyword">return</span> a * b *c&#125;<span class="keyword">var</span> aa = <span class="title function_">f4</span>(<span class="number">10</span>,<span class="number">10</span>,<span class="number">10</span>)<span class="variable language_">console</span>.<span class="title function_">log</span>(aa)</code></pre><h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><ul><li><code>全局作用域</code>: 在script标签定义的变量。就是一个全局变量，可以在任何地方去使用。</li><li><code>局部作用域</code>: 在函数体定义的变量，就是一个局部变量，只能用在当前的函数体中</li><li><code>块级作用域</code>: 在代码块{}定义的变量，采用let进行定义，只能用在当前代码块里面<pre><code class="highlight js"><span class="keyword">var</span> a = <span class="number">10</span> <span class="comment">//全局的变量</span><span class="keyword">function</span> <span class="title function_">f1</span>(<span class="params"></span>)&#123;  <span class="variable language_">console</span>.<span class="title function_">log</span>(a)&#125;<span class="title function_">f1</span>()<span class="comment">//var 变量提升只会把变量声明提升到当前作用域最前面</span><span class="keyword">function</span> <span class="title function_">f2</span>(<span class="params"></span>)&#123; <span class="variable language_">console</span>.<span class="title function_">log</span>(b,<span class="string">&quot;--------&quot;</span>)  <span class="keyword">var</span> b = <span class="number">10</span> <span class="comment">//局部变量</span>  <span class="variable language_">console</span>.<span class="title function_">log</span>(b,<span class="string">&quot;--------&quot;</span>)&#125;<span class="title function_">f2</span>()<span class="comment">// console.log(b) // 局部变量只能用在定义函数体里面</span><span class="comment">//  当全局变量和局部的变量如果冲突了，在局部作用域使用的是局部的变量，</span><span class="comment">//  在全局里面使用的全局变量 </span><span class="keyword">function</span> <span class="title function_">f3</span>(<span class="params"></span>)&#123;<span class="keyword">var</span> a = <span class="number">20</span><span class="variable language_">console</span>.<span class="title function_">log</span>(a,<span class="string">&quot;++++++++&quot;</span>)&#125;<span class="title function_">f3</span>()<span class="variable language_">console</span>.<span class="title function_">log</span>(a,<span class="string">&quot;--------------&quot;</span>)<span class="comment">/*</span><span class="comment">1 全局的用起来比较方便 只需要定义一次,全局变量不会被释放,一直占用内存空间</span><span class="comment">2 局部的变量不能在函数体使用,当函数体执行完了,局部的变量就会直接被释放,</span><span class="comment">*/</span><span class="comment">//在局部定义变量如何间接使用在全局里面</span><span class="keyword">function</span> <span class="title function_">f4</span>(<span class="params">e,f</span>)&#123;<span class="keyword">var</span> d = <span class="number">100</span> <span class="comment">// 局部</span><span class="keyword">return</span> d&#125;<span class="keyword">var</span> f = <span class="title function_">f4</span>()<span class="variable language_">console</span>.<span class="title function_">log</span>(f)</code></pre></li></ul><h2 id="作用域链"><a href="#作用域链" class="headerlink" title="作用域链"></a>作用域链</h2><p>访问一个变量,按照作用域链进行访问,当访问一个变量,先当前作用域去找,如果找到了,就直接使用,如果没找到,去父级作用域去找,如果父级作用域没有,去他父级的父级作用域去找,直到找到全局作用域为止,这样就形成一个作用域链</p><pre><code class="highlight js"><span class="keyword">var</span> a = <span class="number">100</span><span class="keyword">function</span> <span class="title function_">f2</span>(<span class="params"></span>) &#123;  <span class="keyword">var</span> a = <span class="number">30</span>  <span class="keyword">function</span> <span class="title function_">f3</span>(<span class="params"></span>) &#123;      <span class="keyword">var</span> a = <span class="number">20</span>      <span class="keyword">function</span> <span class="title function_">f4</span>(<span class="params"></span>) &#123;          <span class="keyword">var</span> a = <span class="number">10</span>          <span class="variable language_">console</span>.<span class="title function_">log</span>(a, <span class="string">&quot;++++++&quot;</span>) <span class="comment">//10</span>      &#125;      <span class="title function_">f4</span>()      <span class="variable language_">console</span>.<span class="title function_">log</span>(a, <span class="string">&quot;-------&quot;</span>) <span class="comment">//20</span>  &#125;  <span class="title function_">f3</span>()  <span class="variable language_">console</span>.<span class="title function_">log</span>(a, <span class="string">&quot;????????&quot;</span>) <span class="comment">// 30</span>&#125;<span class="title function_">f2</span>()<span class="variable language_">console</span>.<span class="title function_">log</span>(a)      <span class="comment">//100</span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> web笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
             <tag> web </tag>
+            
+            <tag> HTML </tag>
             
         </tags>
       
@@ -606,9 +606,9 @@
       
         <tags>
             
-            <tag> HTML </tag>
-            
             <tag> web </tag>
+            
+            <tag> HTML </tag>
             
         </tags>
       
@@ -633,9 +633,9 @@
       
         <tags>
             
-            <tag> HTML </tag>
-            
             <tag> web </tag>
+            
+            <tag> HTML </tag>
             
         </tags>
       
@@ -660,9 +660,9 @@
       
         <tags>
             
-            <tag> HTML </tag>
-            
             <tag> web </tag>
+            
+            <tag> HTML </tag>
             
         </tags>
       
@@ -687,9 +687,9 @@
       
         <tags>
             
-            <tag> HTML </tag>
-            
             <tag> web </tag>
+            
+            <tag> HTML </tag>
             
         </tags>
       
@@ -714,9 +714,9 @@
       
         <tags>
             
-            <tag> HTML </tag>
-            
             <tag> web </tag>
+            
+            <tag> HTML </tag>
             
         </tags>
       
@@ -741,9 +741,9 @@
       
         <tags>
             
-            <tag> HTML </tag>
-            
             <tag> web </tag>
+            
+            <tag> HTML </tag>
             
         </tags>
       
@@ -768,9 +768,9 @@
       
         <tags>
             
-            <tag> HTML </tag>
-            
             <tag> web </tag>
+            
+            <tag> HTML </tag>
             
         </tags>
       
@@ -795,9 +795,9 @@
       
         <tags>
             
-            <tag> HTML </tag>
-            
             <tag> web </tag>
+            
+            <tag> HTML </tag>
             
         </tags>
       
